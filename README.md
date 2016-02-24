@@ -1,4 +1,4 @@
-# Build a CLI RubyGem with External Data
+# Build a Rails App
 
 ## Overview
 
