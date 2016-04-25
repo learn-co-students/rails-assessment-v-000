@@ -53,7 +53,7 @@ tag_id task_id
 2. Submit that repo to the assessment immediately.
 3. Build your app there. Make sure to commit early and commit often.
 4. Record at least a 30 min coding session. During the session, either think out loud or not. It's up to you. You don't need to submit it, but we may ask for it at a later time.
-5. Submit a video of how a user would interact with your working gem.
+5. Submit a video of how a user would interact with your working web application.
 6. Submit the url to your github project
 7. Write a blog post about the project and process.
 
