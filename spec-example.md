@@ -1,9 +1,5 @@
 # Specifications for the Rails Assessment
 
-* When you create the rails app for your assessment, add this file to the root directory of the project, commit it to Git and push it up to GitHub.
-* Make sure to check each box and explain next to each one how you've met the requirement *before* you submit your project.
-* For en example of how a completed spec file might look, check out the [spec-example.md](spec-example.md).
-
 Specs:
 - [x] Using Ruby on Rails for the project
 - [x] Include at least one has_many relationship (User has_many Recipes) 
