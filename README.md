@@ -10,7 +10,7 @@ In this lesson you're going to build a complete Ruby on Rails application that m
 
 2. Your models must include a `has_many`, a `belongs_to`, and a `has_many :through` relationship. You can include more models to fill out your domain, but there must be at least a model acting as a join table for the has_many through.
 
-3. The join model must also store an additional attribute describing the relationship. For example, in a blog domain with comments by users, you'd have a posts table and a users table, with the comments table containing the foreign key for the `post_id` and the `user_id` along with the comment's content. In a TODO list application with shareable lists, you'd have a lists table and users table and then a `user_lists` table giving users access to lists via columns `user_id` and `list_id`, but you'd want to add a permission column to `user_lists` that described how a user relates to the list, whether they could edit it or just view it or delete it, etc.
+3. The join model must also store an additional user submittable attribute (not just timestamps or auto-created fields) describing the relationship. For example, in a blog domain with comments by users, you'd have a posts table and a users table, with the comments table containing the foreign key for the `post_id` and the `user_id` along with the comment's content. In a TODO list application with shareable lists, you'd have a lists table and users table and then a `user_lists` table giving users access to lists via columns `user_id` and `list_id`, but you'd want to add a permission column to `user_lists` that described how a user relates to the list, whether they could edit it or just view it or delete it, etc.
 
 4. Your models should include reasonable validations for the simple attributes. You don't need to add every possible validation or duplicates, such as presence and a minimum length, but the models should defend against invalid data.
 
@@ -49,13 +49,14 @@ tag_id task_id
 
 ## Instructions
 
-1. Create a new repository on github for your app
-2. Submit that repo to the assessment immediately.
-3. Build your app there. Make sure to commit early and commit often.
+1. Create a new repository on GitHub for your Rails application.
+2. When you create the Rails app for your assessment, add the spec.md file from this repo to the root directory of the project, commit it to Git and push it up to GitHub.
+3. Build your application. Make sure to commit early and commit often. Commit messages should be meaningful (clearly describe what you're doing in the commit) and accurate (there should be nothing in the commit that doesn't match the description in the commit message). Good rule of thumb is to commit every 3-7 mins of actual coding time. Most of your commits should have under 15 lines of code and a 2 line commit is perfectly acceptable. **This is important and you'll be graded on this**.
 4. Record at least a 30 min coding session. During the session, either think out loud or not. It's up to you. You don't need to submit it, but we may ask for it at a later time.
-5. Submit a video of how a user would interact with your working web application.
-6. Submit the url to your github project
+5. Make sure to check each box in your spec.md (replace the space between the square braces with an x) and explain next to each one how you've met the requirement *before* you submit your project.
+6. Submit a video of how a user would interact with your working web application.
 7. Write a blog post about the project and process.
+8. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
 
 
 ## If you're a Learn-Verified Premium student:
