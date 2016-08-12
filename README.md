@@ -59,6 +59,7 @@ tag_id task_id
 8. Write a blog post about the project and process.
 9. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
 
+Unlike the rest of the curriculum, if you have any questions about your assessment or need help with it, please *don’t* use the Ask New Question feature. Rather than working with Learn Experts, please reach out to the Learn Instructor responsible for this section instead - Mendel / mendel@flatironschool.com / learn-co slack: mendel.
 
 ## If you're a Learn-Verified Premium student:
 
