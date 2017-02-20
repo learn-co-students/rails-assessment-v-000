@@ -67,7 +67,7 @@ tag_id task_id
 
 Unlike the rest of the curriculum, if you have any questions about your assessment or need help with it, please don’t use the Ask New Question feature. Rather than working with Learn Experts, please reach out to your Learn Instructor responsible for this section instead.
 
-We should reach out to you soon to schedule a pairing process. If you don't hear from us in 48 hours after submission, reach out to us on Slack!
+We should reach out to you soon to schedule a review. If you don't hear from us in 48 hours after submission, reach out to us on Slack!
 
 ### Be Prepared to:
 
@@ -77,24 +77,12 @@ We should reach out to you soon to schedule a pairing process. If you don't hear
 4. Extend the application with a new feature, more data, a different domain etc. 20-30 minutes
 5. Submit an improved version.
 
-### What to expect from the pairing session
+### What to expect from the instructor review
 
-- Use the best vocabulary you can. Technical terms allow for you to be more precise which makes conversations about code much easier.
-- If you make a mistake, correct yourself! We all make mistakes, I promise.
-- Trust yourself
-- Trust us
-- Think on your feet. Feel free to look things up while you're pairing with us. You'll be asked to expand on concepts you implemented and you will be pushed to the edge of your knowledge.
-- Explain the details. We're curious!
-- You're going to learn a ton. We will give pointers and show you ways to improve your code. This isn't telling you that your code is wrong, it's simply us teaching. Whatever you don't quite understand will be explained
+We have two goals for the instructor review. The first is to make sure that you understand, can talk about and can add to your code in real time - we want to make sure that you've really learned the material in this section. The second goal is to prepare you for technical/coding interviews when you graduate.
 
-### What won't happen:
+Your instructor wants you to succeed, but starting at the Rails portfolio project and on the portfolio projects after it, they're going to quite deliberately give you a bit of a harder time and be less obviously supportive during the portfolio project reviews so you get a better sense of the kind of experience and pressure that you might get when taking a technical interview. Unlike some technical interviewers, we really do want you to succeed, and we'll work with you as many times as necessary to get you through the review if you don't nail it the first time (which is quite common and completely OK). However, we will potentially give you a hard time, cut you off, push you on your use of vocabulary and/or your coding choices. We want to try to give you a sense of what a coding interview might be like, so you build the confidence to describe your app and to write code even in a higher pressure, slightly more adversarial environment.
 
-- You won't be told you're ever wrong
-- You won't be yelled at, belittled, or scolded
-- You won't be put on the spot without support
-- There's nothing you can do to instantly fail or blow it.
-
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/rails-assessment'>Rails Assessment</a> on Learn.co and start learning to code for free.</p>
+Given this, don't be surprised if the instructor doesn't necessarily take the time to "teach" you anything you get wrong. As a rule of thumb, if the instructor has to teach you something, you didn't pass the project review! However, if you feel there was anything you didn't understand or would like to discuss, let the instructor know at the end of the session and they can suggest another instructor who will be able to pair with you on that to help you with your understanding before you retake the project review.
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/rails-assessment'>Rails Portfolio Project</a> on Learn.co and start learning to code for free.</p>
