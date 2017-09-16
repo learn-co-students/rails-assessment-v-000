@@ -72,10 +72,9 @@ We should reach out to you soon to schedule a review. If you don't hear from us 
 ### Be Prepared to:
 
 1. Explain your code from execution point to exit point. We're making sure you wrote it and understand how it works, nothing else. 5-10 minutes
-2. Write tests together. You'll be responsible for making tests pass, not writing test code. However, you'll be expected to provide expected return data of methods. You'll need to know how your code should work, not rspec or testing. 20-30 minutes
-3. Refactor code. 20-30 minutes
-4. Extend the application with a new feature, more data, a different domain etc. 20-30 minutes
-5. Submit an improved version.
+2. Refactor code. 20-30 minutes
+3. Extend the application with a new feature, more data, a different domain etc. 20-30 minutes
+4. Submit an improved version.
 
 ### What to expect from the instructor review
 
