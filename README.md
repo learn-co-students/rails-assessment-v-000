@@ -80,10 +80,30 @@ We should reach out to you soon to schedule a review. If you don't hear from us 
 
 ### What to expect from the instructor review
 
-We have two goals for the instructor review. The first is to make sure that you understand, can talk about and can add to your code in real time - we want to make sure that you've really learned the material in this section. The second goal is to prepare you for technical/coding interviews when you graduate.
+Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and technical presentation. Starting with this project, your instructor will deliberately give you a more challenging project review, to give you a better sense of the kind of experience and pressure that you experience during a real technical interview. Believe it or not, almost all technical interviewers really do want you to succeed, and we'll work with you as many times as necessary to get you through the review if you don't nail it the first time (which is quite common and completely OK). However, we will potentially give you a hard time, cut you off, push you on your use of vocabulary and/or your coding choices. We want to try to give you a sense of what a coding interview might be like, so you build the confidence to describe your app and to write code even in a higher pressure, slightly more adversarial environment.
 
-Your instructor wants you to succeed, but starting at the Rails portfolio project and on the portfolio projects after it, they're going to quite deliberately give you a bit of a harder time and be less obviously supportive during the portfolio project reviews so you get a better sense of the kind of experience and pressure that you might get when taking a technical interview. Unlike some technical interviewers, we really do want you to succeed, and we'll work with you as many times as necessary to get you through the review if you don't nail it the first time (which is quite common and completely OK). However, we will potentially give you a hard time, cut you off, push you on your use of vocabulary and/or your coding choices. We want to try to give you a sense of what a coding interview might be like, so you build the confidence to describe your app and to write code even in a higher pressure, slightly more adversarial environment.
+#### Be scrappy.
+- If you make a mistake, correct yourself. 
+- Think on your feet. We will expect you to be able to explain development concepts to us, as well as expanding on concepts that you have already implemented, but you’ll also have the opportunity to look things up while you're live coding.
 
-Given this, don't be surprised if the instructor doesn't necessarily take the time to "teach" you anything you get wrong. As a rule of thumb, if the instructor has to teach you something, you didn't pass the project review! However, if you feel there was anything you didn't understand or would like to discuss, let the instructor know at the end of the session and they can suggest another instructor who will be able to pair with you on that to help you with your understanding before you retake the project review.
+#### Make no little plans.
+- Approach live coding with a constructive attitude. You might feel nervous or uncertain, but as long as you are familiar with the section material you should be able to reason your way to a solution.
+- Be proud of your project and your code, and show confidence in it. 
+
+#### Radiate positivity.
+- Present yourself and your project in the best way possible. 
+- Be open to feedback, both positive and constructive. We give feedback to help each other get better.
+- If the instructor asks you to complete additional features, or you missed a project requirement, treat this as a learning experience. Becoming a developer is complex and challenging, and it’s our job to find the holes in your knowledge and help you fill them. This is to help you become a better developer, not to delay your progress in the program.
+
+#### Work Together.
+- Our goal is to give you the most thorough technical interview possible in the time allocated. This will include live coding where the instructor might give you one or two pointers, but will for the most part sit back and watch you code.
+- Ask clarification questions when you need them. Asking for more details is always ok.
+
+#### Pursue mastery.
+- Use the best technical vocabulary you can. You will be expected to present yourself as a competent Rails developer.
+- Explain the details - this is your application, you should have a very thorough understanding of how each piece works.
+- Curiosity and willingness to learn are hugely valued in our industry. If there are things you don’t understand, then ask questions at the end of the review for more information. Your instructor will be able to point you to the appropriate section lead or technical coach for more information.
+- Pretend you’re interviewing for a job as a Rails developer. We’re looking for competent, passionate people who are excited to learn, build, and grow. You won’t be expected to be an expert, but people who will be good to work with.
+
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/rails-assessment'>Rails Portfolio Project</a> on Learn.co and start learning to code for free.</p>
