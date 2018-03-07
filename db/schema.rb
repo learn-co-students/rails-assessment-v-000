@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(version: 20180307045020) do
     t.string   "body_focus"
     t.string   "training_type"
     t.string   "equipment_needed"
-    t.string   "notes"
     t.string   "website"
     t.string   "photo"
     t.integer  "user_id"

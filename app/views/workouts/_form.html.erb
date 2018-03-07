@@ -1,19 +1,26 @@
 <%= form_for(@workout) do |f|%>
-<%=f.label :name %>
-<%=f.text_field :name %><br>
-<%=f.label :duration %>
-<%=f.text_field :duration %><br>
-<%=f.label :difficulty %>
-<%=f.text_field :difficulty %><br>
-<%=f.label :body_focus %>
-<%=f.text_field :body_focus %><br>
-<%=f.label :training_type %>
-<%=f.text_field :training_type %><br>
-<%=f.label :equipment_needed %>
-<%=f.text_field :equipment_needed %><br>
-<%=f.label :website %>
-<%=f.text_field :website %><br>
-<%=f.label :notes %>
-<%=f.text_field :notes %><br>
-<%=f.submit %>
+ <div class="field"> <%=f.label :name %>
+<%=f.text_field :name %></div>
+
+ <div class="field"> <%=f.label :duration, "How long is the workout? (in minutes)" %>
+<%=f.number_field  :duration %></div>
+
+ <div class="field"> <%=f.label :difficulty, "On a scale of 1-5, how difficult is this workout?" %>
+<%=f.number_field :difficulty %></div>
+
+ <div class="field"> <%=f.label :body_focus, "What part of the body do this workout focus on?" %>
+<%=f.text_field :body_focus %></div>
+
+ <div class="field"> <%=f.label :training_type, "What type of workout is this?" %>
+<%=f.text_field :training_type %></div>
+
+ <div class="field"> <%=f.label :equipment_needed, "Check if we need equipment!" %>
+<%=f.text_field :equipment_needed %></div>
+
+ <div class="field"> <%=f.label :website %>
+<%=f.text_field :website %></div>
+
+ <div class="actions">
+   <%=f.submit %>
+</div>
 <% end %>
