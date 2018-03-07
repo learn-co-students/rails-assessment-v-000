@@ -28,6 +28,7 @@
     ["Toatl Body","Toatl Body"]])) %></div>
 
  <div class="field"> <%=f.label :training_type, "What type of workout is this?" %>
+   <%= f.label :training_type %>
    <%=f.select(:training_type, options_for_select([ ["HIIT","HIIT"],
     ["Strength Training","Strength Training"],
     ["Pilates","Pilates"],

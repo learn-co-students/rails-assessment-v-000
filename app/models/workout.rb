@@ -1,22 +1,25 @@
 class Workout < ActiveRecord::Base
     belongs_to :user
     validates :name, :duration, :website, presence: true
+    default_scope -> { order(created_at: :desc) }
 
   def assign_photo(training_type)
-    if training_type== "HIIT"
+    case training_type
+      when "HIIT"
         "/images/HIIT-Logo.gif"
-      elsif training_type== "Strength Training"
+      when "Strength Training"
         "/images/weight-lifting-1297690_960_720.png"
-      elsif training_type== "Pilates"
+      when"Pilates"
         "/images/6609676_orig.png"
-      elsif training_type== "Cardio"
+      when "Cardio"
         "/images/logo-cardio.jpg"
-      elsif training_type== "Yoga"
+      when "Yoga"
         "/images/yoga-transparent.png"
-      elsif training_type== "Low Impact"
+      when "Low Impact"
         "/images/lowimpact-logo.png"
       else
         "/images/boxing-kickboxing-logo.png"
     end
   end
+
 end
