@@ -1,26 +1,50 @@
 <%= form_for(@workout) do |f|%>
+
+<% if @workout.errors.any? %>
+  <div id="error_explanation">
+    <h3><%= pluralize(@workout.errors.count, "error") %> prohibited this workout from being updated:</h3>
+
+    <ul>
+    <% @workout.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %> <br>
+
  <div class="field"> <%=f.label :name %>
-<%=f.text_field :name %></div>
+   <%=f.text_field :name %></div>
 
  <div class="field"> <%=f.label :duration, "How long is the workout? (in minutes)" %>
-<%=f.number_field  :duration %></div>
+   <%=f.number_field  :duration, in: 1...1001 %></div>
 
  <div class="field"> <%=f.label :difficulty, "On a scale of 1-5, how difficult is this workout?" %>
-<%=f.number_field :difficulty %></div>
+   <%=f.number_field :difficulty, value: 3, in: 1...6 %></div>
 
  <div class="field"> <%=f.label :body_focus, "What part of the body do this workout focus on?" %>
-<%=f.text_field :body_focus %></div>
+   <%=f.select(:body_focus, options_for_select([ ["Upper Body","Upper Body"],
+    ["Lower Body","Lower Body"],
+    ["Abs","Abs"],
+    ["Toatl Body","Toatl Body"]])) %></div>
 
  <div class="field"> <%=f.label :training_type, "What type of workout is this?" %>
-<%=f.text_field :training_type %></div>
+   <%=f.select(:training_type, options_for_select([ ["HIIT","HIIT"],
+    ["Strength Training","Strength Training"],
+    ["Pilates","Pilates"],
+    ["Cardio","Cardio"],
+    ["Yoga","Yoga"],
+    ["Low Impact","Low Impact"],
+    ["Kickboxing","Kickboxing"]])) %></div>
 
- <div class="field"> <%=f.label :equipment_needed, "Check if we need equipment!" %>
-<%=f.text_field :equipment_needed %></div>
+ <div class="field"> <%=f.label :equipment_needed, "Do we need equipment?" %>
+   <%=f.select(:equipment_needed, options_for_select([ ["Yes","Yes"],
+    ["No","No"]])) %></div>
 
  <div class="field"> <%=f.label :website %>
-<%=f.text_field :website %></div>
+   <%=f.text_field :website %></div>
 
  <div class="actions">
    <%=f.submit %>
 </div>
+
 <% end %>

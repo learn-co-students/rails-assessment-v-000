@@ -1,5 +1,7 @@
 class Workout < ActiveRecord::Base
     belongs_to :user
+    validates :name, :duration, :website, presence: true
+
   def assign_photo(training_type)
     if training_type== "HIIT"
         "/images/HIIT-Logo.gif"

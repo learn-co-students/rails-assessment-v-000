@@ -1,9 +1,9 @@
 <h2 class="container-fluid text-center"> <%=@workout.name %> </h2>
 
+<%= link_to "Back", workouts_path %> ||
 <% if @workout.user_id==current_user.id %>
   <%= link_to "Edit", edit_workout_path %> || <%= link_to 'Delete', @workout, method: :delete %>
 <% end %> <br>
-<%= link_to "Back", workouts_path %>
 
   <iframe class="text-center" width="1000" height="492.5" src="<%=@workout.website %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
    <p> Duration: <%=@workout.duration %> </p>
