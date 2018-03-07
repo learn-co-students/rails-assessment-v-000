@@ -1,0 +1,33 @@
+<h2 class="container-fluid text-center">User Profile!</h2>
+
+<br>
+
+<div class="container">
+  <h3> Workouts Added By You: </h3>
+  <div class="row">
+    <% current_user.workouts.each do |workout| %>
+      <div class="col-sm-4">
+        <div><a class="container-fluid text-center" href="/workouts/<%=workout.id%>"> <%=workout.name%><br>
+        <img src="<%=workout.photo%>" width="150" height="120" alt="Image"><br></a>
+        <%=workout.training_type_name%> || <%=workout.duration%> Minutes</div>
+        <br>
+        <br>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <h3> Your Favorites: </h3>
+  <div class="row">
+    <%current_user.favorites.each do |fav|%>
+      <div class="col-sm-4">
+        <div><a class="container-fluid text-center" href="/workouts/<%=fav.workout.id%>"> <%=fav.workout.name%><br>
+        <img src="<%=fav.workout.photo%>" width="150" height="120" alt="Image"><br></a>
+        <%=fav.workout.training_type_name%> || <%=fav.workout.duration%> Minutes</div>
+        <br>
+        <br>
+      </div>
+    <% end %>
+  </div>
+</div>

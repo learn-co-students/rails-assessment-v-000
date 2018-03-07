@@ -5,6 +5,13 @@
 
 <h2 class="container-fluid text-center"> <%=@workout.name %> </h2>
 
+<form action="/favorites/new" method="post">
+  <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
+  <%= tag(:input, :type => "hidden", :name => :user_id, :value => current_user.id) %>
+  <%= tag(:input, :type => "hidden", :name => :workout_id, :value => @workout.id) %>
+  <input type="submit" value="Add to Favorites">
+</form>
+
 <iframe class="text-center" width="1000" height="492.5" src="<%=@workout.website %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 <p> Duration: <%=@workout.duration %> </p>

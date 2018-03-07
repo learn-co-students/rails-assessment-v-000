@@ -1,11 +1,11 @@
 <% if current_user %>
-    <li> <%= link_to("My Profile", root_url) %> </li>
-    <li> <%= link_to("All Workouts", workouts_path) %> </li>
-    <li> <%= link_to("Add Workout", new_workout_path) %> </li>
-    <li> <%= link_to("Sign out", destroy_user_session_path, :method => "delete") %> </li>
+  <li> <%= link_to("My Profile", profile_path) %> </li>
+  <li> <%= link_to("All Workouts", workouts_path) %> </li>
+  <li> <%= link_to("Add Workout", new_workout_path) %> </li>
+  <li> <%= link_to("Sign out", destroy_user_session_path, :method => "delete") %> </li>
 
-  <% else %>
-    <li> <%= link_to("Sign in", new_user_session_path) %> </li>
-    <li> <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %> </li>
-    <li> <%= link_to("Sign up", new_user_registration_path) %> </li>
-  <% end %>
+<% else %>
+  <li> <%= link_to("Sign in", new_user_session_path) %> </li>
+  <li> <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %> </li>
+  <li> <%= link_to("Sign up", new_user_registration_path) %> </li>
+<% end %>

@@ -10,7 +10,10 @@ class Workout < ActiveRecord::Base
     has_many :equipments, through: :workout_equipments
     accepts_nested_attributes_for :equipments, reject_if: :all_blank
 
+    has_many :favorites
+
     validates :name, :duration, :website, presence: true
+
     default_scope -> { order(created_at: :desc) }
 
   def training_type_name=(name)
