@@ -1,8 +1,14 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+<<<<<<< HEAD
   # Access to rack session
   config.middleware.use RackSessionAccess::Middleware
+=======
+  # Rack Session Access, to test and change sessions in test env
+  config.middleware.use RackSessionAccess::Middleware
+
+>>>>>>> c858639fb6437c258ab72ff5fedad265d21948a9
   # The test environment is used exclusively to run your application's
   # test suite. You never need to work with it otherwise. Remember that
   # your test database is "scratch space" for the test suite and is wiped
@@ -38,4 +44,8 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> c858639fb6437c258ab72ff5fedad265d21948a9

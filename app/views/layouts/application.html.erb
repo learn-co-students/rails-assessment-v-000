@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
   <head>
     <title>Amusement Park</title>
     <%= stylesheet_link_tag    "application", media: "all" %>
@@ -46,4 +47,22 @@
     </div>
 
   </body>
+=======
+<head>
+  <title>RailsFlatironStore</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <%= analytics_init if Rails.env.production? %>
+</head>
+<body>
+
+<%= render 'layouts/header' %>
+<%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+<%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
+<%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
+<%= yield %>
+
+</body>
+>>>>>>> c858639fb6437c258ab72ff5fedad265d21948a9
 </html>
