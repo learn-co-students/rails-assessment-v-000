@@ -11,9 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180307180248) do
+ActiveRecord::Schema.define(version: 20180307190206) do
 
   create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "equipment", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -47,12 +53,18 @@ ActiveRecord::Schema.define(version: 20180307180248) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   add_index "users", ["uid"], name: "index_users_on_uid"
 
+  create_table "workout_equipments", force: :cascade do |t|
+    t.integer  "workout_id"
+    t.integer  "equipment_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "workouts", force: :cascade do |t|
     t.string   "name"
     t.string   "duration"
     t.string   "difficulty"
     t.string   "training_type"
-    t.string   "equipment_needed"
     t.string   "website"
     t.string   "photo"
     t.integer  "category_id"

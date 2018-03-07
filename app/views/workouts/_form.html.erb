@@ -22,34 +22,28 @@
    <%=f.number_field :difficulty, value: 3, in: 1...6 %></div>
 
  <div class="field"> <%=f.label :category_id, "What part of the body are we working?" %>
-    <%= f.collection_select :category_id, Category.all, :id, :name %>
+    <%= f.collection_select :category_id, Category.all, :id, :name %> </div>
 
 
  <div class="field"> <%=f.label :training_type_name, "What type of workout is this?" %>
    <%= f.text_field :training_type_name, list: "training_types_autocomplete" %>
-  <datalist id="training_types_autocomplete">
-    <% TrainingType.all.each do |type| %>
-      <option value="<%= type.name %>">
-    <% end %>
-  </datalist>
+    <datalist id="training_types_autocomplete">
+      <% TrainingType.all.each do |type| %>
+        <option value="<%= type.name %>">
+      <% end %>
+    </datalist> </div>
 
-  <!--  <%=f.select(:training_type, options_for_select([ ["HIIT","HIIT"],
-    ["Strength Training","Strength Training"],
-    ["Pilates","Pilates"],
-    ["Cardio","Cardio"],
-    ["Yoga","Yoga"],
-    ["Low Impact","Low Impact"],
-    ["Kickboxing","Kickboxing"]])) %></div>
--->
-
- <div class="field"> <%=f.label :equipment_needed, "Do we need equipment?" %>
-   <%=f.select(:equipment_needed, options_for_select([ ["Yes","Yes"],
-    ["No","No"]])) %></div>
-
- <div class="field"> <%=f.label :website %>
+<div class="field"> <%=f.label :website %>
    <%=f.text_field :website %></div>
 
- <div class="actions">
+<div class="field"> <%=f.label :equipment_ids, "Do we need equipment?" %><br>
+  <%= f.collection_check_boxes :equipment_ids, Equipment.all, :id, :name %>
+  <%= f.fields_for :equipments, @workout.equipments.build do |equipments_fields| %>
+    <%= equipments_fields.text_field :name, placeholder: "Add Equipment Here!"  %>
+  <% end %> </div>
+
+
+<div class="actions">
    <%=f.submit %>
 </div>
 

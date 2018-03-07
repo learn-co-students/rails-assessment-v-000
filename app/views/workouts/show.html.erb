@@ -5,10 +5,16 @@
 
 <h2 class="container-fluid text-center"> <%=@workout.name %> </h2>
 
-  <iframe class="text-center" width="1000" height="492.5" src="<%=@workout.website %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-   <p> Duration: <%=@workout.duration %> </p>
-   <p> Difficulty: <%=@workout.difficulty %> </p>
-   <p> Body Focus: <%=@workout.category.name %> </p>
-   <p> Training Type: <%=@workout.training_type_name %> </p>
-   <p> Equipment Needed: <%=@workout.equipment_needed %> </p>
-   <p> Website: <a href="<%=@workout.website %>" target="_blank" ><%=@workout.website %></a> </p>
+<iframe class="text-center" width="1000" height="492.5" src="<%=@workout.website %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<p> Duration: <%=@workout.duration %> </p>
+<p> Difficulty: <%=@workout.difficulty %> </p>
+<p> Body Focus: <%=@workout.category.name %> </p>
+<p> Training Type: <%=@workout.training_type_name %> </p>
+<p> Website: <a href="<%=@workout.website %>" target="_blank" ><%=@workout.website %></a> </p>
+    Equipment Needed:
+    <ul>
+      <% @workout.equipments.each do |equipment| %>
+        <li> <%= equipment.name %> </li>
+      <%end%>
+    </ul>

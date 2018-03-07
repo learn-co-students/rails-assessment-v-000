@@ -5,7 +5,6 @@ class CreateWorkouts < ActiveRecord::Migration
       t.string :duration
       t.string :difficulty
       t.string :training_type
-      t.string :equipment_needed
       t.string :website
       t.string :photo
       t.integer :category_id

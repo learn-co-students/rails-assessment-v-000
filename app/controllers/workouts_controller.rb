@@ -45,7 +45,7 @@ class WorkoutsController < ApplicationController
   private
 
   def workout_params
-    params.require(:workout).permit(:name, :duration, :difficulty, :category_id, :training_type_name, :equipment_needed, :website)
+    params.require(:workout).permit(:name, :duration, :difficulty, :category_id, :training_type_name, :website, equipment_ids:[], equipments_attributes: [:name])
   end
 
 

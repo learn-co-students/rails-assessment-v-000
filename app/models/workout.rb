@@ -1,29 +1,17 @@
 class Workout < ActiveRecord::Base
     belongs_to :user
+
     belongs_to :category
     accepts_nested_attributes_for :category
+
     belongs_to :training_type
+
+    has_many :workout_equipments
+    has_many :equipments, through: :workout_equipments
+    accepts_nested_attributes_for :equipments, reject_if: :all_blank
+
     validates :name, :duration, :website, presence: true
     default_scope -> { order(created_at: :desc) }
-
-  def assign_photo(training_type)
-    case training_type
-      when "HIIT"
-        "/images/HIIT-Logo.gif"
-      when "Strength Training"
-        "/images/weight-lifting-1297690_960_720.png"
-      when"Pilates"
-        "/images/6609676_orig.png"
-      when "Cardio"
-        "/images/logo-cardio.jpg"
-      when "Yoga"
-        "/images/yoga-transparent.png"
-      when "Low Impact"
-        "/images/lowimpact-logo.png"
-      else
-        "/images/boxing-kickboxing-logo.png"
-    end
-  end
 
   def training_type_name=(name)
     training_type = TrainingType.find_or_create_by(name: name)
@@ -33,5 +21,32 @@ class Workout < ActiveRecord::Base
   def training_type_name
     self.try(:training_type).try(:name)
   end
+
+  def equipments_attributes=(equipment_attributes)
+   equipment_attributes.values.each do |equipment_attribute|
+     equipment=Equipment.find_or_create_by(equipment_attribute)
+     self.equipments << equipment
+   end
+ end
+
+ def assign_photo(training_type)
+   case training_type
+     when "HIIT"
+       "/images/HIIT-Logo.gif"
+     when "Strength Training"
+       "/images/weight-lifting-1297690_960_720.png"
+     when"Pilates"
+       "/images/6609676_orig.png"
+     when "Cardio"
+       "/images/logo-cardio.jpg"
+     when "Yoga"
+       "/images/yoga-transparent.png"
+     when "Low Impact"
+       "/images/lowimpact-logo.png"
+     else
+       "/images/boxing-kickboxing-logo.png"
+   end
+ end
+
 
 end
