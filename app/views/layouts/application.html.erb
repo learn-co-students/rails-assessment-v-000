@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Amusement Park</title>
+    <title>FitLib</title>
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
@@ -24,12 +24,13 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <% if current_user %>
-                <li><%= link_to "Hello, #{current_user.name}!", user_path(current_user) %></li>
-                <li><%= link_to "Attractions", attractions_path %></li>
-                <li><%= link_to "Log Out", logout_path, method: :post %></li>
+                <li>  </li>
+
+                <li> <%= link_to("Sign out", destroy_user_session_path, :method => "delete") %> </li>
+
               <% else %>
-                <li><%= link_to "Sign Up", new_user_path %></li>
-                <li><%= link_to "Sign In", signin_path %></li>
+                <li> <%= link_to("Sign in", new_user_session_path) %> </li>
+                <li> <%= link_to("Sign up", new_user_registration_path) %> </li>
               <% end %>
 
           </ul>
@@ -40,9 +41,20 @@
     <!-- content -->
     <div class="container"  role="main">
 
-    <%= content_tag(:div, flash[:notice], class: "signed-in", :id => "flash_notice") if flash[:notice] %>
+    <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+    <%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
+    <%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
 
       <%= yield %>
+    </div>
+
+    <div class="footer-copyright text-center">
+      <div class="container-fluid">
+        <% if user_signed_in? %>
+        <h4> Signed in as: <%=current_user.email%> !</h4>
+        <% end %>
+        © 2018 Copyright FitLib.com
+      </div>
     </div>
 
   </body>
