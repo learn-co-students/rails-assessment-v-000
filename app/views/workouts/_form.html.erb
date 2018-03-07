@@ -25,15 +25,22 @@
     <%= f.collection_select :category_id, Category.all, :id, :name %>
 
 
- <div class="field"> <%=f.label :training_type, "What type of workout is this?" %>
-   <%= f.label :training_type %>
-   <%=f.select(:training_type, options_for_select([ ["HIIT","HIIT"],
+ <div class="field"> <%=f.label :training_type_name, "What type of workout is this?" %>
+   <%= f.text_field :training_type_name, list: "training_types_autocomplete" %>
+  <datalist id="training_types_autocomplete">
+    <% TrainingType.all.each do |type| %>
+      <option value="<%= type.name %>">
+    <% end %>
+  </datalist>
+
+  <!--  <%=f.select(:training_type, options_for_select([ ["HIIT","HIIT"],
     ["Strength Training","Strength Training"],
     ["Pilates","Pilates"],
     ["Cardio","Cardio"],
     ["Yoga","Yoga"],
     ["Low Impact","Low Impact"],
     ["Kickboxing","Kickboxing"]])) %></div>
+-->
 
  <div class="field"> <%=f.label :equipment_needed, "Do we need equipment?" %>
    <%=f.select(:equipment_needed, options_for_select([ ["Yes","Yes"],

@@ -10,6 +10,7 @@ class CreateWorkouts < ActiveRecord::Migration
       t.string :photo
       t.integer :category_id
       t.integer :user_id
+      t.integer :training_type_id
 
       t.timestamps null: false
     end

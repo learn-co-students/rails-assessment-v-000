@@ -1,6 +1,8 @@
 class Workout < ActiveRecord::Base
     belongs_to :user
     belongs_to :category
+    accepts_nested_attributes_for :category
+    belongs_to :training_type
     validates :name, :duration, :website, presence: true
     default_scope -> { order(created_at: :desc) }
 
@@ -23,12 +25,13 @@ class Workout < ActiveRecord::Base
     end
   end
 
-  def category_name=(name)
-    category = Category.find_or_create_by(name: name)
-    self.category = category
+  def training_type_name=(name)
+    training_type = TrainingType.find_or_create_by(name: name)
+    self.training_type = training_type
   end
 
-  def category_name
-    self.try(:category).try(:name)
+  def training_type_name
+    self.try(:training_type).try(:name)
   end
+
 end
