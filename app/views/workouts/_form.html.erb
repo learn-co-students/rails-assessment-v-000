@@ -21,11 +21,9 @@
  <div class="field"> <%=f.label :difficulty, "On a scale of 1-5, how difficult is this workout?" %>
    <%=f.number_field :difficulty, value: 3, in: 1...6 %></div>
 
- <div class="field"> <%=f.label :body_focus, "What part of the body do this workout focus on?" %>
-   <%=f.select(:body_focus, options_for_select([ ["Upper Body","Upper Body"],
-    ["Lower Body","Lower Body"],
-    ["Abs","Abs"],
-    ["Toatl Body","Toatl Body"]])) %></div>
+ <div class="field"> <%=f.label :category_id, "What part of the body are we working?" %>
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+
 
  <div class="field"> <%=f.label :training_type, "What type of workout is this?" %>
    <%= f.label :training_type %>

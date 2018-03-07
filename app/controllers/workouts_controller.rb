@@ -10,7 +10,7 @@ class WorkoutsController < ApplicationController
 
   def create
     @workout = current_user.workouts.new(workout_params)
-    #@workout=Workout.create(workout_params)
+    #@workout=Workout.create(workout_params)  <<this wouldn't create the user_id unless I added code below.
     #@workout.user_id=current_user.id
     @workout.photo=@workout.assign_photo(@workout.training_type)
     if @workout.save
@@ -45,7 +45,7 @@ class WorkoutsController < ApplicationController
   private
 
   def workout_params
-    params.require(:workout).permit(:name, :duration, :difficulty, :body_focus, :training_type, :equipment_needed, :website)
+    params.require(:workout).permit(:name, :duration, :difficulty, :category_id, :training_type, :equipment_needed, :website)
   end
 
 

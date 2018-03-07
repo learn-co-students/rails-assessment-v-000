@@ -5,10 +5,10 @@ class CreateWorkouts < ActiveRecord::Migration
       t.string :duration
       t.string :difficulty
       t.string :training_type
-      t.string :body_focus
       t.string :equipment_needed
       t.string :website
       t.string :photo
+      t.integer :category_id
       t.integer :user_id
 
       t.timestamps null: false
