@@ -1,6 +1,12 @@
 class WorkoutsController < ApplicationController
 
   def index
+    # provide a list of users/training_types/cats to the view for the filter control
+    @users = User.all
+    @training_types=TrainingType.all
+    @categories=Category.all
+
+    # filter the @workouts list based on user input
     if params[:user_id]
       @user = User.find_by(id: params[:user_id])
       if @user.nil?
@@ -8,7 +14,15 @@ class WorkoutsController < ApplicationController
       else
         @workouts = @user.workouts
       end
+
+    elsif !params[:category].blank?
+      @workouts =Workout.by_category(params[:category])
+
+    elsif !params[:training_type].blank?
+      @workouts =Workout.by_training_type(params[:training_type])
+
     else
+      # if no filters are applied, show all workouts
       @workouts=Workout.all
     end
   end
@@ -16,7 +30,7 @@ class WorkoutsController < ApplicationController
   def show
     if params[:user_id]
       @user = User.find_by(id: params[:user_id])
-      @workout = @user.workouts.find_by(id: params[:id])
+      @workout = @user.workouts.find_by_id(params[:id])
       if @workout.nil?
         redirect_to user_workouts_path(@user), alert: "Workout not found"
       end

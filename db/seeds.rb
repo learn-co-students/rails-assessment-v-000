@@ -7,7 +7,7 @@ TrainingType.create(name: 'Strength Training')
 TrainingType.create(name: 'Pilates')
 TrainingType.create(name: 'Cardio')
 TrainingType.create(name: 'Yoga')
-TrainingType.create(name: 'Impact')
+TrainingType.create(name: 'Low Impact')
 TrainingType.create(name: 'Kickboxing')
 
 Equipment.create(name: 'Dumbbells')

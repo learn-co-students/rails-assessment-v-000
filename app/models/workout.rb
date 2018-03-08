@@ -32,25 +32,6 @@ class Workout < ActiveRecord::Base
    end
  end
 
- def assign_photo(training_type)
-   case training_type
-     when "HIIT"
-       "/images/HIIT-Logo.gif"
-     when "Strength Training"
-       "/images/weight-lifting-1297690_960_720.png"
-     when"Pilates"
-       "/images/6609676_orig.png"
-     when "Cardio"
-       "/images/logo-cardio.jpg"
-     when "Yoga"
-       "/images/yoga-transparent.png"
-     when "Low Impact"
-       "/images/lowimpact-logo.png"
-     else
-       "/images/boxing-kickboxing-logo.png"
-   end
- end
-
   def category_name=(name)
     category = Category.find_or_create_by(name: name)
     self.category = category
@@ -59,5 +40,34 @@ class Workout < ActiveRecord::Base
   def category_name
     self.try(:category).try(:name)
   end
+
+  def self.by_training_type(training_type_id)
+    where(training_type_id: training_type_id)
+  end
+
+  def self.by_category(category_id)
+    where(category_id: category_id)
+  end
+
+  def assign_photo(training_type)
+    case training_type
+      when "HIIT"
+        "/images/HIIT-Logo.gif"
+      when "Strength Training"
+        "/images/weight-lifting-1297690_960_720.png"
+      when"Pilates"
+        "/images/6609676_orig.png"
+      when "Cardio"
+        "/images/logo-cardio.jpg"
+      when "Yoga"
+        "/images/yoga-transparent.png"
+      when "Low Impact"
+        "/images/lowimpact-logo.png"
+      else
+        "/images/boxing-kickboxing-logo.png"
+    end
+  end
+
+
 
 end

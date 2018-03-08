@@ -1,4 +1,5 @@
 class FavoritesController < ApplicationController
+
   def new
     @favorite=Favorite.create(
       :user_id => params[:user_id],
