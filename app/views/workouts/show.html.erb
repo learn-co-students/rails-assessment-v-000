@@ -1,17 +1,16 @@
-<%= link_to "Back", workouts_path %> ||
+<h2 class="container-fluid text-center"> <%=@workout.name %> </h2>
+<p class="container-fluid text-center"> Added by: <%= link_to @workout.user.email, user_path(@workout.user)%> </p>
+
 <% if @workout.user_id==current_user.id %>
   <%= link_to "Edit", edit_workout_path %> || <%= link_to 'Delete', @workout, method: :delete %>
+<% else %>
+  <form action="/favorites/new" method="post">
+    <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
+    <%= tag(:input, :type => "hidden", :name => :user_id, :value => current_user.id) %>
+    <%= tag(:input, :type => "hidden", :name => :workout_id, :value => @workout.id) %>
+    <input type="submit" value="Add to Favorites">
+  </form>
 <% end %> <br>
-
-<h2 class="container-fluid text-center"> <%=@workout.name %> </h2>
-<p class="container-fluid text-center"> <%=@workout.user.email%> </p>
-
-<form action="/favorites/new" method="post">
-  <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
-  <%= tag(:input, :type => "hidden", :name => :user_id, :value => current_user.id) %>
-  <%= tag(:input, :type => "hidden", :name => :workout_id, :value => @workout.id) %>
-  <input type="submit" value="Add to Favorites">
-</form>
 
 <iframe class="text-center" width="1000" height="492.5" src="<%=@workout.website %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 

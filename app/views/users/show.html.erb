@@ -1,18 +1,16 @@
-show page
-<h2 class="container-fluid text-center">Workouts Added by: <%= @user.email %>!</h2>
+<h2 class="container-fluid text-center">Profile of: <%= @user.email %></h2>
 
-<br>
-
+<h3> Workouts Added By user: <%= link_to "View All", user_workouts_path(@user) %> </h3>
 <div class="container">
-<div class="row">
-  <% @user.workouts.each do |workout| %>
-    <div class="col-sm-4">
-      <div><a class="container-fluid text-center" href="/workouts/<%=workout.id%>"> <%=workout.name%><br>
-      <img src="<%=workout.photo%>" width="150" height="120" alt="Image"><br></a>
-      <%=workout.training_type_name%> || <%=workout.duration%> Minutes</div>
-      <br>
-      <br>
-    </div>
-  <% end %>
-</div>
+  <div class="row">
+    <% @user.workouts.each do |workout| %>
+      <div class="col-sm-4">
+        <div class="container-fluid text-center"> <a href="/users/<%=current_user.id%>/workouts/<%=workout.id%>"> <%=workout.name%><br>
+          <!-- Know I could do <%= link_to workout.name, user_workout_path(@user, workout) %> but wanted image to be wrapped in url-->
+        <img src="<%=workout.photo%>" width="150" height="120" alt="Image"><br></a>
+        <%=workout.training_type_name%> || <%=workout.duration%> Minutes</div>
+      </div>
+    <% end %>
+
+  </div>
 </div>

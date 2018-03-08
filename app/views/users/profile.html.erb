@@ -1,16 +1,16 @@
 <h2 class="container-fluid text-center">User Profile!</h2>
-<h3> Dashboard </h3>
+<h3> Dashboard: </h3>
 
 <br>
 
+<h3> Favorites: </h3>
 <div class="container">
-  <h3> Workouts Added By You: </h3>
   <div class="row">
-    <% current_user.workouts.each do |workout| %>
+    <%current_user.favorites.each do |fav|%>
       <div class="col-sm-4">
-        <div><a class="container-fluid text-center" href="/workouts/<%=workout.id%>"> <%=workout.name%><br>
-        <img src="<%=workout.photo%>" width="150" height="120" alt="Image"><br></a>
-        <%=workout.training_type_name%> || <%=workout.duration%> Minutes</div>
+        <div class="container-fluid text-center"> <a href="/users/<%=fav.workout.id%>/workouts/<%=fav.workout.id%>"> <%=fav.workout.name%><br>
+        <img src="<%=fav.workout.photo%>" width="150" height="120" alt="Image"><br></a>
+        <%=fav.workout.training_type_name%> || <%=fav.workout.duration%> Minutes</div>
         <br>
         <br>
       </div>
@@ -18,14 +18,14 @@
   </div>
 </div>
 
+<h3> Added Workouts: <%= link_to "View All", user_workouts_path(current_user) %></h3>
 <div class="container">
-  <h3> Your Favorites: </h3>
   <div class="row">
-    <%current_user.favorites.each do |fav|%>
+    <% current_user.workouts[0..2].each do |workout| %>
       <div class="col-sm-4">
-        <div><a class="container-fluid text-center" href="/workouts/<%=fav.workout.id%>"> <%=fav.workout.name%><br>
-        <img src="<%=fav.workout.photo%>" width="150" height="120" alt="Image"><br></a>
-        <%=fav.workout.training_type_name%> || <%=fav.workout.duration%> Minutes</div>
+        <div class="container-fluid text-center"> <a href="/users/<%=current_user.id%>/workouts/<%=workout.id%>"> <%=workout.name%><br>
+        <img src="<%=workout.photo%>" width="150" height="120" alt="Image"><br></a>
+        <%=workout.training_type_name%> || <%=workout.duration%> Minutes</div>
         <br>
         <br>
       </div>

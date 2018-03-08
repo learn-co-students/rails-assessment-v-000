@@ -25,10 +25,26 @@ body {
 }
 
 #error_explanation {
-  display: inline;
-  color: #D00;
+  color: #D8000C;
+      background-color: #FFBABA;
+      border: 0;
+      padding: 10px;
 }
 
 .help-inline {
   color: #D00;
+}
+
+#flash_notice {
+  color: #4F8A10;
+    background-color: #DFF2BF;
+    border: 0;
+    padding: 10px;
+}
+
+#flash_alert {
+  color: #D8000C;
+      background-color: #FFBABA;
+      border: 0;
+      padding: 10px;
 }

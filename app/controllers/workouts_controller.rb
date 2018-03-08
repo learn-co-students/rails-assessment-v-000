@@ -1,7 +1,7 @@
 class WorkoutsController < ApplicationController
 
   def index
-    if params[:artist_id]
+    if params[:user_id]
       @user = User.find_by(id: params[:user_id])
       if @user.nil?
         redirect_to workouts_path, alert: "User not found"
@@ -10,6 +10,21 @@ class WorkoutsController < ApplicationController
       end
     else
       @workouts=Workout.all
+    end
+  end
+
+  def show
+    if params[:user_id]
+      @user = User.find_by(id: params[:user_id])
+      @workout = @user.workouts.find_by(id: params[:id])
+      if @workout.nil?
+        redirect_to user_workouts_path(@user), alert: "Workout not found"
+      end
+    else
+      @workout=Workout.find_by(id: params[:id])
+      if @workout.nil?
+        redirect_to workouts_path, alert: "Workout not found"
+      end
     end
   end
 
@@ -29,9 +44,6 @@ class WorkoutsController < ApplicationController
     end
   end
 
-  def show
-    @workout=Workout.find(params[:id])
-  end
 
   def edit
     @workout=Workout.find(params[:id])
