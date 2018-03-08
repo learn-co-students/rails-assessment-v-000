@@ -1,0 +1,18 @@
+show page
+<h2 class="container-fluid text-center">Workouts Added by: <%= @user.email %>!</h2>
+
+<br>
+
+<div class="container">
+<div class="row">
+  <% @user.workouts.each do |workout| %>
+    <div class="col-sm-4">
+      <div><a class="container-fluid text-center" href="/workouts/<%=workout.id%>"> <%=workout.name%><br>
+      <img src="<%=workout.photo%>" width="150" height="120" alt="Image"><br></a>
+      <%=workout.training_type_name%> || <%=workout.duration%> Minutes</div>
+      <br>
+      <br>
+    </div>
+  <% end %>
+</div>
+</div>

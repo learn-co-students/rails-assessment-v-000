@@ -1,4 +1,8 @@
-<h2 class="container-fluid text-center">All Workouts!</h2>
+<% if @user.nil? %>
+  <h2 class="container-fluid text-center">All Workouts!</h2>
+<% else %>
+  <h2 class="container-fluid text-center">Workouts by: <%= @user %>!</h2>
+<% end %>
 
 <br>
 

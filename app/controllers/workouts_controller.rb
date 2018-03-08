@@ -1,7 +1,16 @@
 class WorkoutsController < ApplicationController
 
   def index
-    @workouts=Workout.all
+    if params[:artist_id]
+      @user = User.find_by(id: params[:user_id])
+      if @user.nil?
+        redirect_to workouts_path, alert: "User not found"
+      else
+        @workouts = @user.workouts
+      end
+    else
+      @workouts=Workout.all
+    end
   end
 
   def new

@@ -4,6 +4,7 @@
 <% end %> <br>
 
 <h2 class="container-fluid text-center"> <%=@workout.name %> </h2>
+<p class="container-fluid text-center"> <%=@workout.user.email%> </p>
 
 <form action="/favorites/new" method="post">
   <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
