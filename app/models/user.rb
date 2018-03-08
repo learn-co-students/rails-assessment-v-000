@@ -18,6 +18,9 @@ class User < ActiveRecord::Base
       user.email = auth.info.email
       user.password = Devise.friendly_token[0,20]
     end
+  end
 
+  def self.newest_users
+    all.order(id: :desc).limit(3)
   end
 end

@@ -31,14 +31,20 @@ class WorkoutsController < ApplicationController
     if params[:user_id]
       @user = User.find_by(id: params[:user_id])
       @workout = @user.workouts.find_by_id(params[:id])
+
       if @workout.nil?
         redirect_to user_workouts_path(@user), alert: "Workout not found"
       end
+
+      Workout.add_view(@workout)
     else
       @workout=Workout.find_by(id: params[:id])
+
       if @workout.nil?
         redirect_to workouts_path, alert: "Workout not found"
       end
+
+      Workout.add_view(@workout)
     end
   end
 

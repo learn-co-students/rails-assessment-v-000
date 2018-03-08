@@ -79,11 +79,12 @@ ActiveRecord::Schema.define(version: 20180307204853) do
     t.string   "training_type"
     t.string   "website"
     t.string   "photo"
+    t.integer  "views",            default: 0
     t.integer  "category_id"
     t.integer  "user_id"
     t.integer  "training_type_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
 end

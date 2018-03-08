@@ -49,6 +49,11 @@ class Workout < ActiveRecord::Base
     where(category_id: category_id)
   end
 
+  def self.add_view(workout)
+    workout.views +=1
+    workout.save
+  end
+
   def assign_photo(training_type)
     case training_type
       when "HIIT"
@@ -68,6 +73,16 @@ class Workout < ActiveRecord::Base
     end
   end
 
+  def self.longest
+    all.order(duration: :desc).limit(1)
+  end
 
+  def self.shortest
+    order(duration: :ASC).limit(1)
+  end
+
+  def self.top_views
+    all.order(views: :desc).limit(3)
+  end
 
 end

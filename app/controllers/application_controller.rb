@@ -9,6 +9,8 @@ class ApplicationController < ActionController::Base
   end
 
   def index
+    @top_views
+    @newest_users=User.newest_users
   end
 
 end
