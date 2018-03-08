@@ -12,7 +12,7 @@ class Workout < ActiveRecord::Base
 
     has_many :favorites
 
-    validates :name, :duration, :website, presence: true
+    validates :name, :duration, :website, :training_type_name, presence: true
 
     default_scope -> { order(created_at: :desc) }
 
@@ -51,5 +51,13 @@ class Workout < ActiveRecord::Base
    end
  end
 
+  def category_name=(name)
+    category = Category.find_or_create_by(name: name)
+    self.category = category
+  end
+
+  def category_name
+    self.try(:category).try(:name)
+  end
 
 end
