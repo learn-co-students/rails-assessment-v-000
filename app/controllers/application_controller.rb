@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
 
     @newest_users=User.newest_users
     @top_views=Workout.top_views
+
   end
 
 end
