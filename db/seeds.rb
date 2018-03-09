@@ -153,7 +153,7 @@ Workout.create(
   difficulty:2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/lowimpact-logo.png",
-  views: 50,
+  views: 550,
   category_id: 2,
   user_id:3 ,
   training_type_id: 5)
@@ -164,7 +164,7 @@ Workout.create(
   difficulty:2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/boxing-kickboxing-logo.png",
-  views: 50,
+  views: 600,
   category_id: 2,
   user_id:1 ,
   training_type_id: 6)
@@ -175,7 +175,7 @@ Workout.create(
   difficulty:2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/HIIT-Logo.gif",
-  views: 50,
+  views: 700,
   category_id: 2,
   user_id:2 ,
   training_type_id: 7)

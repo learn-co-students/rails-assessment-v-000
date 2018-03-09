@@ -55,7 +55,7 @@ class Workout < ActiveRecord::Base
   end
 
   def self.top_views
-    all.order_by(views: :DESC).limit(3)
+    all.order(views: :DESC).limit(3)
   end
 
   def assign_photo(training_type)
