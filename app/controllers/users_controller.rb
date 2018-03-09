@@ -4,9 +4,6 @@ class UsersController < ApplicationController
   @users=User.all
   end
 
-  def profile
-  end
-
   def show
       @user = User.find_by_id(params[:id])
       if !@user
