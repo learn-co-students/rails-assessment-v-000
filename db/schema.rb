@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 20180307204853) do
 
   create_table "workouts", force: :cascade do |t|
     t.string   "name"
-    t.string   "duration"
+    t.integer  "duration"
     t.string   "difficulty"
     t.string   "training_type"
     t.string   "website"

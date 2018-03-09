@@ -5,12 +5,20 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!, except: [:index]
 
   def after_sign_in_path_for(resource)
-    request.env['omniauth.origin'] || root_path
+    request.env['omniauth.origin'] || home_path
   end
 
   def index
-    @top_views
+
+  end
+
+  def home
+    if !current_user
+      redirect_to root_path
+    end
+
     @newest_users=User.newest_users
+    @top_views=Workout.top_views
   end
 
 end

@@ -54,6 +54,10 @@ class Workout < ActiveRecord::Base
     workout.save
   end
 
+  def self.top_views
+    all.order(views: :desc).limit(3)
+  end
+
   def assign_photo(training_type)
     case training_type
       when "HIIT"
@@ -71,18 +75,6 @@ class Workout < ActiveRecord::Base
       else
         "/images/boxing-kickboxing-logo.png"
     end
-  end
-
-  def self.longest
-    all.order(duration: :desc).limit(1)
-  end
-
-  def self.shortest
-    order(duration: :ASC).limit(1)
-  end
-
-  def self.top_views
-    all.order(views: :desc).limit(3)
   end
 
 end

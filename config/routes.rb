@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'application#index'
+get "/home", to: "application#home"
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
@@ -8,12 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :workouts
-
+  resources :favorites, only: [:index]
   post "/favorites/new", to: "favorites#new"
-
-
-
-
-
 
   end
