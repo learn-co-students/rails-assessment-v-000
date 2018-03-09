@@ -1,7 +1,7 @@
 <% if current_user %>
   <li> <%= link_to("My Dashboard", user_path(current_user)) %> </li>
   <li> <%= link_to("All Workouts", workouts_path) %> </li>
-  <li> <%= link_to("Add Workout", new_workout_path) %> </li>
+  <li> <%= link_to("Add Workout", new_workout_path) %>  </li>
   <li> <%= link_to("Sign out", destroy_user_session_path, :method => "delete") %> </li>
 
 <% else %>

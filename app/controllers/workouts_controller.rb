@@ -49,13 +49,15 @@ class WorkoutsController < ApplicationController
   end
 
   def new
-    @workout=Workout.new
+    if params[:user_id] && !User.exists?( params[:user_id])
+      redirect_to users_path, alert: "User Not Found"
+    else
+      @workout=Workout.new(user_id: params[:user_id])
+    end
   end
 
   def create
     @workout = current_user.workouts.new(workout_params)
-    #@workout=Workout.create(workout_params)  <<this wouldn't create the user_id unless I added code below.
-    #@workout.user_id=current_user.id
     @workout.photo=@workout.assign_photo(@workout.training_type_name)
     if @workout.save
       redirect_to @workout
@@ -66,7 +68,17 @@ class WorkoutsController < ApplicationController
 
 
   def edit
-    @workout=Workout.find(params[:id])
+    if params[:user_id]
+      user = User.find_by(id: params[:user_id])
+      if user.nil?
+        redirect_to workouts_path, alert: "User Not Found"
+      else
+        @workout = user.workouts.find_by_id(params[:id])
+        redirect_to user_workouts_path(user), alert: "Workout Not Found" if @workout.nil?
+      end
+    else
+      @workout=Workout.find(params[:id])
+    end
   end
 
   def update
@@ -80,13 +92,14 @@ class WorkoutsController < ApplicationController
 
   def destroy
     @workout=Workout.find(params[:id]).destroy
+    flash[:notice]= "Workout Deleted"
     redirect_to workouts_path
   end
 
   private
 
   def workout_params
-    params.require(:workout).permit(:name, :duration, :difficulty, :category_id, :training_type_name, :website, equipment_ids:[], equipments_attributes: [:name])
+    params.require(:workout).permit(:user_id, :name, :duration, :difficulty, :category_id, :training_type_name, :website, equipment_ids:[], equipments_attributes: [:name])
   end
 
 

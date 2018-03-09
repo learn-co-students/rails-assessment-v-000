@@ -2,7 +2,7 @@
 <p class="container-fluid text-center"> Added by: <%= link_to @workout.user.email, user_path(@workout.user)%> </p>
 
 <% if @workout.user_id==current_user.id %>
-  <%= link_to "Edit", edit_workout_path %> || <%= link_to 'Delete', @workout, method: :delete %>
+  <%= link_to "Edit", edit_user_workout_path(@workout.user, @workout) %> || <%= link_to 'Delete', @workout, method: :delete %>
 <% else %>
   <form action="/favorites/new" method="post">
     <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
