@@ -1,4 +1,5 @@
 class WorkoutsController < ApplicationController
+  before_action :authenticate_user!
 
   def index
     # provide a list of users/training_types/cats to the view for the filter control
