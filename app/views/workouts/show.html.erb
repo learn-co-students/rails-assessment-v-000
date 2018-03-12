@@ -1,5 +1,6 @@
 <h2 class="container-fluid text-center"> <%=@workout.name %> </h2>
 <p class="container-fluid text-center"> Added by: <%= link_to @workout.user.email, user_path(@workout.user)%> </p>
+<p class="container-fluid text-center"> <%= last_updated @workout %></p>
 
 <% if @workout.user_id==current_user.id %>
   <%= link_to "Edit", edit_user_workout_path(@workout.user, @workout) %> || <%= link_to 'Delete', @workout, method: :delete %>

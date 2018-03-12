@@ -66,7 +66,6 @@ class WorkoutsController < ApplicationController
     end
   end
 
-
   def edit
     if params[:user_id]
       user = User.find_by(id: params[:user_id])
@@ -101,6 +100,5 @@ class WorkoutsController < ApplicationController
   def workout_params
     params.require(:workout).permit(:user_id, :name, :duration, :difficulty, :category_id, :training_type_name, :website, equipment_ids:[], equipments_attributes: [:name])
   end
-
 
 end

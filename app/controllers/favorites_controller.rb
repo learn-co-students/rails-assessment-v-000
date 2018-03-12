@@ -13,6 +13,4 @@ class FavoritesController < ApplicationController
     redirect_to workout_path(@favorite.workout)
   end
 
-
-
 end
