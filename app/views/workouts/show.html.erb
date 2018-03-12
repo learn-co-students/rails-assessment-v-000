@@ -1,17 +1,10 @@
-<h2 class="container-fluid text-center"> <%=@workout.name %> </h2>
-<p class="container-fluid text-center"> Added by: <%= link_to @workout.user.email, user_path(@workout.user)%> </p>
-<p class="container-fluid text-center"> <%= last_updated @workout %></p>
+<div class="container-fluid text-center">
+  <h2> <%=@workout.name %> </h2>
+  <p> Added by: <%= link_to @workout.user.email, user_path(@workout.user)%> </p>
+  <p> <%= last_updated @workout %></p>
+</div>
 
-<% if @workout.user_id==current_user.id %>
-  <%= link_to "Edit", edit_user_workout_path(@workout.user, @workout) %> || <%= link_to 'Delete', @workout, method: :delete %>
-<% else %>
-  <form action="/favorites/new" method="post">
-    <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
-    <%= tag(:input, :type => "hidden", :name => :user_id, :value => current_user.id) %>
-    <%= tag(:input, :type => "hidden", :name => :workout_id, :value => @workout.id) %>
-    <input type="submit" value="Add to Favorites">
-  </form>
-<% end %> <br>
+<%= render 'option_favorite' %>
 
 <iframe class="text-center" width="1000" height="492.5" src="<%=@workout.website %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 

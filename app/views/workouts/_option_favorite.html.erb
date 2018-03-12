@@ -1,0 +1,10 @@
+<% if @workout.user_id==current_user.id %>
+  <%= link_to "Edit", edit_user_workout_path(@workout.user, @workout) %> || <%= link_to 'Delete', @workout, method: :delete %>
+<% else %>
+  <form action="/favorites/new" method="post">
+    <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
+    <%= tag(:input, :type => "hidden", :name => :user_id, :value => current_user.id) %>
+    <%= tag(:input, :type => "hidden", :name => :workout_id, :value => @workout.id) %>
+    <input type="submit" value="Add to Favorites">
+  </form>
+<% end %> <br>
