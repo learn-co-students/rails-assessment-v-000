@@ -1,0 +1,5 @@
+<% if current_user.id== @user.id%>
+  <%= render 'dashboard' %>
+<%else%>
+  <%= render 'user_profile' %>
+<% end %>

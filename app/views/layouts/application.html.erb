@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FitLib</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= analytics_init if Rails.env.production? %>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <!--  navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        <a class="navbar-brand" href="<%= home_path %>"/>Home</a>
+
+      </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+
+            <%= render '/layouts/header' %>
+
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <!-- content -->
+    <div class="container"  role="main">
+
+    <%= content_tag(:div, flash[:error], :id => "flash_error") if flash[:error] %>
+    <%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
+    <%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
+
+
+      <%= yield %>
+    </div>
+
+    <div class="footer-copyright text-center">
+      <div class="container-fluid">
+        <%= render '/layouts/footer' %>
+      </div>
+    </div>
+
+  </body>
+
+</html>

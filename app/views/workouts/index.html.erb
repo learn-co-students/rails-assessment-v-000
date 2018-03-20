@@ -1,0 +1,29 @@
+<% if @user %>
+  <h2 class="container-fluid text-center">Workouts Added by: <%=link_to @user.email, user_path(@user)%>!</h2>
+<%else %>
+  <h2 class="container-fluid text-center">All Workouts!</h2>
+
+  <br>
+
+  <h3>Filter Workouts:</h3>
+    <%= form_tag("/workouts", method: "get") do %>
+      <%= select_tag "category", options_from_collection_for_select(@categories, "id", "name"), include_blank: true %>
+      <%= select_tag "training_type", options_from_collection_for_select(@training_types, "id", "name"), include_blank: true %>
+      <%= submit_tag "Filter" %>
+    <% end %>
+<%end%>
+
+<div class="container">
+  <div class="row">
+    <% @workouts.each do |workout| %>
+      <div class="col-sm-4">
+        <div class="container-fluid text-center"> <a href="/workouts/<%=workout.id%>"> <%=workout.name%><br>
+          <!--I know I can do <%= link_to workout.name, workout_path(workout) %> but I want image to be wrapped link too-->
+        <img src="<%=workout.photo%>" width="150" height="120" alt="Image"><br></a>
+        <%=workout.training_type_name%> || <%=workout.duration%> Minutes</div>
+        <br>
+        <br>
+      </div>
+    <% end %>
+  </div>
+</div>

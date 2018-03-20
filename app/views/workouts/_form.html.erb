@@ -1,0 +1,50 @@
+<%= form_for(@workout) do |f|%>
+
+<% if @workout.errors.any? %>
+  <div id="error_explanation">
+    <h3><%= pluralize(@workout.errors.count, "error") %> prohibited this workout from being updated:</h3>
+
+    <ul>
+    <% @workout.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %> <br>
+
+ <div class="field"> <%=f.label :name %>
+   <%=f.text_field :name %></div>
+
+ <div class="field"> <%=f.label :duration, "How long is the workout? (in minutes)" %>
+   <%=f.number_field  :duration, in: 1...1001 %></div>
+
+ <div class="field"> <%=f.label :difficulty, "On a scale of 1-5, how difficult is this workout?" %>
+   <%=f.number_field :difficulty, value: 3, in: 1...6 %></div>
+
+ <div class="field"> <%=f.label :category_id, "What part of the body are we working?" %>
+    <%= f.collection_select :category_id, Category.all, :id, :name %> </div>
+
+
+ <div class="field"> <%=f.label :training_type_name, "What type of workout is this?" %>
+   <%= f.text_field :training_type_name, list: "training_types_autocomplete" %>
+    <datalist id="training_types_autocomplete">
+      <% TrainingType.all.each do |type| %>
+        <option value="<%= type.name %>">
+      <% end %>
+    </datalist> </div>
+
+  <div class="field"> <%=f.label :website %>
+    <%=f.text_field :website %></div>
+
+<div class="field"> <%=f.label :equipment_ids, "Do we need equipment?" %><br>
+  <%= f.collection_check_boxes :equipment_ids, Equipment.all, :id, :name %>
+  <%= f.fields_for :equipments, @workout.equipments.build do |equipments_fields| %>
+    <%= equipments_fields.text_field :name, placeholder: "Add Equipment Here!"  %>
+  <% end %> </div>
+
+
+<div class="actions">
+   <%=f.submit %>
+</div>
+
+<% end %>
