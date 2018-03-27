@@ -28,8 +28,10 @@ class Workout < ActiveRecord::Base
 
   def equipments_attributes=(equipment_attributes)
    equipment_attributes.values.each do |equipment_attribute|
-     equipment=Equipment.find_or_create_by(equipment_attribute)
-     self.equipments << equipment
+     if !equipment_attribute==nil
+       equipment=Equipment.find_or_create_by(equipment_attribute)
+       self.equipments << equipment
+     end
    end
  end
 

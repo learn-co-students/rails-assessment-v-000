@@ -2,8 +2,7 @@ class WorkoutsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    # provide a list of users/training_types/cats to the view for the filter control
-    @users = User.all
+    # provide a list of training_types/cats to the view for the filter control
     @training_types=TrainingType.all
     @categories=Category.all
 
@@ -15,6 +14,10 @@ class WorkoutsController < ApplicationController
       else
         @workouts = @user.workouts
       end
+
+    elsif !params[:category].blank? && !params[:training_type].blank?
+      category =Workout.by_category(params[:category])
+      @workouts =category.by_training_type(params[:training_type])
 
     elsif !params[:category].blank?
       @workouts =Workout.by_category(params[:category])

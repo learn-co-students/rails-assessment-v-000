@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   resources :workouts
 
   post "/favorites/new", to: "favorites#new"
+  post "/users/find", to: "users#find"
 
 end

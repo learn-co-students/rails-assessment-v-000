@@ -8,6 +8,7 @@
     <%current_user.favorites.each do |fav|%>
       <div class="col-sm-4">
         <div class="container-fluid text-center"> <a href="/workouts/<%=fav.workout.id%>"> <%=fav.workout.name%><br>
+        <!--I know I can do <%= link_to fav.workout.name, workout_path(fav.workout.id) %> but I want image to be wrapped link too-->
         <img src="<%=fav.workout.photo%>" width="150" height="120" alt="Image"><br></a>
         <%=fav.workout.training_type_name%> || <%=fav.workout.duration%> Minutes</div>
         <br>
@@ -23,6 +24,7 @@
     <% current_user.workouts[0..2].each do |workout| %>
       <div class="col-sm-4">
         <div class="container-fluid text-center"> <a href="/users/<%=current_user.id%>/workouts/<%=workout.id%>"> <%=workout.name%><br>
+        <!--I know I can do <%= link_to workout.name, user_workout_path(current_user,workout) %> but I want image to be wrapped link too-->
         <img src="<%=workout.photo%>" width="150" height="120" alt="Image"><br></a>
         <%=workout.training_type_name%> || <%=workout.duration%> Minutes</div>
         <br>
@@ -32,4 +34,4 @@
   </div>
 </div>
 
-<%= link_to("Add Workout", new_user_workout_path(@user)) %>
+<%= link_to("Add Workout", new_user_workout_path(current_user)) %>

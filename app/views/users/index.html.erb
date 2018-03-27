@@ -1,4 +1,5 @@
 <h2 class="container-fluid text-center">All Users!</h2>
+
 <ul>
   <% @users.each do |user| %>
     <li> <%= link_to user.email, user_path(user)%> </li>

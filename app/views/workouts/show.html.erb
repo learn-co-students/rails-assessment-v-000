@@ -6,7 +6,9 @@
 
 <%= render 'action_options' %>
 
-<iframe class="text-center" width="1000" height="492.5" src="<%=@workout.website %>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="<%=@workout.website %>" allowfullscreen></iframe>
+</div>
 
 <p> Duration: <%=@workout.duration %> </p>
 <p> Difficulty: <%=@workout.difficulty %> </p>

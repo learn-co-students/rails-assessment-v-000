@@ -5,6 +5,7 @@
     <% @newest_users.each do |user| %>
       <div class="col-sm-4">
         <div class="container-fluid text-center"> <a href="/users/<%=user.id%>"> <%=user.email%><br>
+            <!-- Know I could do <%=link_to user.email, user_path(user)%> but wanted image to be wrapped in url-->
         <img src="/images/profile-place-holder.jpg" width="140" height="120" alt="Image"><br></a> </div>
         <br>
         <br>
@@ -20,10 +21,10 @@
       <% @top_views.each do |workout| %>
         <div class="col-sm-4">
           <div class="container-fluid text-center"> <a href="/workouts/<%=workout.id%>"> <%=workout.name%><br>
-            <p><%= workout.views %> Views</p>
             <!--I know I can do <%= link_to workout.name, workout_path(workout) %> but I want image to be wrapped link too-->
-          <img src="<%=workout.photo%>" width="150" height="120" alt="Image"><br></a>
-          <%=workout.training_type_name%> || <%=workout.duration%> Minutes </div>
+            <p><%= workout.views %> Views</p>
+            <img src="<%=workout.photo%>" width="150" height="120" alt="Image"><br></a>
+            <%=workout.training_type_name%> || <%=workout.duration%> Minutes </div>
           <br>
           <br>
         </div>
