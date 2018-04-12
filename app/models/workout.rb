@@ -52,6 +52,18 @@ class Workout < ActiveRecord::Base
     where(category_id: category_id)
   end
 
+  def self.by_difficulty(difficulty)
+    where(difficulty: difficulty)
+  end
+
+  def self.by_min(min_time)
+    where('duration >= ?' , min_time)
+  end
+
+  def self.by_max(max_time)
+    where('duration <= ?' , max_time)
+  end
+
   def self.add_view(workout)
     workout.views +=1
     workout.save

@@ -6,11 +6,18 @@
   <br>
 
   <h3>Filter Workouts:</h3>
+  <div class="fluid">
     <%= form_tag("/workouts", method: "get") do %>
-      <%= select_tag "category", options_from_collection_for_select(@categories, "id", "name"), include_blank: true %>
-      <%= select_tag "training_type", options_from_collection_for_select(@training_types, "id", "name"), include_blank: true %>
+      Body Focus: <%= select_tag "category", options_from_collection_for_select(@categories, "id", "name"), include_blank: true %>
+      Workout Type: <%= select_tag "training_type", options_from_collection_for_select(@training_types, "id", "name"), include_blank: true %>
+      Difficulty Level: <%= select_tag "difficulty", options_for_select([ 1,2,3,4,5]), include_blank: true %>
+      Min Time: <%= text_field_tag 'min', nil, placeholder: 'Minutes', size: 3, include_blank: true%>
+      Max Time: <%= text_field_tag 'max', nil, placeholder: 'Minutes', size: 3, include_blank: true%>
       <%= submit_tag "Filter" %>
     <% end %>
+    <br>
+    <br>
+  </div>
 <%end%>
 
 <div class="container">

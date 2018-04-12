@@ -38,7 +38,7 @@ Workout.create(
 
 Workout.create(
   name: "Quick Pilates",
-  duration: 30,
+  duration: 5,
   difficulty:2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/6609676_orig.png",
@@ -49,7 +49,7 @@ Workout.create(
 
 Workout.create(
   name: "Quick Cardio",
-  duration: 30,
+  duration: 10,
   difficulty:2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/logo-cardio.jpg",
@@ -60,7 +60,7 @@ Workout.create(
 
 Workout.create(
   name: "Yoga",
-  duration: 30,
+  duration: 15,
   difficulty:2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/yoga-transparent.png",
@@ -71,7 +71,7 @@ Workout.create(
 
 Workout.create(
   name: "Low Impact",
-  duration: 30,
+  duration: 20,
   difficulty:2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/lowimpact-logo.png",
@@ -82,7 +82,7 @@ Workout.create(
 
 Workout.create(
   name: "Kickboxing Quickie",
-  duration: 30,
+  duration: 25,
   difficulty:2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/boxing-kickboxing-logo.png",
@@ -105,7 +105,7 @@ Workout.create(
 #User 2
 Workout.create(
   name: "Strength Upper Arms",
-  duration: 30,
+  duration: 35,
   difficulty: 2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/weight-lifting-1297690_960_720.png",
@@ -116,7 +116,7 @@ Workout.create(
 
 Workout.create(
   name: "Beginner Pilates",
-  duration: 30,
+  duration: 40,
   difficulty:2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/6609676_orig.png",
@@ -127,7 +127,7 @@ Workout.create(
 
 Workout.create(
   name: "Cardio 30 Min",
-  duration: 30,
+  duration: 45,
   difficulty:2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/logo-cardio.jpg",
@@ -138,7 +138,7 @@ Workout.create(
 
 Workout.create(
   name: "Morning Yoga",
-  duration: 30,
+  duration: 50,
   difficulty:2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/yoga-transparent.png",
@@ -149,7 +149,7 @@ Workout.create(
 
 Workout.create(
   name: "Stretching",
-  duration: 30,
+  duration: 55,
   difficulty:2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/lowimpact-logo.png",
@@ -171,7 +171,7 @@ Workout.create(
 
 Workout.create(
   name: "HIIT Legs",
-  duration: 30,
+  duration: 35,
   difficulty:2 ,
   website:"https://www.fitnessblender.com/videos/low-impact-cardio-workout-for-beginners-feel-good-cardio",
   photo: "/images/HIIT-Logo.gif",
