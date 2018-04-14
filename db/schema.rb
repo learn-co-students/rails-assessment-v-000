@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180414222334) do
+ActiveRecord::Schema.define(version: 20180414223958) do
+
+  create_table "games", force: :cascade do |t|
+    t.string "title"
+    t.string "game_system"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "guides", force: :cascade do |t|
+    t.string "title"
+    t.integer "user_id"
+    t.integer "game_id"
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
