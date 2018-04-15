@@ -7,7 +7,7 @@ class Game < ApplicationRecord
 
   def unique_game
     if Game.find_by(params[:title]) && Game.find_by(params[:game_system])
-      errors.add(:title, :game_system "already exists in the database")
+      errors.add(:title, "already exists in the database")
     end
   end
 
