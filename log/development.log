@@ -1498,3 +1498,594 @@ Processing by WelcomeController#home as HTML
 Completed 200 OK in 19ms (Views: 17.9ms)
 
 
+Started GET "/" for 24.144.29.208 at 2018-04-16 19:44:36 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 592ms (Views: 574.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 24.144.29.208 at 2018-04-16 19:44:39 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+Completed 406 Not Acceptable in 105ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (SessionsController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.6) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.6) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.6) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+rack (2.0.4) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.4) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.0) lib/web_console/middleware.rb:137:in `call_app'
+web-console (3.6.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+thin (1.7.2) lib/thin/connection.rb:86:in `block in pre_process'
+thin (1.7.2) lib/thin/connection.rb:84:in `catch'
+thin (1.7.2) lib/thin/connection.rb:84:in `pre_process'
+thin (1.7.2) lib/thin/connection.rb:53:in `process'
+thin (1.7.2) lib/thin/connection.rb:39:in `receive_data'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run_machine'
+eventmachine (1.2.5) lib/eventmachine.rb:194:in `run'
+thin (1.7.2) lib/thin/backends/base.rb:73:in `start'
+thin (1.7.2) lib/thin/server.rb:162:in `start'
+rack (2.0.4) lib/rack/handler/thin.rb:22:in `run'
+rack (2.0.4) lib/rack/server.rb:297:in `start'
+railties (5.1.6) lib/rails/commands/server/server_command.rb:44:in `start'
+railties (5.1.6) lib/rails/commands/server/server_command.rb:135:in `block in perform'
+railties (5.1.6) lib/rails/commands/server/server_command.rb:130:in `tap'
+railties (5.1.6) lib/rails/commands/server/server_command.rb:130:in `perform'
+thor (0.20.0) lib/thor/command.rb:27:in `run'
+thor (0.20.0) lib/thor/invocation.rb:126:in `invoke_command'
+thor (0.20.0) lib/thor.rb:387:in `dispatch'
+railties (5.1.6) lib/rails/command/base.rb:63:in `perform'
+railties (5.1.6) lib/rails/command.rb:44:in `invoke'
+railties (5.1.6) lib/rails/commands.rb:16:in `<top (required)>'
+bin/rails:9:in `require'
+bin/rails:9:in `<top (required)>'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `load'
+spring (2.0.2) lib/spring/client/rails.rb:28:in `call'
+spring (2.0.2) lib/spring/client/command.rb:7:in `call'
+spring (2.0.2) lib/spring/client.rb:30:in `run'
+spring (2.0.2) bin/spring:49:in `<top (required)>'
+spring (2.0.2) lib/spring/binstub.rb:31:in `load'
+spring (2.0.2) lib/spring/binstub.rb:31:in `<top (required)>'
+/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:70:in `require'
+/usr/local/rvm/rubies/ruby-2.3.1/lib/ruby/site_ruby/2.3.0/rubygems/core_ext/kernel_require.rb:70:in `require'
+bin/spring:15:in `<top (required)>'
+bin/rails:3:in `load'
+bin/rails:3:in `<main>'
+Started GET "/" for 24.144.29.208 at 2018-04-16 19:45:27 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.144.29.208 at 2018-04-16 19:51:18 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 401ms (Views: 391.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 24.144.29.208 at 2018-04-16 19:51:22 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial layout/_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/keithadams007-58645/code/labs/rails-assessment-v-000/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.4.3/app/views"
+):
+    1: <%= form_for @user do |f| %>
+    2:   <%= render 'layout/form' %>
+    3:   <% end %>
+  
+app/views/users/new.html.erb:2:in `block in _app_views_users_new_html_erb___810546419934805826_61156200'
+app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___810546419934805826_61156200'
+Started GET "/users/new" for 24.144.29.208 at 2018-04-16 19:51:38 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_form.html.erb (64.0ms)
+  Rendered users/new.html.erb within layouts/application (65.8ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x000000074a4e38>:0x00000005934f68>):
+    1: <%= f.label :user_name %></br>
+    2: <%= f.text_field :user_name %></br>
+    3: <%= f.label :password %></br>
+    4: <%= f.password_field :password %></br>
+  
+app/views/layouts/_form.html.erb:1:in `_app_views_layouts__form_html_erb___4523015200252721310_46500020'
+app/views/users/new.html.erb:2:in `block in _app_views_users_new_html_erb___810546419934805826_46772620'
+app/views/users/new.html.erb:1:in `_app_views_users_new_html_erb___810546419934805826_46772620'
+Started GET "/" for 24.144.29.208 at 2018-04-16 19:54:19 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 24.144.29.208 at 2018-04-16 19:54:21 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_form.html.erb (39.9ms)
+  Rendered users/new.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 24.144.29.208 at 2018-04-16 19:54:30 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TJHm8dyH4dU4oJJc2EfWYn+Ei3ZHx/8dG7CREYqSu8yO0TXtqnTdCWzZjI4sjQ5MwxKBMOG8a4C0D4jNCGU+tQ==", "user"=>{"user_name"=>"randall", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x00000005421b70>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:8:in `create'
+Started POST "/users" for 24.144.29.208 at 2018-04-16 19:56:12 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C33WAze6QLFS8tKA2+xYe8PIyTkCXuvr9hb3wz+CIGBYZ6ulOWfCF5XxyriVOiRcBOrqDg/P50fGXjbQhYOD+Q==", "user"=>{"user_name"=>"randall", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."user_name" = ? LIMIT ?[0m  [["user_name", "randall"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."user_name" = ? LIMIT ?[0m  [["user_name", "randall"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("user_name", "password_digest") VALUES (?, ?)[0m  [["user_name", "randall"], ["password_digest", "$2a$10$ujMPp55oQ7umWhcWOxXPzOlDZNw5q7Epe1GUv4536gasI8byN3vRm"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://159.203.80.114:30000/users/2
+Completed 302 Found in 282ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/users/2" for 24.144.29.208 at 2018-04-16 19:56:12 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 26ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 24.144.29.208 at 2018-04-16 19:56:19 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SIhnsWLckdZU2NYzbcJPxzRwj2oIK3CSC4C4Q1ugz9cbkhoXbAETcJPbzgsjFDPg81KsXQW6fD47yHlQ4aFsTg=="}
+Redirected to http://159.203.80.114:30000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.144.29.208 at 2018-04-16 19:56:19 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 24.144.29.208 at 2018-04-16 19:56:20 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_form.html.erb (1.9ms)
+  Rendered sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 24.144.29.208 at 2018-04-16 19:56:37 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T4m/CfQTNUNHf5dD1GcXiX91S7IREs/YRhVgbGdAHJH1QPcBPwZb71I4lOX2W8blWqXd3FmaEvJGasI7szjWQQ==", "user"=>{"user_name"=>"randall", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."user_name" = ? LIMIT ?[0m  [["user_name", "randall"], ["LIMIT", 1]]
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_form.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 225ms (Views: 75.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 24.144.29.208 at 2018-04-16 19:56:47 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dhi5RND+p9bd5vm3HFTANXGGr8QOO0iAnToPLY5h6kwMiVvZ29NJGPMjWCucT5+2JZaLkoOGx2iMTdzc2Kkouw==", "user"=>{"user_name"=>"randall", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."user_name" = ? LIMIT ?[0m  [["user_name", "randall"], ["LIMIT", 1]]
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_form.html.erb (1.8ms)
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 217ms (Views: 70.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 24.144.29.208 at 2018-04-16 20:02:24 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 470ms (Views: 408.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 24.144.29.208 at 2018-04-16 20:02:27 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_form.html.erb (17.3ms)
+  Rendered sessions/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 57ms (Views: 36.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/signin" for 24.144.29.208 at 2018-04-16 20:05:22 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 13ms
+
+
+  
+NoMethodError (undefined method `build' for User (call 'User.connection' to establish a connection):Class):
+  
+app/controllers/sessions_controller.rb:4:in `new'
+Started GET "/" for 24.144.29.208 at 2018-04-16 20:05:51 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 80ms (Views: 77.5ms)
+
+
+Started GET "/signin" for 24.144.29.208 at 2018-04-16 20:05:53 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 7ms
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user do |f| %>
+    2:   <%= render :partial => 'layouts/form', :locals=>{:f=>f} %>
+    3:   <% end %>
+  
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb___2748932185578499020_53287440'
+Started GET "/" for 24.144.29.208 at 2018-04-16 20:07:26 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 63ms (Views: 61.9ms)
+
+
+Started GET "/signin" for 24.144.29.208 at 2018-04-16 20:07:28 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 15ms
+
+
+  
+NoMethodError (undefined method `build' for User (call 'User.connection' to establish a connection):Class):
+  
+app/controllers/sessions_controller.rb:4:in `new'
+Started GET "/signin" for 24.144.29.208 at 2018-04-16 20:09:16 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_form.html.erb (2.4ms)
+  Rendered sessions/new.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 93ms (Views: 77.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 24.144.29.208 at 2018-04-16 20:12:29 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 401ms (Views: 391.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 24.144.29.208 at 2018-04-16 20:12:31 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_form.html.erb (61.9ms)
+  Rendered sessions/new.html.erb within layouts/application (65.1ms)
+Completed 200 OK in 99ms (Views: 84.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/signin" for 24.144.29.208 at 2018-04-16 20:12:46 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/FGvBHuk+rVeiWU+DNmVcacrA0zVRUToVHnMDeZxWCIwLFhA4x/df8QFZUbXreVF7+k5ssaRqPf099IWy+I0UA==", "user"=>{"user_name"=>"randall", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::MissingTemplate (Missing template session/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/keithadams007-58645/code/labs/rails-assessment-v-000/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.4.3/app/views"
+):
+  
+app/controllers/sessions_controller.rb:18:in `create'
+Started POST "/signin" for 24.144.29.208 at 2018-04-16 20:14:04 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7T9tjM+i6WFdCAodLsvaJ9DCExoBlAVn1BthW8xwlreXro8RxI8Hr3PNq4Gu0IWkhNI3TIwpio/FbLKqmrhUQA==", "user"=>{"user_name"=>"randall", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::MissingTemplate (Missing template session/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/keithadams007-58645/code/labs/rails-assessment-v-000/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.1/gems/devise-4.4.3/app/views"
+):
+  
+app/controllers/sessions_controller.rb:18:in `create'
+Started POST "/signin" for 24.144.29.208 at 2018-04-16 20:14:16 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7T9tjM+i6WFdCAodLsvaJ9DCExoBlAVn1BthW8xwlreXro8RxI8Hr3PNq4Gu0IWkhNI3TIwpio/FbLKqmrhUQA==", "user"=>{"user_name"=>"randall", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @user, url: signin_path do |f| %>
+    2:   <%= render :partial => 'layouts/form', :locals=>{:f=>f} %>
+    3:   <% end %>
+  
+app/views/sessions/new.html.erb:1:in `_app_views_sessions_new_html_erb__1384130127474683158_63512580'
+app/controllers/sessions_controller.rb:18:in `create'
+Started POST "/signin" for 24.144.29.208 at 2018-04-16 20:14:55 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7T9tjM+i6WFdCAodLsvaJ9DCExoBlAVn1BthW8xwlreXro8RxI8Hr3PNq4Gu0IWkhNI3TIwpio/FbLKqmrhUQA==", "user"=>{"user_name"=>"randall", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"7T9tjM+i6WFdCAodLsvaJ9DCExoBlAVn1BthW8xwlreXro8RxI8Hr3PNq4Gu0IWkhNI3TIwpio/FbLKqmrhUQA==", "user"=>{"user_name"=>"randall", "password"=>"randall"}, "commit"=>"Create User", "controller"=>"sessions", "action"=>"create"} permitted: false>):
+  
+app/controllers/sessions_controller.rb:13:in `create'
+Started POST "/signin" for 24.144.29.208 at 2018-04-16 20:15:40 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7T9tjM+i6WFdCAodLsvaJ9DCExoBlAVn1BthW8xwlreXro8RxI8Hr3PNq4Gu0IWkhNI3TIwpio/FbLKqmrhUQA==", "user"=>{"user_name"=>"randall", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.1ms)
+
+
+  
+RuntimeError (nil):
+  
+app/controllers/sessions_controller.rb:14:in `create'
+Started POST "/signin" for 24.144.29.208 at 2018-04-16 20:16:09 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7T9tjM+i6WFdCAodLsvaJ9DCExoBlAVn1BthW8xwlreXro8RxI8Hr3PNq4Gu0IWkhNI3TIwpio/FbLKqmrhUQA==", "user"=>{"user_name"=>"randall", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"7T9tjM+i6WFdCAodLsvaJ9DCExoBlAVn1BthW8xwlreXro8RxI8Hr3PNq4Gu0IWkhNI3TIwpio/FbLKqmrhUQA==", "user"=>{"user_name"=>"randall", "password"=>"randall"}, "commit"=>"Create User", "controller"=>"sessions", "action"=>"create"} permitted: false>):
+  
+app/controllers/sessions_controller.rb:13:in `create'
+Started POST "/signin" for 24.144.29.208 at 2018-04-16 20:16:49 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7T9tjM+i6WFdCAodLsvaJ9DCExoBlAVn1BthW8xwlreXro8RxI8Hr3PNq4Gu0IWkhNI3TIwpio/FbLKqmrhUQA==", "user"=>{"user_name"=>"randall", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = ? LIMIT ?[0m  [["user_name", "randall"], ["LIMIT", 1]]
+Redirected to http://159.203.80.114:30000/users/2
+Completed 302 Found in 209ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/users/2" for 24.144.29.208 at 2018-04-16 20:16:49 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/logout" for 24.144.29.208 at 2018-04-16 20:16:55 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/R7pOJMIUSzSBZN8L+Dv0rh1Rfj6PnT9DzNsO5CEHU+HjwulmCW/4vzAMuCv+7BR7GVhrneD+xUeRL/KxkzfuA=="}
+Redirected to http://159.203.80.114:30000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.144.29.208 at 2018-04-16 20:16:55 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 24.144.29.208 at 2018-04-16 20:16:56 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_form.html.erb (2.3ms)
+  Rendered sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/signin" for 24.144.29.208 at 2018-04-16 20:17:01 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0H096isE6Xmi5Q4Uyro1duBsOvibqnaXQ/THKHsySLB3vOV5l6zz19yNo7qvA+na9oZYEwNKL/+gQALxM/2Fog==", "user"=>{"user_name"=>"randall", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = ? LIMIT ?[0m  [["user_name", "randall"], ["LIMIT", 1]]
+Redirected to http://159.203.80.114:30000/users/2
+Completed 302 Found in 217ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for 24.144.29.208 at 2018-04-16 20:17:02 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/logout" for 24.144.29.208 at 2018-04-16 20:17:03 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hSHeTbNuv51+kCyC+LnMx39Lg2ueSt+RK2k2cottRqDC640E4kAhjlRz5vUT5DDEMBzYnm6hZSskr8resP+82w=="}
+Redirected to http://159.203.80.114:30000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.144.29.208 at 2018-04-16 20:17:03 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 24.144.29.208 at 2018-04-16 20:18:46 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_form.html.erb (14.6ms)
+  Rendered sessions/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 489ms (Views: 466.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 24.144.29.208 at 2018-04-16 20:18:47 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 24.144.29.208 at 2018-04-16 20:18:49 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_form.html.erb (1.6ms)
+  Rendered sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for 24.144.29.208 at 2018-04-16 20:19:02 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_form.html.erb (1.6ms)
+  Rendered sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 72ms (Views: 70.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.144.29.208 at 2018-04-16 20:19:05 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 24.144.29.208 at 2018-04-16 20:19:06 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered layouts/_form.html.erb (1.2ms)
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
