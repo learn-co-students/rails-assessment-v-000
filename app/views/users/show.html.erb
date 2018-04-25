@@ -7,11 +7,9 @@
 
 <h4>View or Update your own guides</h4>
   <% if @user.guides.empty?  %>
-  <p>You currently have not made any guides</p>
+    <p>You currently have not made any guides</p>
   <% else %>
-  <% @user.guides.each do |guide| %>
-    <p><%= link_to "#{guide.title}", game_guide(guide) %></p>
+    <% @user.guides.each do |guide| %>
+      <p><%= link_to "#{guide.title}", game_guide_path(guide.game, guide) %></p>
+      <% end %>
   <% end %>
-
-
-<% end %>

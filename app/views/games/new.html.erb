@@ -1,0 +1,9 @@
+<h1>Add a game to our database!</h1>
+
+<%= form_for @game do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %></br>
+  <%= f.label :game_system %>
+  <%= f.text_field :game_system %></br>
+  <%= f.submit %>
+  <% end %>

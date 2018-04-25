@@ -1,8 +1,10 @@
 <h1>Games Database</h1>
+<h2>Add a <%= link_to "game", new_game_path %> to our database.</h2>
+
 <h2>Search for a game!</h2>
-  <%= form_tag(games_path) do %>
-    <%= text_field_tag :game %>
-    <%= submit_tag "Search" %>
+  <%= form_tag games_path, method: :get do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", name: nil %>
     <% end %>
 
   </br>
@@ -10,7 +12,7 @@
 <h2>Select a game to view its guides or to create a guide for that game.</h2>
   <ul>
     <% @games.each do |game| %>
-      <li>Title: <%= game.title %></li>
+      <li>Title: <%= link_to game.title, game_path(game) %></li>
       <li>Game System: <%= game.game_system %></li>
     <% end %>
   </ul>

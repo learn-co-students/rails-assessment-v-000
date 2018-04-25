@@ -3,21 +3,17 @@ class Game < ApplicationRecord
   has_many :users, through: :guides
   validates :title, presence: true
   validates :game_system, presence: true
-  validate :unique_game
-
-  def unique_game
-    if Game.find_by(params[:title]) && Game.find_by(params[:game_system])
-      errors.add(:title, "already exists in the database")
-    end
-  end
+  validates :title, uniqueness: { scope: [:game_system] }
 
   def self.search(search)
     if search
-      find(:all, :conditions => ['title LIKE ?', "%#{search}%"])
+      where('title LIKE ?', "%#{search}%")
     else
-      find(:all)
+      all
     end
   end
+
+
 
 
 end

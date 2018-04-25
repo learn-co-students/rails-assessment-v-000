@@ -13,6 +13,7 @@
     <%= yield %>
   </br>
     <% if logged_in? %>
+      <%= link_to "User Home Page", user_path(current_user.id) %></br>
       <%= link_to "Log Out", logout_path, method: :delete %>
     <% end %>
   </body>

@@ -1,9 +1,13 @@
-<h1>Welcome to the homepage for <%= @game.title %>!</h1>
+<h1>Welcome to the homepage for <%= @game.title %> for the <%= @game.game_system %>!</h1>
 
 <h2>Select a Guide to view or <%= link_to "create", new_game_guide_path(@game) %> a new guide.</h2>
 
  <ul>
-   <% @game.guides.each do |guide| %>
-    <li><%= link_to guide.title, game_guide_path %></li>
+    <% if @game.guides.empty? %>
+      This game does not currently have any guides.
+    <% else %>
+      <% @game.guides.each do |guide| %>
+        <li><%= link_to guide.title, game_guide_path %></li>
+      <% end %>
    <% end %>
  </ul>
