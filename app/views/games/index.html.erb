@@ -1,0 +1,16 @@
+<h1>Games Database</h1>
+<h2>Search for a game!</h2>
+  <%= form_tag('/search_results') do %>
+    <%= text_field_tag(:game) %>
+    <%= submit_tag("Search") %>
+    <% end %>
+
+  </br>
+
+<h2>Select a game to view its guides or to create a guide for that game.</h2>
+  <ul>
+    <% @games.each do |game| %>
+      <li>Title: <%= game.title %></li>
+      <li>Game System: <%= game.game_system %></li>
+    <% end %>
+  </ul>
