@@ -17,5 +17,8 @@ def self.find_or_create_by_omniauth(auth_hash)
   end
 end
 
+def has_guides?
+  @user.guides
+end
 
 end

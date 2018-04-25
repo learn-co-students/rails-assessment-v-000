@@ -1,1 +1,17 @@
-hello<%= @user.user_name %>
+<h1>Hello, <%= @user.user_name %>!</h1></br>
+
+<h2>What would you like to do?</h2>
+
+<h4>View our <%= link_to "games", games_path %> database and search for a game.</h4>
+<p>After you select a game, you can view the guides for that game, as well as create your own!</p></br>
+
+<h4>View or Update your own guides</h4>
+  <% if @user.guides.empty?  %>
+  <p>You currently have not made any guides</p>
+  <% else %>
+  <% @user.guides.each do |guide| %>
+    <p><%= link_to "#{guide.title}", game_guide(guide) %></p>
+  <% end %>
+
+
+<% end %>
