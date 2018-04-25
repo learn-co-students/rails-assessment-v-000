@@ -1,8 +1,8 @@
 <h1>Games Database</h1>
 <h2>Search for a game!</h2>
-  <%= form_tag('/search_results') do %>
-    <%= text_field_tag(:game) %>
-    <%= submit_tag("Search") %>
+  <%= form_tag(games_path) do %>
+    <%= text_field_tag :game %>
+    <%= submit_tag "Search" %>
     <% end %>
 
   </br>
