@@ -5,3 +5,10 @@
 <p><%= @guide.body %></p>
 
 Made by: <%= @guide.user.user_name %>
+
+</br>
+
+  <% if current_user.id == @guide.user.id %>
+    <%= link_to "Update this guide", edit_game_guide_path %></br>
+    <%= link_to "Delete this guide", game_guide_path, method: :delete %>
+    <% end %>
