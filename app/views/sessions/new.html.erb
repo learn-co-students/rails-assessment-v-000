@@ -1,3 +1,7 @@
+<% if flash[:notice] %>
+  <%= flash[:notice] %>
+<% end %>
+
 <%= form_for @user, url: signin_path do |f| %>
   <%= render :partial => 'layouts/form_for_users', :locals=>{:f=>f} %>
   <%= f.submit "Sign in" %>

@@ -1,4 +1,4 @@
 <%= f.label :user_name %></br>
-<%= f.text_field :user_name %></br>
+<%= f.text_field :user_name, :placeholder => (@user.errors.full_messages_for(:user_name).first || "Enter a User name") %></br>
 <%= f.label :password %></br>
 <%= f.password_field :password %></br>

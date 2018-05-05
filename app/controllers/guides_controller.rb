@@ -21,11 +21,9 @@ class GuidesController < ApplicationController
       @guide.save
       redirect_to game_guide_path(@game, @guide)
     else
-      redirect_to new_game_guide_path(@game)
+      render 'guides/new'
     end
   end
-
-
 
     private
 

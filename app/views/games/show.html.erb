@@ -7,7 +7,7 @@
       This game does not currently have any guides.
     <% else %>
       <% @game.guides.each do |guide| %>
-        <li><%= link_to guide.title, game_guide_path %></li>
+        <li><%= link_to guide.title, game_guide_path(@game, guide) %></li>
       <% end %>
    <% end %>
  </ul>

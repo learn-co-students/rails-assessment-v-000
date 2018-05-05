@@ -15,6 +15,8 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         redirect_to user_path(user.id)
       else
+        @user = User.new
+        flash[:notice] = "User not found, Please try again."
         render 'sessions/new'
       end
     end

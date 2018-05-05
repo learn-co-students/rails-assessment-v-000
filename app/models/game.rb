@@ -3,7 +3,7 @@ class Game < ApplicationRecord
   has_many :users, through: :guides
   validates :title, presence: true
   validates :game_system, presence: true
-  validates :title, uniqueness: { scope: [:game_system] }
+  validates :title, uniqueness: true
 
   def self.search(search)
     if search

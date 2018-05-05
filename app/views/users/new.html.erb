@@ -1,3 +1,11 @@
+<ul>
+  <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+</ul>
+
+</br>
+
 <%= form_for @user do |f| %>
   <%= render :partial => 'layouts/form_for_users', :locals=>{:f=>f} %>
   <%= f.submit %>

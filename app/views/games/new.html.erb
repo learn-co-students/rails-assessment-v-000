@@ -1,3 +1,9 @@
+<ul>
+  <% @game.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+
 <h1>Add a game to our database!</h1>
 
 <%= form_for @game do |f| %>
