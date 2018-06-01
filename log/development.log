@@ -5426,3 +5426,469 @@ Processing by GuidesController#new as HTML
 Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 24.144.29.208 at 2018-05-30 18:52:46 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 171ms (Views: 163.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 24.144.29.208 at 2018-05-30 18:52:50 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/github" for 24.144.29.208 at 2018-05-30 18:52:50 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/github" for 24.144.29.208 at 2018-05-30 18:53:27 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/github" for 24.144.29.208 at 2018-05-30 18:53:28 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/signin" for 24.144.29.208 at 2018-05-30 18:53:48 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_form_for_users.html.erb (15.9ms)
+  Rendered sessions/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 53ms (Views: 35.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/auth/github" for 24.144.29.208 at 2018-05-30 18:54:12 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/github" for 24.144.29.208 at 2018-05-30 18:54:13 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/signin" for 24.144.29.208 at 2018-05-30 18:55:30 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_form_for_users.html.erb (1.7ms)
+  Rendered sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 50ms (Views: 26.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/signin" for 24.144.29.208 at 2018-05-30 18:55:38 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"paXKO7EA1y33u0U3PZPde/zr3phYJiytRNuQfUbGIvJJ5W/y+HR4GH4Sqj6dlWlI5WAFhYtFY2S66gU9BWd/kg==", "user"=>{"user_name"=>"Randall", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = ? LIMIT ?[0m  [["user_name", "Randall"], ["LIMIT", 1]]
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_form_for_users.html.erb (1.9ms)
+  Rendered sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 38ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signin" for 24.144.29.208 at 2018-05-30 18:55:41 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_form_for_users.html.erb (1.5ms)
+  Rendered sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.144.29.208 at 2018-05-30 18:55:42 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 24.144.29.208 at 2018-06-01 12:57:53 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#home as HTML
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 1159ms (Views: 1121.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/github" for 24.144.29.208 at 2018-06-01 12:58:00 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/auth/github" for 24.144.29.208 at 2018-06-01 12:58:00 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/signin" for 24.144.29.208 at 2018-06-01 12:58:26 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered layouts/_form_for_users.html.erb (119.0ms)
+  Rendered sessions/new.html.erb within layouts/application (142.2ms)
+Completed 200 OK in 368ms (Views: 252.2ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/signin" for 24.144.29.208 at 2018-06-01 12:58:33 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bdiK94CcXaEshTkxQEounzqU6BqcTc39fthIw4iTxfO4zhsB2Uxys6NrAw13GDYoCwdrGQKNt6bjs2XLWG1xBA==", "user"=>{"user_name"=>"randall", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."user_name" = ? LIMIT ?[0m  [["user_name", "randall"], ["LIMIT", 1]]
+Redirected to http://192.241.155.248:55716/users/2
+Completed 302 Found in 433ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for 24.144.29.208 at 2018-06-01 12:58:33 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGuide Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "guides" WHERE "guides"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (200.0ms)
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 415ms (Views: 391.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/games" for 24.144.29.208 at 2018-06-01 12:58:37 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (1.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered games/index.html.erb within layouts/application (1939.2ms)
+Completed 500 Internal Server Error in 2002ms (ActiveRecord: 4.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `most_popular_game' for #<#<Class:0x0000000426b958>:0x000000042fb490>):
+    10:   </br>
+    11: 
+    12: <h2>Most Popluar Game</h2>
+    13:  <%= most_popular_game %>
+    14: 
+    15: 
+    16: <h2>Select a game to view its guides or to create a guide for that game.</h2>
+  
+app/views/games/index.html.erb:13:in `_app_views_games_index_html_erb___895143193061973197_34851860'
+Started GET "/games" for 24.144.29.208 at 2018-06-01 13:05:21 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (4.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" LEFT OUTER JOIN "guides" ON "guides"."game_id" = "games"."id" GROUP BY "games"."id" ORDER BY COUNT(guides.id) DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (24.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 395ms (Views: 203.1ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/games/1" for 24.144.29.208 at 2018-06-01 13:05:27 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  [1m[36mGuide Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "guides" WHERE "guides"."game_id" = ? LIMIT ?[0m  [["game_id", 1], ["LIMIT", 1]]
+  [1m[36mGuide Load (0.3ms)[0m  [1m[34mSELECT "guides".* FROM "guides" WHERE "guides"."game_id" = ?[0m  [["game_id", 1]]
+  Rendered games/show.html.erb within layouts/application (120.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 228ms (Views: 206.5ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/games/3" for 24.144.29.208 at 2018-06-01 13:05:30 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGame Load (1.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  [1m[36mGuide Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "guides" WHERE "guides"."game_id" = ? LIMIT ?[0m  [["game_id", 3], ["LIMIT", 1]]
+  [1m[36mGuide Load (0.3ms)[0m  [1m[34mSELECT "guides".* FROM "guides" WHERE "guides"."game_id" = ?[0m  [["game_id", 3]]
+  Rendered games/show.html.erb within layouts/application (21.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 146ms (Views: 129.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/games/3/guides/new" for 24.144.29.208 at 2018-06-01 13:05:33 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GuidesController#new as HTML
+  Parameters: {"game_id"=>"3"}
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering guides/new.html.erb within layouts/application
+  Rendered layouts/_form_for_guides.html.erb (34.2ms)
+  Rendered guides/new.html.erb within layouts/application (46.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 189ms (Views: 174.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/games/3/guides" for 24.144.29.208 at 2018-06-01 13:05:43 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GuidesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z8sORf/8u3kspk3uIMpvuZMP1jxCOP7WGoBHtfV6+rgzC+3E9FU9Vnc5taMrblsJkfPUbCNtoTVoUwK0Z4VnPQ==", "guide"=>{"title"=>"NEW GUIDE 2", "body"=>"new stuff", "user_id"=>"2", "game_id"=>"3"}, "commit"=>"Create Guide", "game_id"=>"3"}
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGuide Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "guides" WHERE "guides"."title" = ? LIMIT ?[0m  [["title", "NEW GUIDE 2"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE Guide Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "guides" WHERE "guides"."title" = ? LIMIT ?[0m  [["title", "NEW GUIDE 2"], ["LIMIT", 1]]
+  [1m[35mSQL (10.5ms)[0m  [1m[32mINSERT INTO "guides" ("title", "user_id", "game_id", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "NEW GUIDE 2"], ["user_id", 2], ["game_id", 3], ["body", "new stuff"], ["created_at", "2018-06-01 13:05:43.643053"], ["updated_at", "2018-06-01 13:05:43.643053"]]
+  [1m[35m (20.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://192.241.155.248:55716/games/3/guides/4
+Completed 302 Found in 112ms (ActiveRecord: 37.6ms)
+
+
+Started GET "/games/3/guides/4" for 24.144.29.208 at 2018-06-01 13:05:43 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GuidesController#show as HTML
+  Parameters: {"game_id"=>"3", "id"=>"4"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mGuide Load (0.7ms)[0m  [1m[34mSELECT  "guides".* FROM "guides" WHERE "guides"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering guides/show.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered guides/show.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 200ms (Views: 157.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/2" for 24.144.29.208 at 2018-06-01 13:05:46 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGuide Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "guides" WHERE "guides"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[36mGuide Load (2.7ms)[0m  [1m[34mSELECT "guides".* FROM "guides" WHERE "guides"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (40.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 208ms (Views: 198.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/games" for 24.144.29.208 at 2018-06-01 13:05:47 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" LEFT OUTER JOIN "guides" ON "guides"."game_id" = "games"."id" GROUP BY "games"."id" ORDER BY COUNT(guides.id) DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (13.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 138ms (Views: 116.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/games/3" for 24.144.29.208 at 2018-06-01 13:05:51 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGame Load (2.8ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  [1m[36mGuide Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "guides" WHERE "guides"."game_id" = ? LIMIT ?[0m  [["game_id", 3], ["LIMIT", 1]]
+  [1m[36mGuide Load (0.2ms)[0m  [1m[34mSELECT "guides".* FROM "guides" WHERE "guides"."game_id" = ?[0m  [["game_id", 3]]
+  Rendered games/show.html.erb within layouts/application (29.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 147ms (Views: 134.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/games/2" for 24.144.29.208 at 2018-06-01 13:05:54 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mGame Load (1.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering games/show.html.erb within layouts/application
+  [1m[36mGuide Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "guides" WHERE "guides"."game_id" = ? LIMIT ?[0m  [["game_id", 2], ["LIMIT", 1]]
+  Rendered games/show.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 121ms (Views: 111.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/2" for 24.144.29.208 at 2018-06-01 13:15:26 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGuide Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "guides" WHERE "guides"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[36mGuide Load (5.5ms)[0m  [1m[34mSELECT "guides".* FROM "guides" WHERE "guides"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (269.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 1379ms (Views: 1241.1ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/games" for 24.144.29.208 at 2018-06-01 13:15:29 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (6.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  Rendered games/index.html.erb within layouts/application (1898.3ms)
+Completed 500 Internal Server Error in 1929ms (ActiveRecord: 8.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game_most_popular_path' for #<#<Class:0x007fe5c5e05e40>:0x007fe5c5ded818>
+Did you mean?  games_most_popular_path
+               games_most_popular_url):
+    10:   </br>
+    11: 
+    12: <h2>Most Popular Game</h2>
+    13:  <%= link_to "Most Popular game", game_most_popular_path %>
+    14: 
+    15: 
+    16: <h2>Select a game to view its guides or to create a guide for that game.</h2>
+  
+app/views/games/index.html.erb:13:in `_app_views_games_index_html_erb__2107164949853938501_70312422029840'
+Started GET "/users/2" for 24.144.29.208 at 2018-06-01 13:17:30 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGuide Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "guides" WHERE "guides"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[36mGuide Load (6.7ms)[0m  [1m[34mSELECT "guides".* FROM "guides" WHERE "guides"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mGame Load (3.9ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (281.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 1334ms (Views: 1191.1ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/games" for 24.144.29.208 at 2018-06-01 13:17:35 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (22.0ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 155ms (Views: 140.5ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/games/most_popular" for 24.144.29.208 at 2018-06-01 13:17:37 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"most_popular"}
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 12ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Game with 'id'=most_popular):
+  
+app/controllers/games_controller.rb:9:in `show'
+Started GET "/games" for 24.144.29.208 at 2018-06-01 13:17:49 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (1.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (19.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 225ms (Views: 213.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/games/most_popular" for 24.144.29.208 at 2018-06-01 13:18:18 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"most_popular"}
+  [1m[36mGame Load (6.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 58ms (ActiveRecord: 14.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Game with 'id'=most_popular):
+  
+app/controllers/games_controller.rb:14:in `show'
+Started GET "/games" for 24.144.29.208 at 2018-06-01 13:18:41 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (63.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 271ms (Views: 220.3ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/games/most_popular" for 24.144.29.208 at 2018-06-01 13:19:19 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"most_popular"}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 71ms (ActiveRecord: 11.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Game with 'id'=most_popular):
+  
+app/controllers/games_controller.rb:14:in `show'
+Started GET "/games" for 24.144.29.208 at 2018-06-01 13:19:31 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (1.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (81.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 294ms (Views: 272.0ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/games/most_popular" for 24.144.29.208 at 2018-06-01 13:20:24 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"most_popular"}
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 46ms (ActiveRecord: 10.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Game with 'id'=most_popular):
+  
+app/controllers/games_controller.rb:12:in `show'
+Started GET "/games" for 24.144.29.208 at 2018-06-01 13:20:39 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (52.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 225ms (Views: 209.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/games/new" for 24.144.29.208 at 2018-06-01 13:25:01 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (70.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 288ms (Views: 211.7ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/users/2" for 24.144.29.208 at 2018-06-01 13:25:03 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGuide Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "guides" WHERE "guides"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[36mGuide Load (0.2ms)[0m  [1m[34mSELECT "guides".* FROM "guides" WHERE "guides"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (128.0ms)
+  [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 245ms (Views: 227.4ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/games" for 24.144.29.208 at 2018-06-01 13:25:04 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  Rendered games/index.html.erb within layouts/application (15.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 118ms (Views: 106.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/games/most_popular" for 24.144.29.208 at 2018-06-01 13:25:05 +0000
+Cannot render console from 24.144.29.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#most_popular as HTML
+  [1m[36mGame Load (3.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" LEFT OUTER JOIN "guides" ON "guides"."game_id" = "games"."id" GROUP BY "games"."id" ORDER BY COUNT(guides.id) DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering games/most_popular.html.erb within layouts/application
+  Rendered games/most_popular.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 153ms (Views: 91.6ms | ActiveRecord: 3.9ms)
+
+

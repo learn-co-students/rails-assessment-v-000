@@ -3,7 +3,11 @@ class GamesController < ApplicationController
   def index
     @games = Game.search(params[:search])
   end
-
+  
+  def most_popular
+    @most_popular_game = Game.most_popular_game
+  end   
+    
   def show
     @game = Game.find(params[:id])
   end
@@ -21,7 +25,6 @@ class GamesController < ApplicationController
       render :new
     end
   end
-
 
 
 

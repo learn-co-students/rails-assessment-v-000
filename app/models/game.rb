@@ -13,7 +13,10 @@ class Game < ApplicationRecord
     end
   end
 
-
+  def self.most_popular_game
+    left_joins(:guides).group(:id).order('COUNT(guides.id) DESC').first
+  end
+  
 
 
 end
