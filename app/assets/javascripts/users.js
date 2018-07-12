@@ -1,6 +1,10 @@
-$(function){
+var random = "GUB"
+
+
+
+$(function(){
   $("a.user_guides").on("click", function(e){
-    alert("its a start")
+    alert("trying")
     e.preventDefault();
   })
-}
+})
