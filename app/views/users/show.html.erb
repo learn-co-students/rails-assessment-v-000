@@ -9,7 +9,8 @@
   <% if @user.guides.empty?  %>
     <p>You currently have not made any guides</p>
   <% else %>
-    <% @user.guides.each do |guide| %>
-      <p><%= link_to "#{guide.title}", game_guide_path(guide.game, guide) %></p>
-      <% end %>
+  <a href="<%= @user.id %>/guides" class="user_guides">View a list of your guides.</a>
+  <ol class="show_user_guides">
+  </ol>
   <% end %>
+
