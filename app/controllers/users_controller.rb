@@ -19,6 +19,11 @@ class UsersController < ApplicationController
      @user = User.find(session[:user_id])
    end
 
+   def guides
+     @user = User.find(params[:id])
+     render json: @user
+   end
+
    private
 
    def user_params

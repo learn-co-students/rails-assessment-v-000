@@ -9,8 +9,9 @@
   <% if @user.guides.empty?  %>
     <p>You currently have not made any guides</p>
   <% else %>
-  <a href="<%= @user.id %>/guides" class="user_guides">View a list of your guides.</a>
-  <ol class="show_user_guides">
-  </ol>
+  <a href="<%= @user.id %>/guides" class="show_guides_link">View a list of your guides.</a>
+  <div class="show_guides">
+    <ol>
+    </ol>
+  </div>
   <% end %>
-
