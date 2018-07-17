@@ -20,7 +20,6 @@ class GuidesController < ApplicationController
   end
 
   def create
-    raise.inspect
     @game = which_game?
     @guide = Guide.new(guide_params)
     if @guide.valid?
@@ -30,7 +29,7 @@ class GuidesController < ApplicationController
         format.html {redirect_to game_guide_path(@game, @guide)}
       end
     else
-      render 'guides/new'
+      redirect_to "/games/#{@game.id}"
     end
   end
 

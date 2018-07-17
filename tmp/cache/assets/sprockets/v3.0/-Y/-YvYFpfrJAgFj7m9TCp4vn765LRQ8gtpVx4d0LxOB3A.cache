@@ -1,0 +1,8 @@
+{:uriI"›file://app/assets/javascripts/templates/guides/show.hbs?type=text/x-handlebars-template&id=0b0b24707adc5d7ea3d583612a74c41acbe91d37db5ce3af2376352d9a830a9e:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/templates/guides/show.hbs;T:	nameI"templates/guides/show;T:logical_pathI"templates/guides/show.hbs;T:content_typeI"text/x-handlebars-template;T:sourceI"_{{#guides}}
+<li><a href="/games/{{game_id}}/guides/{{id}}">{{title}}</a></li>
+{{/guides}}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"Tprocessors:type=text/x-handlebars-template&file_type=text/x-handlebars-template;TTI"Cfile-digest://app/assets/javascripts/templates/guides/show.hbs;TTF:charsetI"
+utf-8;F:digest"%e²ž(™v`Ÿ:5LÚFÂ{r;ãÜºp~ø¤a¤Ïœ…Ê:lengthi_:dependencies_digest"%Çdšöå´RúøM!¸++#s»°×?¾(ÃáÔcE3:idI"E0b0b24707adc5d7ea3d583612a74c41acbe91d37db5ce3af2376352d9a830a9e;F:
+mtimel+ÈMM[

@@ -6,6 +6,7 @@ function Guide(attributes){
 }
 
 Guide.success = function(json){
+  debugger
   var $ol = $("div.show_guides ol")
   $ol.html("")
   for(const newGuide of json.guides){
@@ -25,8 +26,17 @@ Guide.showGuides = function(e){
 
 Guide.newGuide = function(e){
   e.preventDefault()
-  debugger
+  var $form = $(this)
+  var action = $form.attr("action")
+  var params = $form.serialize()
+  $.ajax({
+    url: action,
+    data: params,
+    datatype: "json",
+    method: "POST"
+  }).done(Guide.success)
 }
+
 Guide.showEventTrigger = function(){
   $(".show_guides").on("click", "a.show_guides_link", Guide.showGuides)
 }
