@@ -1,7 +1,12 @@
 class GuidesController < ApplicationController
 
   def index
-    @guides = Guide.all
+    @game = which_game?
+    @guides = @game.guides || Guide.all
+    respond_to do |format|
+      format.json {render json: @game}
+      format.html
+    end
   end
 
   def show
@@ -15,11 +20,15 @@ class GuidesController < ApplicationController
   end
 
   def create
+    raise.inspect
     @game = which_game?
     @guide = Guide.new(guide_params)
     if @guide.valid?
       @guide.save
-      redirect_to game_guide_path(@game, @guide)
+      respond_to do |format|
+        format.json {render json: @game}
+        format.html {redirect_to game_guide_path(@game, @guide)}
+      end
     else
       render 'guides/new'
     end

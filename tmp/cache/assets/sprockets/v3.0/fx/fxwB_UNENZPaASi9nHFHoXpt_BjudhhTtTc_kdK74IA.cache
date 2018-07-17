@@ -1,0 +1,12 @@
+{:uriI"›file://app/assets/javascripts/templates/games/index.hbs?type=text/x-handlebars-template&id=2c6a4adfbe48c0030849bf890e8ae5193e2cba90aa55572f7c36a494c2a0605a:ET:load_pathI"app/assets/javascripts;T:filenameI"5app/assets/javascripts/templates/games/index.hbs;T:	nameI"templates/games/index;T:logical_pathI"templates/games/index.hbs;T:content_typeI"text/x-handlebars-template;T:sourceI"ª{{#games}}
+<h4>Title: <a href="/games/{{id}}">{{title}}</a></h4>
+<p>System: {{game_system}}</p>
+</br>
+<a href="/games/{{id}}" class="show_games_link">Next</a>
+{{/games}}
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"Tprocessors:type=text/x-handlebars-template&file_type=text/x-handlebars-template;TTI"Cfile-digest://app/assets/javascripts/templates/games/index.hbs;TTF:charsetI"
+utf-8;F:digest"%-ÍzA óÀ¶ÿßnZáC#¸„¬‘˜ÆOò`´/ÍÛq:lengthiª:dependencies_digest"%ËR†¿dU~ÇñÛaÁ®^¹Ú€TgÉ$¬
+SÈ×Q.:idI"E2c6a4adfbe48c0030849bf890e8ae5193e2cba90aa55572f7c36a494c2a0605a;F:
+mtimel+èM[

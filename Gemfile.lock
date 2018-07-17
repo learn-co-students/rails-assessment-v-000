@@ -89,6 +89,10 @@ GEM
     ffi (1.9.23)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    handlebars_assets (0.23.2)
+      execjs (~> 2.0)
+      sprockets (>= 2.0.0)
+      tilt (>= 1.2)
     hashie (3.5.7)
     i18n (1.0.0)
       concurrent-ruby (~> 1.0)
@@ -238,6 +242,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
+  handlebars_assets
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

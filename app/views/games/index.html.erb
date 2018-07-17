@@ -13,10 +13,12 @@
  <%= link_to "Most Popular game", games_most_popular_path %>
 
 
-<h2>Select a game to view its guides or to create a guide for that game.</h2>
-  <ul>
-    <% @games.each do |game| %>
-      <li>Title: <%= link_to game.title, game_path(game) %></li>
-      <li>Game System: <%= game.game_system %></li>
-    <% end %>
-  </ul>
+ <p>Click "View Guides" to see any guides that have been made for that game.</p>
+ <p>You can also view that game's page by clicking on its name to view any guides and make your own.</p>
+<div class="show_games">
+  <h2><a href="/games/1" class="show_games_link">Browse our games.</a></h2>
+</div>
+<div class="show_guides">
+  <ol>
+  </ol>
+</div>

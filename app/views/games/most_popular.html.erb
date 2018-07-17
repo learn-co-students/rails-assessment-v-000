@@ -1,2 +1,2 @@
 <h2>Most Popular Game</h2>
- <h3><%= @most_popular_game.title %></h3>
+ <h3><%= link_to @most_popular_game.title, game_path(@most_popular_game) %> </h3>

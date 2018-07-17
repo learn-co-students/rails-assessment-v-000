@@ -2,15 +2,15 @@
 
 <h2>What would you like to do?</h2>
 
-<h4>View our <%= link_to "games", games_path %> database and search for a game.</h4>
+<h4>View our <%= link_to "games", games_path, data: { turbolinks: false } %> database and search for a game.</h4>
 <p>After you select a game, you can view the guides for that game, as well as create your own!</p></br>
 
-<h4>View or Update your own guides</h4>
   <% if @user.guides.empty?  %>
     <p>You currently have not made any guides</p>
   <% else %>
-  <a href="<%= @user.id %>/guides" class="show_guides_link">View a list of your guides.</a>
+
   <div class="show_guides">
+    <h4><a href="/users/<%= @user.id %>/guides" class="show_guides_link">View a list of your guides.</a></h4>
     <ol>
     </ol>
   </div>

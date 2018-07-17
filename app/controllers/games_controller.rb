@@ -3,13 +3,18 @@ class GamesController < ApplicationController
   def index
     @games = Game.search(params[:search])
   end
-  
+
   def most_popular
     @most_popular_game = Game.most_popular_game
-  end   
-    
+  end
+
   def show
     @game = Game.find(params[:id])
+    @guide = Guide.new
+    respond_to do |format|
+      format.json {render json: @game}
+      format.html
+    end
   end
 
   def new
