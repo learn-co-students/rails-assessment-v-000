@@ -5,7 +5,7 @@ The goal of this app is a website that provides a place where users can create, 
 
 View Gemfile to see what gems are used in this app.
 
-
+To get started, run bundle to install the gems required by the application, then start your rails server.
 
 
 -Randall Robinson

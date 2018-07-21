@@ -1,8 +1,10 @@
-<ul>
+<div class="guide_errors">
+  <ul>
     <% @guide.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
 </ul>
+</div>
 
 <%= form_for [@game, @guide] do |f| %>
   <%= f.label :title %>
@@ -11,5 +13,5 @@
   <%= f.text_area :body %></br>
   <%= f.hidden_field :user_id, value: session[:user_id] %>
   <%= f.hidden_field :game_id, value: params[:id] %>
-  <%= f.submit %>
+  <%= f.submit data: { disable_with: false }%>
   <% end %>

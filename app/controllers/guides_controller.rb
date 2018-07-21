@@ -2,7 +2,7 @@ class GuidesController < ApplicationController
 
   def index
     @game = which_game?
-    @guides = @game.guides || Guide.all
+    @guides = @game.guides
     respond_to do |format|
       format.json {render json: @game}
       format.html
@@ -29,7 +29,10 @@ class GuidesController < ApplicationController
         format.html {redirect_to game_guide_path(@game, @guide)}
       end
     else
-      redirect_to "/games/#{@game.id}"
+      respond_to do |format|
+      format.json { render :json => { :errors => @guide.errors.full_messages }, :status => 422 }
+      format.html { render 'new'}
+    end
     end
   end
 

@@ -2,15 +2,18 @@
 
 <h2>Select a Guide to view it!</h2>
 
- <ul>
     <% if @game.guides.empty? %>
       This game does not currently have any guides.
     <% else %>
-      <% @game.guides.each do |guide| %>
-        <li><%= link_to guide.title, game_guide_path(@game, guide) %></li>
-      <% end %>
+     <div class="show_guides">
+      <ol>
+        <% @game.guides.each do |guide| %>
+          <li><%= link_to guide.title, game_guide_path(@game, guide) %></li>
+        <% end %>
+      </ol>
+    </div>
    <% end %>
- </ul>
+
 
 <h2>Create a new guide for this Game!</h2>
 <%= render :partial => 'layouts/form_for_guides' %>

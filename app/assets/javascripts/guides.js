@@ -6,13 +6,22 @@ function Guide(attributes){
 }
 
 Guide.success = function(json){
-  debugger
   var $ol = $("div.show_guides ol")
   $ol.html("")
   for(const newGuide of json.guides){
     var guide = new Guide(newGuide)
     var guideLI = HandlebarsTemplates['guides/show']({guides: guide})
     $ol.append(guideLI)
+  }
+  document.getElementById("new_guide").reset();
+}
+
+Guide.newGuideFailure = function(json){
+  var errors = $.parseJSON(json.responseText).errors
+  var $ul = $("div.guide_errors ul")
+  $ul.html("")
+  for(const singleError of errors){
+    $ul.append(singleError)
   }
 }
 
@@ -34,7 +43,9 @@ Guide.newGuide = function(e){
     data: params,
     datatype: "json",
     method: "POST"
-  }).done(Guide.success)
+  }).
+  done(Guide.success).
+  fail(Guide.newGuideFailure)
 }
 
 Guide.showEventTrigger = function(){
