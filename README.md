@@ -82,15 +82,15 @@ We should reach out to you soon to schedule a review. If you don't hear from us 
 Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and technical presentation. Starting with this project, your instructor will deliberately give you a more challenging project review, to give you a better sense of the kind of experience and pressure that you experience during a real technical interview. Believe it or not, almost all technical interviewers really do want you to succeed, and we'll work with you as many times as necessary to get you through the review if you don't nail it the first time (which is quite common and completely OK). However, we will potentially give you a hard time, cut you off, push you on your use of vocabulary and/or your coding choices. We want to try to give you a sense of what a coding interview might be like, so you build the confidence to describe your app and to write code even in a higher pressure, slightly more adversarial environment.
 
 #### Be scrappy.
-- If you make a mistake, correct yourself. 
+- If you make a mistake, correct yourself.
 - Think on your feet. We will expect you to be able to explain development concepts to us, as well as expanding on concepts that you have already implemented, but you’ll also have the opportunity to look things up while you're live coding.
 
 #### Make no little plans.
 - Approach live coding with a constructive attitude. You might feel nervous or uncertain, but as long as you are familiar with the section material you should be able to reason your way to a solution.
-- Be proud of your project and your code, and show confidence in it. 
+- Be proud of your project and your code, and show confidence in it.
 
 #### Radiate positivity.
-- Present yourself and your project in the best way possible. 
+- Present yourself and your project in the best way possible.
 - Be open to feedback, both positive and constructive. We give feedback to help each other get better.
 - If the instructor asks you to complete additional features, or you missed a project requirement, treat this as a learning experience. Becoming a developer is complex and challenging, and it’s our job to find the holes in your knowledge and help you fill them. This is to help you become a better developer, not to delay your progress in the program.
 
