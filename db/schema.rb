@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_08_183706) do
+ActiveRecord::Schema.define(version: 2018_08_08_184523) do
 
   create_table "time_slots", force: :cascade do |t|
     t.datetime "start_time"
     t.integer "duration"
+    t.integer "number_of_volunteers_needed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_time_slots", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "time_slot_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
