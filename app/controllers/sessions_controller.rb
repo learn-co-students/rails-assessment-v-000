@@ -11,11 +11,11 @@ class SessionsController < ApplicationController
         u.image = auth['info']['image']
       end
       session[:user_id] = @user.id
-      redirect_to '/'
+      redirect_to user_path(@user)
     elsif User.find_by(email: params[:user][:email]).authenticate(params[:user][:password])
       @user = User.find_by(email: params[:user][:email])
       session[:user_id] = @user.id
-      redirect_to '/'
+      redirect_to user_path(@user)
     end
   end
 
