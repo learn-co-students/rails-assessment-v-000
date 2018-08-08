@@ -4,12 +4,16 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if auth['uid']
+    if auth
       @user = User.find_or_create_by(uid: auth['uid']) do |u|
         u.name = auth['info']['name']
         u.email = auth['info']['email']
         u.image = auth['info']['image']
       end
+      session[:user_id] = @user.id
+      redirect_to '/'
+    elsif User.find_by(email: params[:user][:email]).authenticate(params[:user][:password])
+      @user = User.find_by(email: params[:user][:email])
       session[:user_id] = @user.id
       redirect_to '/'
     end
