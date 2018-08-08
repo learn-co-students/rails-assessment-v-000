@@ -12,8 +12,7 @@ class SessionsController < ApplicationController
       end
       session[:user_id] = @user.id
       redirect_to '/'
-    elsif condition
-
+    end
   end
 
   private
