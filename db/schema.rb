@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2018_08_07_193136) do
     t.boolean "approved"
     t.string "uid"
     t.string "image"
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

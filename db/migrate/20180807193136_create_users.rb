@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.boolean :approved
       t.string :uid
       t.string :image
+      t.string :email
       t.timestamps
     end
   end
