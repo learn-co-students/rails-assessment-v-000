@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/auth/facebook/callback' => 'sessions#create'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
+  post '/logout' => 'sessions#destroy'
 
   resources :users
 end

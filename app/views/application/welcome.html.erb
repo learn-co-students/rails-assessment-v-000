@@ -3,6 +3,11 @@
   <h2>Email: <%= @user.email %></h2>
   <h2>Facebook UID: <%= @user.uid %></h2>
   <img src="<%= @user.image %>">
+  <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+    <input type=submit value='logout'>
+  <% end %>
 <% else %>
-  <%= link_to('Log in with Facebook!', '/auth/facebook') %>
+  <%=link_to('Login', login_path)%>
+  <%=link_to('Sign up', new_user_path)%>
+  <%=link_to('Log in with Facebook!', '/auth/facebook') %>
 <% end %>
