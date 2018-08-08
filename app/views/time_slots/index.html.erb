@@ -1,5 +1,3 @@
-<% @time_slots.each do |time_slot| %>
-  <%if !time_slot.full %>
+<% @available_time_slots.each do |time_slot| %>
     <%= link_to time_slot.start_time, time_slot_path(time_slot)%><br>
-  <%end%>
 <%end%>

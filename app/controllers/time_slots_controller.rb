@@ -1,7 +1,7 @@
 class TimeSlotsController < ApplicationController
 
   def index
-    @time_slots = TimeSlot.all
+    @available_time_slots = TimeSlot.all_available
   end
 
 end
