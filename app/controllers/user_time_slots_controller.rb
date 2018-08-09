@@ -1,16 +1,12 @@
-class UserTimeSlots < ApplicationController
-
-  def new
-  end
+class UserTimeSlotsController < ApplicationController
 
   def create
-    @user_time_slot = UserTimeSlot.create(user_time_slot_params)
+    @user = User.find(session[:user_id])
+    params[:user_time_slot][:time_slot].each do |time_slot|
+      UserTimeSlot.create(user_id: @user.id, time_slot_id: time_slot)
+    end
 
     redirect_to user_path(@user)
-  end
-
-  def user_time_slot_params
-    params.require(:user_time_slot).permit(:time_slot_id)
   end
 
 end
