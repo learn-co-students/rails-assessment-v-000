@@ -1,5 +1,1 @@
 
-<%= form_for @user_time_slot, url: user_time_slots_path, method: :post do |f|%>
-  <%=f.collection_check_boxes :time_slot, @available_time_slots, :id, :start_time %>
-  <%=f.submit "sign up"%>
-<%end%>
