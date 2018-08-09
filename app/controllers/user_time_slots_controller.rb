@@ -9,4 +9,10 @@ class UserTimeSlotsController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  def destroy
+    UserTimeSlot.find(params[:id]).destroy
+    @user = session[:user_id]
+    redirect_to user_path(@user)
+  end
+
 end
