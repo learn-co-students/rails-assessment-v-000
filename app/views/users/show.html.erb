@@ -5,3 +5,8 @@
 <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
   <input type=submit value='logout'>
 <%end%>
+
+<h1>My Time Slots</h1>
+<%@user.time_slots.each do |time_slot|%>
+  <p><%=time_slot.start_time%></p>
+<%end%>
