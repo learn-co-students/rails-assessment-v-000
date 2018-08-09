@@ -12,6 +12,6 @@ time_slot_1 = TimeSlot.create(start_time: "2018-08-11 10:00:00", duration: 60, n
 #YYYY-MM-DD HH:MM:SS.SSS
 time_slot_2 = TimeSlot.create(start_time: "2018-08-12 10:00:00", duration: 120, number_of_volunteers_needed: 3)
 
-user_time_slot_1 = UserTimeSlot.create(user_id: 2, time_slot_id: 2)
+user_time_slot_1 = UserTimeSlot.create(user_id: 1, time_slot_id: 2)
 user_time_slot_2 = UserTimeSlot.create(user_id: 2, time_slot_id: 2)
-user_time_slot_3 = UserTimeSlot.create(user_id: 2, time_slot_id: 2)
+user_time_slot_3 = UserTimeSlot.create(user_id: 3, time_slot_id: 2)

@@ -4,4 +4,6 @@
   -prevent more than cap signing up for a time slot
   -add user contributed attribute to user time slot notes? tech stack?
   -on available time slots page show which ones already sign up for
-  -delete user_time_slots
+  -human readable start time
+  -time slots should probably have a description
+  -change all available to scope method

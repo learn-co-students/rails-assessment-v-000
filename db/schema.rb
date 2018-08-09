@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_08_184523) do
+ActiveRecord::Schema.define(version: 2018_08_09_205159) do
 
   create_table "time_slots", force: :cascade do |t|
     t.datetime "start_time"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2018_08_08_184523) do
     t.integer "time_slot_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "comments"
   end
 
   create_table "users", force: :cascade do |t|
