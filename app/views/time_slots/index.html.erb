@@ -1,3 +1,5 @@
-<% @available_time_slots.each do |time_slot| %>
-    <%= link_to time_slot.start_time, time_slot_path(time_slot)%><br>
+
+<%= form_for @user_time_slot do |f|%>
+  <%=f.collection_check_boxes :time_slot, @available_time_slots, :id, :start_time %>
+  <%=f.submit "sign up"%>
 <%end%>
