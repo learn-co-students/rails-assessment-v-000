@@ -1,8 +1,10 @@
-<%= form_for @user_time_slot, url: user_time_slots_path, method: :post do |f|%>
+<%= form_tag(user_time_slots_path, method: :post) do%>
   <% @available_time_slots.each do |time_slot|%>
-    <%=f.label time_slot.start_time%>
-    <%=f.check_box :time_slot_id%>
-    <%=f.text_field :comments%>
+    <%=label_tag time_slot.start_time%>
+    <%=check_box_tag(time_slot.id)%>
+    <%=label_tag "Comments:"%>
+    <%=text_field_tag(:comments)%>
+    <br>
   <%end%>
-  <%=f.submit "sign up"%>
+  <%=submit_tag("sign up")%>
 <%end%>
