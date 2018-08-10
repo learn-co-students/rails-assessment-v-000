@@ -1,6 +1,7 @@
 class TimeSlotsController < ApplicationController
   before_action :require_admin
   skip_before_action :require_admin, only: [:index]
+  layout "logged_in"
 
   def index
 
