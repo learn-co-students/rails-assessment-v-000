@@ -7,12 +7,13 @@
   -change all available to scope method
   -make sure all params strong
   -make sure not creating junk user_time_slots when not selected
-  -add end time
   -make duration more clear on form
   -make start_time 12 hr on form
+  -nested routes
 
 #Maybe add
   -confirmation pending/confirmed! to user time slots
+  -admin approve a user
 
 #Future
   -notification if admin edits a time slot a user is signed up for
