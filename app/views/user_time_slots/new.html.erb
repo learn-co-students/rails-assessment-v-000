@@ -1,13 +1,15 @@
 
 <%= form_for @user_time_slot do |f|%>
+  <%counter = 1%>
   <%@available_time_slots.each do |time_slot|%>
-    <%= f.fields_for "time_slot"+time_slot.id.to_s do |sign_up_form| %>
+    <%= f.fields_for counter.to_s do |sign_up_form| %>
       <li>
         <%= sign_up_form.label time_slot.start_time %>
         <%= sign_up_form.check_box :time_slot_id, {}, time_slot.id, "" %>
 
         <%= sign_up_form.label "Comments:" %>
         <%= sign_up_form.text_field "comments"%>
+        <%counter += 1%>
       </li>
     <%end%>
     <%end%>
