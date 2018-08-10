@@ -8,3 +8,4 @@
   -make sure all params strong
   -make sure not creating junk user_time_slots when not selected
   -add end time
+  -maybe add confirmation pending/confirmed! to user time slots
