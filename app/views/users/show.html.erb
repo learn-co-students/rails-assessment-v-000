@@ -18,9 +18,9 @@
   <%@user.time_slots.each do |time_slot|%>
     <%user_time_slot = UserTimeSlot.find_by(user_id: @user.id, time_slot_id: time_slot.id)%>
     <tr>
-    <td><%=time_slot.readable_date%></td>
-    <td><%=time_slot.readable_start_time%></td>
-    <td><%=time_slot.readable_end_time%></td>
+    <td><%=readable_date(time_slot)%></td>
+    <td><%=readable_start_time(time_slot)%></td>
+    <td><%=readable_end_time(time_slot)%></td>
     <td><%=user_time_slot.comments%></td>
     <td><%= link_to "Delete", user_time_slot_url(user_time_slot), method: :delete, data: { confirm: "Really?" } %></td>
     </tr>

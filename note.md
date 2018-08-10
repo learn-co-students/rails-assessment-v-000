@@ -8,4 +8,11 @@
   -make sure all params strong
   -make sure not creating junk user_time_slots when not selected
   -add end time
-  -maybe add confirmation pending/confirmed! to user time slots
+  -make duration more clear on form
+  -make start_time 12 hr on form
+
+#Maybe add
+  -confirmation pending/confirmed! to user time slots
+
+#Future
+  -notification if admin edits a time slot a user is signed up for
