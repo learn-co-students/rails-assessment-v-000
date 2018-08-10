@@ -1,10 +1,15 @@
-<%= form_tag(user_time_slots_path, method: :post) do%>
-  <% @available_time_slots.each do |time_slot|%>
-    <%=label_tag time_slot.start_time%>
-    <%=check_box_tag(time_slot.id)%>
-    <%=label_tag "Comments:"%>
-    <%=text_field_tag(:comments)%>
-    <br>
-  <%end%>
+
+<%= form_for @user_time_slot do |f|%>
+  <%@available_time_slots.each do |time_slot|%>
+    <%= f.fields_for "time_slot"+time_slot.id.to_s do |sign_up_form| %>
+      <li>
+        <%= sign_up_form.label time_slot.start_time %>
+        <%= sign_up_form.check_box time_slot.id %>
+
+        <%= sign_up_form.label "Comments:" %>
+        <%= sign_up_form.text_field "comments"%>
+      </li>
+    <%end%>
+    <%end%>
   <%=submit_tag("sign up")%>
 <%end%>
