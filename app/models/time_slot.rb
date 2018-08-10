@@ -21,11 +21,19 @@ class TimeSlot < ApplicationRecord
   end
 
   def readable_start_time
-    self.start_time.strftime("%B %d, %Y at %H:%M")
+    self.start_time.strftime("%B %d, %Y at %I:%M %p")
   end
 
   def duration_in_hours
     self.duration/60
+  end
+
+  def end_time
+    self.start_time + (self.duration * 60)
+  end
+
+  def readable_end_time
+    self.end_time.strftime("%B %d, %Y at %I:%M %p")
   end
 
 end
