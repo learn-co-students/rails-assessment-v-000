@@ -20,4 +20,8 @@ class TimeSlot < ApplicationRecord
     available
   end
 
+  def readable_start_time
+    self.start_time.strftime("%B %d, %Y at %H:%M")
+  end
+
 end
