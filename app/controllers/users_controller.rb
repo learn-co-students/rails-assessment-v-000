@@ -10,7 +10,15 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(session[:user_id])
+    if session[:user_id] && session[:user_id] == params[:id].to_i
+      @user = User.find(session[:user_id])
+    elsif session[:user_id] && session[:user_id] != params[:id].to_i
+      @user = User.find(session[:user_id])
+      redirect_to user_path(@user)
+    else
+      #add flash message
+      redirect_to '/'
+    end
   end
 
   def index
