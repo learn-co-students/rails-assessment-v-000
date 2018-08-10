@@ -5,7 +5,6 @@
   -on available time slots page show which ones already sign up for
   -time slots should probably have a description
   -change all available to scope method
-  -show comments
   -make sure all params strong
   -make sure not creating junk user_time_slots when not selected
   -add end time

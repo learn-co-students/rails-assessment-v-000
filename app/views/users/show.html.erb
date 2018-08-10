@@ -7,12 +7,12 @@
 <%end%>
 
 <h1>My Time Slots</h1>
-<table>
+<table border="1">
   <tr>
     <th>Start</th>
     <th>End</th>
     <th>Your Comments</th>
-    <th>Delete</th>
+    <th>Delete Sign Up</th>
   </tr>
   <%@user.time_slots.each do |time_slot|%>
     <%user_time_slot = UserTimeSlot.find_by(user_id: @user.id, time_slot_id: time_slot.id)%>
