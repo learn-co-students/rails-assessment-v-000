@@ -9,14 +9,16 @@
 <h1>My Time Slots</h1>
 <table border="1">
   <tr>
-    <th>Start</th>
-    <th>End</th>
+    <th>Date</th>
+    <th>Start Time</th>
+    <th>End Time</th>
     <th>Your Comments</th>
     <th>Delete Sign Up</th>
   </tr>
   <%@user.time_slots.each do |time_slot|%>
     <%user_time_slot = UserTimeSlot.find_by(user_id: @user.id, time_slot_id: time_slot.id)%>
     <tr>
+    <td><%=time_slot.readable_date%></td>
     <td><%=time_slot.readable_start_time%></td>
     <td><%=time_slot.readable_end_time%></td>
     <td><%=user_time_slot.comments%></td>

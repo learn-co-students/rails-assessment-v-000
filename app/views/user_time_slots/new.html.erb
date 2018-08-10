@@ -1,17 +1,26 @@
 
+<table border="1">
+  <tr>
+    <th>Date</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <th>Select</th>
+    <th>Your Comments</th>
+  </tr>
 <%= form_for @user_time_slot do |f|%>
   <%counter = 1%>
   <%@available_time_slots.each do |time_slot|%>
     <%= f.fields_for counter.to_s do |sign_up_form| %>
-      <li>
-        <%= sign_up_form.label time_slot.readable_start_time %>
-        <%= sign_up_form.check_box :time_slot_id, {}, time_slot.id, "" %>
-
-        <%= sign_up_form.label "Comments:" %>
-        <%= sign_up_form.text_field "comments"%>
+      <tr>
+        <td><%= sign_up_form.label time_slot.readable_date %></td>
+        <td><%= sign_up_form.label time_slot.readable_start_time %></td>
+        <td><%= sign_up_form.label time_slot.readable_end_time %></td>
+        <td><%= sign_up_form.check_box :time_slot_id, {}, time_slot.id, "" %></td>
+        <td><%= sign_up_form.text_field "comments"%></td>
         <%counter += 1%>
-      </li>
+      </tr>
+      <%end%>
     <%end%>
-    <%end%>
+    </table>
   <%=submit_tag("sign up")%>
 <%end%>
