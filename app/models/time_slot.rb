@@ -24,4 +24,8 @@ class TimeSlot < ApplicationRecord
     self.start_time.strftime("%B %d, %Y at %H:%M")
   end
 
+  def duration_in_hours
+    self.duration/60
+  end
+
 end

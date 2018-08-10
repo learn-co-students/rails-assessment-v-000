@@ -3,9 +3,9 @@
   -validation user.email unique
   -prevent more than cap signing up for a time slot
   -on available time slots page show which ones already sign up for
-  -human readable start time
   -time slots should probably have a description
   -change all available to scope method
   -show comments
   -make sure all params strong
   -make sure not creating junk user_time_slots when not selected
+  -add end time

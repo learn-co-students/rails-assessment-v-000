@@ -7,7 +7,20 @@
 <%end%>
 
 <h1>My Time Slots</h1>
-<%@user.time_slots.each do |time_slot|%>
-  <%user_time_slot = UserTimeSlot.find_by(user_id: @user.id, time_slot_id: time_slot.id)%>
-  <p><%=time_slot.readable_start_time%> <%= link_to "Delete", user_time_slot_url(user_time_slot), method: :delete, data: { confirm: "Really?" } %></p>
-<%end%>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Hours</th>
+    <th>Your Comments</th>
+    <th>Delete</th>
+  </tr>
+  <%@user.time_slots.each do |time_slot|%>
+    <%user_time_slot = UserTimeSlot.find_by(user_id: @user.id, time_slot_id: time_slot.id)%>
+    <tr>
+    <td><%=time_slot.readable_start_time%></td>
+    <td><%=time_slot.duration_in_hours%></td>
+    <td><%=user_time_slot.comments%></td>
+    <td><%= link_to "Delete", user_time_slot_url(user_time_slot), method: :delete, data: { confirm: "Really?" } %></td>
+    </tr>
+  <%end%>
+</table>
