@@ -2,8 +2,10 @@
   -validation to prevent a user from signing up for the same time slot more than once
   -validation user.email unique
   -prevent more than cap signing up for a time slot
-  -add user contributed attribute to user time slot notes? tech stack?
   -on available time slots page show which ones already sign up for
   -human readable start time
   -time slots should probably have a description
   -change all available to scope method
+  -show comments
+  -make sure all params strong
+  -make sure not creating junk user_time_slots when not selected
