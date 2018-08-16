@@ -18,4 +18,8 @@ module TimeSlotsHelper
   def readable_end_time(time_slot)
     end_time(time_slot).strftime("%I:%M %p")
   end
+
+  def ordered_time_slots(time_slots)
+    time_slots.sort_by(&:start_time)
+  end
 end

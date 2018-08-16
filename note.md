@@ -1,5 +1,4 @@
 #Need to add:
-  -validation to prevent a user from signing up for the same time slot more than once
   -prevent more than cap signing up for a time slot
   -on available time slots page show which ones already sign up for
   -time slots should probably have a description

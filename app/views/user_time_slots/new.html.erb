@@ -9,7 +9,7 @@
   </tr>
 <%= form_for @user_time_slot do |f|%>
   <%counter = 1%>
-  <%@available_time_slots.each do |time_slot|%>
+  <%ordered_time_slots(@available_time_slots).each do |time_slot|%>
     <%= f.fields_for counter.to_s do |sign_up_form| %>
       <tr>
         <td><%= sign_up_form.label readable_date(time_slot) %></td>

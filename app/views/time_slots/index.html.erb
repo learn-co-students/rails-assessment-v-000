@@ -8,7 +8,7 @@
       <th>Delete Sign Up</th>
     <%end%>
   </tr>
-  <%@time_slots.each do |time_slot|%>
+  <%ordered_time_slots(@time_slots).each do |time_slot|%>
     <tr>
       <td><%=readable_date(time_slot)%></td>
       <td><%=readable_start_time(time_slot)%></td>
