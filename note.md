@@ -5,8 +5,6 @@
   -time slots should probably have a description
   -change all available to scope method
   -make sure all params strong[User_time_slots, sessions]
-  -make sure not creating junk user_time_slots when not selected
-  -check what happens when unknown user tries to log in
   -move timeslots out of profile
   -set up navigation in layout
   -delete not working on nested route
