@@ -1,1 +1,21 @@
-
+<table border="1">
+  <tr>
+    <th>Date</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+    <%if @user%>
+      <th>Your Comments</th>
+    <%end%>
+  </tr>
+  <%@time_slots.each do |time_slot|%>
+    <tr>
+      <td><%=readable_date(time_slot)%></td>
+      <td><%=readable_start_time(time_slot)%></td>
+      <td><%=readable_end_time(time_slot)%></td>
+      <%if @user%>
+        <%user_time_slot = UserTimeSlot.find_by(user_id: @user.id, time_slot_id: time_slot.id)%>
+        <td><%=user_time_slot.comments%></td>
+      <%end%>
+    </tr>
+  <%end%>
+</table>
