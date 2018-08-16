@@ -1,7 +1,7 @@
 <%= form_for @time_slot do |f|%>
   <%=f.label :start_time%>
-  <%=f.datetime_select :start_time%>
-  <%=f.label :duration%>
+  <%=f.datetime_select :start_time, ampm: true%>
+  <%=f.label :duration_in_minutes%>
   <%=f.number_field :duration%>
   <%=f.label :number_of_volunteers_needed%>
   <%=f.number_field :number_of_volunteers_needed%>
