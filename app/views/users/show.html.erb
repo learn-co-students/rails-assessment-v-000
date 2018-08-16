@@ -8,8 +8,10 @@
 <%end%>
 
 <h1>My Time Slots</h1>
+
 <%=link_to "Sign up for time slots", new_user_time_slot_path%>
 <br>
+
 <table border="1">
   <tr>
     <th>Date</th>
@@ -21,11 +23,11 @@
   <%@user.time_slots.each do |time_slot|%>
     <%user_time_slot = UserTimeSlot.find_by(user_id: @user.id, time_slot_id: time_slot.id)%>
     <tr>
-    <td><%=readable_date(time_slot)%></td>
-    <td><%=readable_start_time(time_slot)%></td>
-    <td><%=readable_end_time(time_slot)%></td>
-    <td><%=user_time_slot.comments%></td>
-    <td><%= link_to "Delete", user_time_slot_url(user_time_slot), method: :delete, data: { confirm: "Really?" } %></td>
+      <td><%=readable_date(time_slot)%></td>
+      <td><%=readable_start_time(time_slot)%></td>
+      <td><%=readable_end_time(time_slot)%></td>
+      <td><%=user_time_slot.comments%></td>
+      <td><%= button_to "Delete", user_time_slot, :method => :delete, data: { confirm: "Really?" } %></td>
     </tr>
   <%end%>
 </table>

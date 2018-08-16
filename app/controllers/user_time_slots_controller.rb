@@ -9,7 +9,7 @@ class UserTimeSlotsController < ApplicationController
   def create
     @user = User.find(session[:user_id])
     params[:user_time_slot].each do |time_slot|
-      UserTimeSlot.create(user_id: @user.id, time_slot_id: time_slot.last[:time_slot_id].to_i, comments: time_slot.last[:comments])
+      UserTimeSlot.find_or_create_by(user_id: @user.id, time_slot_id: time_slot.last[:time_slot_id].to_i)
     end
 
     redirect_to user_path(@user)
