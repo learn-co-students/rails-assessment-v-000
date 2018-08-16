@@ -34,7 +34,12 @@ class UsersController < ApplicationController
   end
 
   def edit
-    set_user
+    if session[:user_id] && session[:user_id] == params[:id].to_i
+      set_user
+    elsif session[:user_id] && session[:user_id] != params[:id].to_i
+      set_user
+      redirect_to edit_user_path(@user)
+    end
   end
 
   def update
