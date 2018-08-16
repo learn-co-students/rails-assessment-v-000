@@ -3,7 +3,7 @@ class TimeSlot < ApplicationRecord
   has_many :users, through: :user_time_slots
 
   def available
-    self.users.count < self.number_of_volunteers_needed && self.start_time > Date.today
+    UserTimeSlot.slots_taken(self) < self.number_of_volunteers_needed && self.start_time > Date.today
   end
 
   def slots_open
