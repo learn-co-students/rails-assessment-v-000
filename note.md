@@ -3,7 +3,6 @@
   -make sure all params strong[User_time_slots, sessions]
   -set up navigation in layout
   -check only user or admin can edit profile
-  -fix oauth
 
 #Maybe add
   -confirmation pending/confirmed! to user time slots
