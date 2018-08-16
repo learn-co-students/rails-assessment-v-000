@@ -15,12 +15,12 @@ class SessionsController < ApplicationController
       end
       session[:user_id] = @user.id
       redirect_to user_path(@user)
-    elsif User.find_by(email: params[:user][:email]) && User.find_by(email: params[:user][:email]).authenticate(params[:user][:password])
+    elsif User.find_by(email: session_params[:email]) && User.find_by(email: session_params[:email]).authenticate(session_params[:password])
       @user = User.find_by(email: params[:user][:email])
       session[:user_id] = @user.id
       redirect_to user_path(@user)
-    elsif User.find_by(email: params[:user][:email]) && !User.find_by(email: params[:user][:email]).authenticate(params[:user][:password])
-        flash[:message] = "Your email and password do not match, please try again."
+    elsif User.find_by(email: session_params[:email]) && !User.find_by(email: session_params[:email]).authenticate(session_params[:password])
+      flash[:message] = "Your email and password do not match, please try again."
       redirect_to '/login'
     else
       flash[:message] = "There is no account for that email address, please create an account."
@@ -37,5 +37,9 @@ class SessionsController < ApplicationController
 
   def auth
     request.env['omniauth.auth']
+  end
+
+  def session_params
+    params.require(:user).permit(:email, :password)
   end
 end

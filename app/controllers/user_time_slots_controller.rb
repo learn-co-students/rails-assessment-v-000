@@ -21,4 +21,9 @@ class UserTimeSlotsController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  private
+  def user_time_slot_params
+    params.require(:user_time_slot).permit(:time_slot_id)
+  end
+
 end
