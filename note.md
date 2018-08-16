@@ -5,11 +5,10 @@
   -time slots should probably have a description
   -change all available to scope method
   -make sure all params strong[User_time_slots, sessions]
-  -move timeslots out of profile
   -set up navigation in layout
-  -delete not working on nested route
   -display time_slots in chronological order
   -don't display past time_slots
+  -check only user or admin can edit
 
 #Maybe add
   -confirmation pending/confirmed! to user time slots

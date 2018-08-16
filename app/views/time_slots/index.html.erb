@@ -5,6 +5,7 @@
     <th>End Time</th>
     <%if @user%>
       <th>Your Comments</th>
+      <th>Delete Sign Up</th>
     <%end%>
   </tr>
   <%@time_slots.each do |time_slot|%>
@@ -15,6 +16,7 @@
       <%if @user%>
         <%user_time_slot = UserTimeSlot.find_by(user_id: @user.id, time_slot_id: time_slot.id)%>
         <td><%=user_time_slot.comments%></td>
+        <td><%= button_to "Delete", user_time_slot, :method => :delete, data: { confirm: "Really?" } %></td>
       <%end%>
     </tr>
   <%end%>
