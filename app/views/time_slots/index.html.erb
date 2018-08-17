@@ -3,7 +3,7 @@
     <th>Date</th>
     <th>Start Time</th>
     <th>End Time</th>
-    <%if @user%>
+    <%if params[:user_id]%>
       <th>Your Comments</th>
       <th>Delete Sign Up</th>
     <%end%>
@@ -13,7 +13,7 @@
       <td><%=readable_date(time_slot)%></td>
       <td><%=readable_start_time(time_slot)%></td>
       <td><%=readable_end_time(time_slot)%></td>
-      <%if @user%>
+      <%if params[:user_id]%>
         <%user_time_slot = UserTimeSlot.find_by(user_id: @user.id, time_slot_id: time_slot.id)%>
         <td><%=user_time_slot.comments%></td>
         <td><%= button_to "Delete", user_time_slot, :method => :delete, data: { confirm: "Really?" } %></td>

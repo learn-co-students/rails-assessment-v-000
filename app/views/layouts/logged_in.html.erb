@@ -3,7 +3,7 @@
   <%= link_to "Sign up", new_user_time_slot_path%>
   <%=link_to "My Time Slots", "/users/#{@user.id}/time_slots"%>
   <%if @user.admin%>
-    <%= link_to "Add Time Slots", new_time_slot_path%>
+    <%=link_to "Add Time Slots", new_time_slot_path%>
   <%end%>
   <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
     <input type=submit value='logout'>
