@@ -20,8 +20,11 @@ class UsersController < ApplicationController
   end
 
   def show
-    if session[:user_id] && session[:user_id] == params[:id].to_i
+    if session[:user_id] == params[:id].to_i
       set_user
+    elsif User.find(session[:user_id]).admin
+      @user = User.find(params[:id])
+      @admin = User.find(session[:user_id])
     elsif session[:user_id] && session[:user_id] != params[:id].to_i
       set_user
       redirect_to user_path(@user)
@@ -31,6 +34,7 @@ class UsersController < ApplicationController
   end
 
   def index
+    set_user
     @users = User.all
   end
 
