@@ -1,6 +1,9 @@
 #Need to add:
   -set up navigation in layout
   -add edit user link to user index
+  -admin can view each user
+  -what should be the home page? Split out from user profile?
+  -add note if no new slots available
 
 #Maybe add
   -confirmation pending/confirmed! to user time slots

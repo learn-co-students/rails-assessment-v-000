@@ -2,6 +2,7 @@ class UserTimeSlotsController < ApplicationController
   layout "logged_in"
 
   def new
+    set_user
     @available_time_slots = TimeSlot.all_available
     @user_time_slot = UserTimeSlot.new
   end

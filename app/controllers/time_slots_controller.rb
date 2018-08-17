@@ -4,6 +4,7 @@ class TimeSlotsController < ApplicationController
   layout "logged_in"
 
   def index
+    set_user
     if params[:user_id]
       @user = User.find(params[:user_id])
       @time_slots = @user.time_slots
@@ -13,10 +14,12 @@ class TimeSlotsController < ApplicationController
   end
 
   def show
+    set_user
     @time_slot = TimeSlot.find(params[:id])
   end
 
   def new
+    set_user
     @time_slot = TimeSlot.new
   end
 
@@ -26,6 +29,7 @@ class TimeSlotsController < ApplicationController
   end
 
   def edit
+    set_user
     @time_slot = TimeSlot.find(params[:id])
   end
 

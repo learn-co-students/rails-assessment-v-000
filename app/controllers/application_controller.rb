@@ -17,4 +17,8 @@ class ApplicationController < ActionController::Base
   def require_admin
     return head(:forbidden) unless User.find(session[:user_id]).admin
   end
+
+  def set_user
+    @user = User.find(session[:user_id])
+  end
 end
