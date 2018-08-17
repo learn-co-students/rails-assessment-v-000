@@ -1,7 +1,6 @@
 #Need to add:
-  -make sure all params strong[User_time_slots, sessions]
   -set up navigation in layout
-  -check only user or admin can edit profile
+  -add edit user link to user index
 
 #Maybe add
   -confirmation pending/confirmed! to user time slots

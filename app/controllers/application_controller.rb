@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
   def require_login
     return head(:forbidden) unless session.include? :user_id
   end
+
+  def require_admin
+    return head(:forbidden) unless User.find(session[:user_id]).admin
+  end
 end

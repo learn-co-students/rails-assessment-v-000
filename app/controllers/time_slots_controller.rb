@@ -40,8 +40,4 @@ class TimeSlotsController < ApplicationController
   def time_slot_params
     params.require(:time_slot).permit(:start_time, :duration, :number_of_volunteers_needed)
   end
-
-  def require_admin
-    return head(:forbidden) unless User.find(session[:user_id]).admin
-  end
 end

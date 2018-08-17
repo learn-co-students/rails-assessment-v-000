@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
+  before_action :require_admin, only: [:index]
 
   layout "logged_in", :except => :new
 
@@ -34,8 +35,11 @@ class UsersController < ApplicationController
   end
 
   def edit
-    if session[:user_id] && session[:user_id] == params[:id].to_i
+    if session[:user_id] == params[:id].to_i #can this be dried up?
       set_user
+    elsif User.find(session[:user_id]).admin
+      @user = User.find(params[:id])
+      @admin = User.find(session[:user_id])
     elsif session[:user_id] && session[:user_id] != params[:id].to_i
       set_user
       redirect_to edit_user_path(@user)
@@ -43,11 +47,12 @@ class UsersController < ApplicationController
   end
 
   def update
-    set_user
+    @user = User.find(params[:id])
     @user.update(user_params)
-    if @user.save
-      session[:user_id] = @user.id
+    if @user.save && @user.id == session[:user_id]
       redirect_to user_path(@user)
+    elsif @user.save
+      redirect_to users_path
     else
       render :edit
     end
@@ -55,7 +60,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :name)
+    params.require(:user).permit(:email, :password, :password_confirmation, :name, :admin)
   end
 
   def set_user

@@ -26,6 +26,11 @@
   <%=f.label :password_confirmation%>
   <%=f.text_field :password_confirmation%>
 
+  <%if @admin%>
+    <%=f.label :admin%>
+    <%=f.check_box :admin%>
+  <%end%>
+
   <%=f.submit%>
 
 <%end%>
