@@ -26,7 +26,8 @@ class UserTimeSlotsController < ApplicationController
     @user_time_slot = UserTimeSlot.find(params[:id])
     @user_time_slot.comments = params[:user_time_slot][:comments]
     @user_time_slot.save
-    redirect_to "/users/#{params[:user_id]}/time_slots"
+    set_user
+    redirect_to "/users/#{@user.id}/time_slots"
   end
 
   private
