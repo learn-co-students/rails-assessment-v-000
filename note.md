@@ -1,17 +1,17 @@
 #Need to add:
-  -add note if no new slots available
-  -big when submit new time_slot
-  -time_slot show add who signed up for admin view
-  -time_slot index should have link to view and edit
-  -add message to time slot page if haven't signed up for any
-  -past time slots vs upcoming time slots
   -field with errors
   -check dryness
   -update seeds
   -what happens if already have an account and try to log in with fb?
   -breaks if tries to sign up with non unique email, need to kick it back with errors
-  -add edit time slot button so can fix comments- this will meet the nested resource form requirement
+  -nested routes not secure!
 
+#UX needs
+  -add note if no new slots available
+  -big when submit new time_slot
+  -time_slot show add who signed up for admin view
+  -add message to time slot page if haven't signed up for any
+  -past time slots vs upcoming time slots
 
 #Maybe add
   -log in with google
