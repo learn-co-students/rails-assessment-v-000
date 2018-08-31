@@ -1,16 +1,16 @@
 class UserTimeSlotsController < ApplicationController
   layout "logged_in"
 
-  def new
-    set_user
-    @available_time_slots = TimeSlot.all_available
-    @user_time_slot = UserTimeSlot.new
-  end
+  #def new
+#    set_user
+  #  @available_time_slots = TimeSlot.all_available
+#    @user_time_slot = UserTimeSlot.new
+#  end
 
   def create
     @user = User.find(session[:user_id])
     params[:user_time_slot].each do |time_slot|
-      UserTimeSlot.find_or_create_by(user_id: @user.id, time_slot_id: time_slot.last[:time_slot_id].to_i)
+      UserTimeSlot.find_or_create_by(user_id: @user.id, time_slot_id: time_slot.last[:time_slot_id].to_i, comments: time_slot.last[:comments])
     end
 
     redirect_to user_path(@user)
@@ -18,8 +18,8 @@ class UserTimeSlotsController < ApplicationController
 
   def destroy
     UserTimeSlot.find(params[:id]).destroy
-    @user = session[:user_id]
-    redirect_to user_path(@user)
+    set_user
+    redirect_to "/users/#{@user.id}/time_slots"
   end
 
   def update

@@ -22,6 +22,7 @@ class TimeSlotsController < ApplicationController
     set_user
     if params[:user_id]
       @user_time_slot = UserTimeSlot.new
+      @available_time_slots = TimeSlot.all_available
     else
       @time_slot = TimeSlot.new
     end
