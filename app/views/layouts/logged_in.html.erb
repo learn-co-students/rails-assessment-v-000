@@ -2,7 +2,7 @@
   <%if @admin%>
   <div>
     <%= link_to "Home", user_path(@admin)%>
-    <%= link_to "Sign up", new_user_time_slot_path%>
+    <%= link_to "Sign up", "/users/#{@admin.id}/time_slots/new"%>
     <%=link_to "My Time Slots", "/users/#{@admin.id}/time_slots"%>
     <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
       <input type=submit value='logout'>
@@ -16,7 +16,7 @@
   <%else%>
   <div>
     <%= link_to "Home", user_path(@user)%>
-    <%= link_to "Sign up", new_user_time_slot_path%>
+    <%= link_to "Sign up", "/users/#{@user.id}/time_slots/new"%>
     <%=link_to "My Time Slots", "/users/#{@user.id}/time_slots"%>
     <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
       <input type=submit value='logout'>
