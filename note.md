@@ -3,7 +3,7 @@
   -big when submit new time_slot
   -time_slot show add who signed up for admin view
   -time_slot index should have link to view and edit
-  -add message to tine slot page if haven't signed up for any
+  -add message to time slot page if haven't signed up for any
   -past time slots vs upcoming time slots
   -field with errors
   -check dryness

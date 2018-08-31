@@ -1,4 +1,14 @@
 <%if @user_time_slot.persisted?%>
+  <%= form_for @user_time_slot do |f|%>
+    <tr>
+      <td><%= f.label readable_date(@time_slot) %></td>
+      <td><%= f.label readable_start_time(@time_slot) %></td>
+      <td><%= f.label readable_end_time(@time_slot) %></td>
+      <td><%= f.check_box :time_slot_id, {}, @time_slot.id, "" %></td>
+      <td><%= f.text_field "comments"%></td>
+      <td><%= f.submit%></td>
+    </tr>
+  <%end%>
 <%else%>
     <table border="1">
       <tr>

@@ -20,7 +20,11 @@ class TimeSlotsController < ApplicationController
 
   def new
     set_user
-    @time_slot = TimeSlot.new
+    if params[:user_id]
+      @user_time_slot = UserTimeSlot.new
+    else
+      @time_slot = TimeSlot.new
+    end
   end
 
   def create
@@ -30,7 +34,12 @@ class TimeSlotsController < ApplicationController
 
   def edit
     set_user
-    @time_slot = TimeSlot.find(params[:id])
+    if params[:user_id]
+      @user_time_slot = UserTimeSlot.find_by(user_id: params[:user_id], time_slot_id: params[:id])
+      @time_slot = TimeSlot.find(params[:id])
+    else
+      @time_slot = TimeSlot.find(params[:id])
+    end
   end
 
   def update

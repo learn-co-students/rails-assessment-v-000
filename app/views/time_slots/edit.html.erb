@@ -1,1 +1,5 @@
-<%=render 'form'%>
+<%if params[:user_id]%>
+  <%=render 'signup'%>
+<%else%>
+  <%=render 'form'%>
+<%end%>

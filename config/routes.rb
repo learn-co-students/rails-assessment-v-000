@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :users
   resources :user_time_slots
   resources :users, only: [:show] do
-    resources :time_slots, only: [:show, :index]
+    resources :time_slots, only: [:show, :index, :new, :edit]
   end
 
   resources :time_slots

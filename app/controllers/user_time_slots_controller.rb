@@ -22,6 +22,13 @@ class UserTimeSlotsController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  def update
+    @user_time_slot = UserTimeSlot.find(params[:id])
+    @user_time_slot.comments = params[:user_time_slot][:comments]
+    @user_time_slot.save
+    redirect_to "/users/#{params[:user_id]}/time_slots"
+  end
+
   private
   def user_time_slot_params
     params.require(:user_time_slot).permit(:time_slot_id)
