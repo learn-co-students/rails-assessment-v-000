@@ -2,9 +2,28 @@
 
 ## Overview
 
+- [What to Expect from the Project Review](#expectations)
+- [Project Requirements](#requirements)
+- [Instructions](#instructions)
+- [Support](#support)
+- [Practicing for Success on Learn](#success)
+- [Resources](#resources)
+
 In this lesson you're going to build a complete Ruby on Rails application that manages related data through complex forms and RESTful routes. The goal of the application is to build a Content Management System, whether the content being managed is Blog Posts, Recipes, a Library of Resources, or any domain model that lends itself to these requirements (the majority of ideas you could come up with would probably meet the requirements).
 
-## Requirements
+### <a id="expectations">What to expect from the instructor review</a>
+
+Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and technical presentation. Starting with this project, your instructor will deliberately give you a more challenging project review, to give you a better sense of the kind of experience and pressure that you experience during a real technical interview. Believe it or not, almost all technical interviewers really do want you to succeed, and we'll work with you as many times as necessary to get you through the review if you don't nail it the first time (which is quite common and completely OK). However, we will potentially give you a hard time, cut you off, push you on your use of vocabulary and/or your coding choices. We want to try to give you a sense of what a coding interview might be like, so you build the confidence to describe your app and to write code even in a higher pressure, slightly more adversarial environment.
+
+### Be Prepared to:
+
+1. Explain your code from execution point to exit point. We're making sure you wrote it and understand how it works, nothing else. 5-10 minutes
+2. Write tests together. You'll be responsible for making tests pass, not writing test code. However, you'll be expected to provide expected return data of methods. You'll need to know how your code should work, not rspec or testing. 20-30 minutes
+3. Refactor code. 20-30 minutes
+4. Extend the application with a new feature, more data, a different domain etc. 20-30 minutes
+5. Submit an improved version.
+
+## <a id="requirements">Requirements</a>
 
 1. Use the Ruby on Rails framework.
 
@@ -58,7 +77,7 @@ tag_id task_id
 - An Amusement Park - This is the domain design for one of the final Rails projects. Try to find inspiration from this project and build something unique and different.
 
 
-## Instructions
+## <a id="instructions">Instructions</a>
 
 1. Create a new repository on GitHub for your Rails application.
 2. When you create the Rails app for your assessment, add the spec.md file from this repo to the root directory of the project, commit it to Git and push it up to GitHub.
@@ -71,23 +90,13 @@ tag_id task_id
 8. Write a blog post about the project and process.
 9. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
 
-## If you're a Learn-Verified Premium student:
+## <a id="support">Helpful Hints:</a> 
 
-Unlike the rest of the curriculum, if you have any questions about your assessment or need help with it, please don’t use the Ask New Question feature. Rather than working with Learn Experts, please reach out to your Learn Instructor responsible for this section instead.
+* For project support, you can reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads) responsible for this section and/or schedule up to four 30-minute [Project Support sessions](https://theflatironschool.typeform.com/to/B9BrgH).
+* After project submission, watch for an email from Learn with instructions to schedule an assessment. If you don't receive the email within a day or so, reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads).
 
-We should reach out to you soon to schedule a review. If you don't hear from us in 48 hours after submission, reach out to us on Slack!
 
-### Be Prepared to:
-
-1. Explain your code from execution point to exit point. We're making sure you wrote it and understand how it works, nothing else. 5-10 minutes
-2. Write tests together. You'll be responsible for making tests pass, not writing test code. However, you'll be expected to provide expected return data of methods. You'll need to know how your code should work, not rspec or testing. 20-30 minutes
-3. Refactor code. 20-30 minutes
-4. Extend the application with a new feature, more data, a different domain etc. 20-30 minutes
-5. Submit an improved version.
-
-### What to expect from the instructor review
-
-Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and technical presentation. Starting with this project, your instructor will deliberately give you a more challenging project review, to give you a better sense of the kind of experience and pressure that you experience during a real technical interview. Believe it or not, almost all technical interviewers really do want you to succeed, and we'll work with you as many times as necessary to get you through the review if you don't nail it the first time (which is quite common and completely OK). However, we will potentially give you a hard time, cut you off, push you on your use of vocabulary and/or your coding choices. We want to try to give you a sense of what a coding interview might be like, so you build the confidence to describe your app and to write code even in a higher pressure, slightly more adversarial environment.
+## <a id="success">Practicing for Success on Learn</a>
 
 #### Be scrappy.
 - If you make a mistake, correct yourself. 
