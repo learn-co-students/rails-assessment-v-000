@@ -35,7 +35,7 @@ Project reviews are focused on preparing you for technical interviews. Treat pro
 3. Your models should include reasonable validations for the simple attributes. You don't need to add every possible validation or duplicates, such as presence and a minimum length, but the models should defend against invalid data.
 
 4. You must include at least one class level ActiveRecord [scope method](https://guides.rubyonrails.org/active_record_querying.html#scopes).
-  - Your scope method must be chainable, meaning that you must use [ActiveRecord Query methods](https://guides.rubyonrails.org/active_record_querying.html) within it (such as `#where` and `#order`) rather than native ruby methods (such as `#find_all` or `#sort`).
+  - Your scope method must be chainable, meaning that you must use [ActiveRecord Query methods](https://guides.rubyonrails.org/active_record_querying.html) within it (such as `.where` and `.order`) rather than native ruby methods (such as `#find_all` or `#sort`).
 
 5. Your application must provide a standard user authentication, including signup, login, logout, and passwords.
 
