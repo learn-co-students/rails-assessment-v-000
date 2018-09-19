@@ -1,1 +1,9 @@
-<h1>hello </h1>
+<h1>Welcome back <%= @user.name %>! </h1>
+
+<p>What would you like to do?</p>
+
+<%= link_to "Add Workout", new_post_path(@post) %>
+
+<%= link_to "Edit Workout", edit_post_path(@post) %>
+
+<%= link_to "View All Workouts", post_path(@posts) %>
