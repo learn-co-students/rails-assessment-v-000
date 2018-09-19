@@ -39,7 +39,7 @@ Project reviews are focused on preparing you for technical interviews. Treat pro
 
 5. Your application must provide a standard user authentication, including signup, login, logout, and passwords.
 
-6. Your authentication system should allow login from some other service. Facebook, twitter, foursquare, github, etc...
+6. Your authentication system should allow login from some other service. Facebook, Twitter, Foursquare, Github, etc...
 
 7. You must make use of a nested resource with the appropriate RESTful URLs.
  - You must include a nested `new` route with form that relates to the parent resource
