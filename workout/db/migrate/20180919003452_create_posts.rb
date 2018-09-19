@@ -5,6 +5,7 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.string :time
       t.integer :reps
 
+
       t.timestamps
     end
   end

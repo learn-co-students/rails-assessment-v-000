@@ -1,3 +1,6 @@
-<% @posts.each do |post| %>
-  <%= post.all %>
+<%= @posts.each do |post| %>
+  View Goal:<%= link_to @post, posts_path(@post) %>
 <% end %>
+
+
+ended here
