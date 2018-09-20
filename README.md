@@ -28,31 +28,31 @@ Project reviews are focused on preparing you for technical interviews. Treat pro
 1. Use the Ruby on Rails framework.
 
 2. Your models must:
-  - include at least one `has_many`, at least one `belongs_to`, and at least one `has_many :through` relationship
-  - Include a many-to-many relationship with a model acting as a join table
-  - That join table must include a user-submittable attribute — that is to say, some attribute other than its foreign keys that can be submitted by the app's user
+  > - include at least one `has_many`, at least one `belongs_to`, and at least one `has_many :through` relationship
+  > - Include a many-to-many relationship with a model acting as a join table
+  > - That join table must include a user-submittable attribute — that is to say, some attribute other than its foreign keys that can be submitted by the app's user
 
 3. Your models should include reasonable validations for the simple attributes. You don't need to add every possible validation or duplicates, such as presence and a minimum length, but the models should defend against invalid data.
 
 4. You must include at least one class level ActiveRecord [scope method](https://guides.rubyonrails.org/active_record_querying.html#scopes).
-  - Your scope method must be chainable, meaning that you must use [ActiveRecord Query methods](https://guides.rubyonrails.org/active_record_querying.html) within it (such as `.where` and `.order`) rather than native ruby methods (such as `#find_all` or `#sort`).
+  > - Your scope method must be chainable, meaning that you must use [ActiveRecord Query methods](https://guides.rubyonrails.org/active_record_querying.html) within it (such as `.where` and `.order`) rather than native ruby methods (such as `#find_all` or `#sort`).
 
 5. Your application must provide a standard user authentication, including signup, login, logout, and passwords.
 
 6. Your authentication system should allow login from some other service. Facebook, Twitter, Foursquare, Github, etc...
 
 7. You must make use of a nested resource with the appropriate RESTful URLs.
- - You must include a nested `new` route with form that relates to the parent resource
- - You must include a nested `index` or `show` route
+ > - You must include a nested `new` route with form that relates to the parent resource
+ > - You must include a nested `index` or `show` route
 
 8. Your forms should correctly display validation errors.
-  - Your fields should be enclosed within a fields_with_errors class
-  - Error messages describing the validation failures must be present within the view.
+  > - Your fields should be enclosed within a fields_with_errors class
+  > - Error messages describing the validation failures must be present within the view.
 
 9. Your application must be, within reason, a DRY (Do-Not-Repeat-Yourself) rails app. 
-  - Logic present in your controllers should be encapsulated as methods in your models. 
-  - Your views should use helper methods and partials when appropriate. 
-  - Follow patterns in the [Rails Style Guide](https://github.com/bbatsov/rails-style-guide) and the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide).
+  > - Logic present in your controllers should be encapsulated as methods in your models. 
+  > - Your views should use helper methods and partials when appropriate. 
+  > - Follow patterns in the [Rails Style Guide](https://github.com/bbatsov/rails-style-guide) and the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide).
 
 10. **Do not** use scaffolding to build your project. Your goal here is to learn. Scaffold is a way to get up and running quickly, but learning a lot is not one of the benefits of scaffolding.
 
