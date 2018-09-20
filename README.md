@@ -13,15 +13,24 @@ In this lesson you're going to build a complete Ruby on Rails application that m
 
 ## <a id="expectations">What to Expect from the Project Review</a>
 
-Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and technical presentation. Starting with this project, your instructor will deliberately give you a more challenging project review, to give you a better sense of the kind of experience and pressure that you experience during a real technical interview. Believe it or not, almost all technical interviewers really do want you to succeed, and we'll work with you as many times as necessary to get you through the review if you don't nail it the first time (which is quite common and completely OK). However, we will potentially give you a hard time, cut you off, push you on your use of vocabulary and/or your coding choices. We want to try to give you a sense of what a coding interview might be like, so you build the confidence to describe your app and to write code even in a higher pressure, slightly more adversarial environment.
+Project reviews are focused on preparing you for [technical interviews](https://www.brightnetwork.co.uk/career-path-guides/technology-it-software-development/five-ways-stand-out-your-technology/what-expect-technical-interview/). Treat project reviews as if they were technical interviews in both attitude and technical presentation.
 
-### Be Prepared to:
+During your project review, be prepared to:
 
-1. Explain your code from execution point to exit point. We're making sure you wrote it and understand how it works, nothing else. 5-10 minutes
-2. Write tests together. You'll be responsible for making tests pass, not writing test code. However, you'll be expected to provide expected return data of methods. You'll need to know how your code should work, not rspec or testing. 20-30 minutes
-3. Refactor code. 20-30 minutes
-4. Extend the application with a new feature, more data, a different domain etc. 20-30 minutes
-5. Submit an improved version.
+1. Explain your code from execution point to exit point. Use the best technical vocabulary you can. (15 minutes)
+2. Live code. This could be refactoring, adding a new feature, or both. (20 minutes)
+3. You will also be asked questions that test your knowledge of Rails fundamentals. (10 minutes)
+
+If any requirements are missing or if significant gaps in understanding are found, be prepared to do one or all of the following:
+
+- Submit an improved version
+- Meet again for another Project Review
+
+What won't happen:
+
+- You won't be yelled at, belittled, or scolded
+- You won't be put on the spot without support
+- There's nothing you can do to instantly fail or blow it
 
 ## <a id="requirements">Requirements</a>
 
@@ -60,18 +69,7 @@ Project reviews are focused on preparing you for technical interviews. Treat pro
 
 - A Recipe Manager - Should provide the ability to browse recipes by different filters such as date created, ingredient count, rating, comments, whatever your domain provides. Additionally ingredients would need to be unique so that the first user that adds Chicken to their recipe would create the canonical (or atomic/unique/individual) instance of Chicken (the only row to ever have the name Chicken in the ingredients table). This will force a join model between ingredients and recipes and provide an easy way to group recipes by ingredients, which would be a great view to implement. Associating some user-centric data regarding recipes such as ratings or comments would further fill out the domain and provide some great learning experiences.
 
-- A Group Task Manager - An application that allowed the creation of task lists with individual tasks that can be assigned to a user would flex the majority of the requirements of this assessment. You would be able to create a list of tasks, add tasks to that list, and assign those tasks to a user.
-
-lists
-users
-tasks
-  user_id
-  list_id
-  status
-  due_date
-tags
-task_tags
-tag_id task_id
+- A Group Task Manager - An application that allowed the creation of task lists with individual tasks that can be assigned to a user would flex the majority of the requirements of this assessment. You would be able to create a list of tasks, add tasks to that list, assign those tasks to a user, and allow users to change the statuses of their tasks.
 
 ### Restricted Domains
 
