@@ -39,20 +39,18 @@ What won't happen:
 2. Your models must:
   > - include at least one `has_many`, at least one `belongs_to`, and at least one `has_many :through` relationship
   
-  > - Include a many-to-many relationship with a model acting as a join table
-  
-  > - That join table must include a user-submittable attribute — that is to say, some attribute other than its foreign keys that can be submitted by the app's user
+  > - Include a many-to-many relationship with a model acting as a join table. That join table must include a user-submittable attribute — that is to say, some attribute other than its foreign keys that can be submitted by the app's user
 
-3. Your models should include reasonable validations for the simple attributes. You don't need to add every possible validation or duplicates, such as presence and a minimum length, but the models should defend against invalid data.
+3. Your models must include reasonable validations for the simple attributes. You don't need to add every possible validation or duplicates, such as presence and a minimum length, but the models should defend against invalid data.
 
 4. You must include at least one class level ActiveRecord [scope method](https://guides.rubyonrails.org/active_record_querying.html#scopes).
   > - Your scope method must be chainable, meaning that you must use [ActiveRecord Query methods](https://guides.rubyonrails.org/active_record_querying.html) within it (such as `.where` and `.order`) rather than native ruby methods (such as `#find_all` or `#sort`).
 
-5. Your application must provide a standard user authentication, including signup, login, logout, and passwords.
+5. Your application must provide standard user authentication, including signup, login, logout, and passwords.
 
-6. Your authentication system should allow login from some other service. Facebook, Twitter, Foursquare, Github, etc...
+6. Your authentication system must also allow login from some other service. Facebook, Twitter, Foursquare, Github, etc...
 
-7. You must make use of a nested resource with the appropriate RESTful URLs.
+7. You must include and make use of a nested resource with the appropriate RESTful URLs.
  > - You must include a nested `new` route with form that relates to the parent resource
  
  > - You must include a nested `index` or `show` route
@@ -96,7 +94,7 @@ What won't happen:
 8. Write a blog post about the project and process.
 9. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
 
-## <a id="support">Helpful Hints</a> 
+## <a id="support">Project Support</a> 
 
 * For project support, you can reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads) responsible for this section and/or schedule up to four 30-minute [Project Support sessions](https://theflatironschool.typeform.com/to/B9BrgH).
 * After project submission, watch for an email from Learn with instructions to schedule an assessment. If you don't receive the email within a day or so, reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads).
