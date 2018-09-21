@@ -2,46 +2,78 @@
 
 ## Overview
 
+- [What to Expect from the Project Review](#expectations)
+- [Project Requirements](#requirements)
+- [Instructions](#instructions)
+- [Support](#support)
+- [Practicing for Success on Learn](#success)
+- [Resources](#resources)
+
 In this lesson you're going to build a complete Ruby on Rails application that manages related data through complex forms and RESTful routes. The goal of the application is to build a Content Management System, whether the content being managed is Blog Posts, Recipes, a Library of Resources, or any domain model that lends itself to these requirements (the majority of ideas you could come up with would probably meet the requirements).
 
-## Requirements
+## <a id="expectations">What to Expect from the Project Review</a>
+
+Project reviews are focused on preparing you for [technical interviews](https://www.brightnetwork.co.uk/career-path-guides/technology-it-software-development/five-ways-stand-out-your-technology/what-expect-technical-interview/). Treat project reviews as if they were technical interviews in both attitude and technical presentation.
+
+During your project review, be prepared to:
+
+1. Explain your code from execution point to exit point. Use the best technical vocabulary you can. (15 minutes)
+2. Live code. This could be refactoring, adding a new feature, or both. (20 minutes)
+3. You will also be asked questions that test your knowledge of Rails fundamentals. (10 minutes)
+
+If any requirements are missing or if significant gaps in understanding are found, be prepared to do one or all of the following:
+
+- Submit an improved version
+- Meet again for another Project Review
+
+What won't happen:
+
+- You won't be yelled at, belittled, or scolded
+- You won't be put on the spot without support
+- There's nothing you can do to instantly fail or blow it
+
+## <a id="requirements">Requirements</a>
 
 1. Use the Ruby on Rails framework.
 
-2. Your models must include a `has_many`, a `belongs_to`, and a `has_many :through` relationship. You can include more models to fill out your domain, but there must be at least a model acting as a join table for the has_many through. Also, make sure that the join table contains at least one user submittable attribute; for example: rides with tickets or appointments with times.
+2. Your models must:
+  > - include at least one `has_many`, at least one `belongs_to`, and at least one `has_many :through` relationship
+  
+  > - Include a many-to-many relationship with a model acting as a join table. That join table must include a user-submittable attribute — that is to say, some attribute other than its foreign keys that can be submitted by the app's user
 
-3. Your models should include reasonable validations for the simple attributes. You don't need to add every possible validation or duplicates, such as presence and a minimum length, but the models should defend against invalid data.
+3. Your models must include reasonable validations for the simple attributes. You don't need to add every possible validation or duplicates, such as presence and a minimum length, but the models should defend against invalid data.
 
-4. You must include at least one class level ActiveRecord scope methods. To some extent these class scopes can be added to power a specific individual feature, such as "My Overdue Tasks" in a TODO application, scoping all tasks for the user by a datetime scope for overdue items, `@user.tasks.overdue`. Reports make for a good usage of class scopes, such as "Most Valuable Cart by Customer" where the code would implement a `Cart.most_valuable` and `Cart.by_customer` which could be combined as `Cart.most_valuable.by_customer(@customer)`.
+4. You must include at least one class level ActiveRecord [scope method](https://guides.rubyonrails.org/active_record_querying.html#scopes).
+  > - Your scope method must be chainable, meaning that you must use [ActiveRecord Query methods](https://guides.rubyonrails.org/active_record_querying.html) within it (such as `.where` and `.order`) rather than native ruby methods (such as `#find_all` or `#sort`).
 
-5. Your application must provide a standard user authentication, including signup, login, logout, and passwords. You can use [Devise](https://github.com/plataformatec/devise) but given the complexity of that system, you should also feel free to roll your own authentication logic.
+5. Your application must provide standard user authentication, including signup, login, logout, and passwords.
 
-6. Your authentication system should allow login from some other service. Facebook, twitter, foursquare, github, etc...
+6. Your authentication system must also allow login from some other service. Facebook, Twitter, Foursquare, Github, etc...
 
-7. You must make use of a nested resource with the appropriate RESTful URLs. Additionally, your nested resource must provide a form that relates to the parent resource. Imagine an application with user profiles. You might represent a person's profile via the RESTful URL of /profiles/1, where 1 is the primary key of the profile. If the person wanted to add pictures to their profile, you could represent that as a nested resource of /profiles/1/pictures, listing all pictures belonging to profile 1. The route `/profiles/1/pictures/new` would allow me to upload a new picture to profile 1. Focus on making a working application first and then adding more complexity. Making a nested URL resource like '/divisions/:id/teams/new' is great. Having a complex nested resource like 'countries/:id/sports/:id/divisions/:id/teams/new' is going to make this much harder on you.
+7. You must include and make use of a nested resource with the appropriate RESTful URLs.
+ > - You must include a nested `new` route with form that relates to the parent resource
+ 
+ > - You must include a nested `index` or `show` route
 
-8. Your forms should correctly display validation errors. Your fields should be enclosed within a fields_with_errors class and error messages describing the validation failures must be present within the view.
+8. Your forms should correctly display validation errors.
+  > - Your fields should be enclosed within a fields_with_errors class
+  
+  > - Error messages describing the validation failures must be present within the view.
 
-9. Your application must be, within reason, a DRY (Do-Not-Repeat-Yourself) rails app. Logic present in your controllers should be encapsulated as methods in your models. Your views should use helper methods and partials to be as logic-less as possible. Follow patterns in the [Rails Style Guide](https://github.com/bbatsov/rails-style-guide) and the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide).
+9. Your application must be, within reason, a DRY (Do-Not-Repeat-Yourself) rails app. 
+  > - Logic present in your controllers should be encapsulated as methods in your models. 
 
-10. **Do not** use scaffolding to build your project. Your goal here is to learn. Scaffold is a way to get up and running quickly, but learning a lot is not one of the benefits of scaffolding. That’s why we do not allow the use of scaffolding for projects.
+  > - Your views should use helper methods and partials when appropriate. 
+  
+  > - Follow patterns in the [Rails Style Guide](https://github.com/bbatsov/rails-style-guide) and the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide).
+
+10. **Do not** use scaffolding to build your project. Your goal here is to learn. Scaffold is a way to get up and running quickly, but learning a lot is not one of the benefits of scaffolding.
 
 ### Example Domains
 
 - A Recipe Manager - Should provide the ability to browse recipes by different filters such as date created, ingredient count, rating, comments, whatever your domain provides. Additionally ingredients would need to be unique so that the first user that adds Chicken to their recipe would create the canonical (or atomic/unique/individual) instance of Chicken (the only row to ever have the name Chicken in the ingredients table). This will force a join model between ingredients and recipes and provide an easy way to group recipes by ingredients, which would be a great view to implement. Associating some user-centric data regarding recipes such as ratings or comments would further fill out the domain and provide some great learning experiences.
 
-- A Group Task Manager - An application that allowed the creation of task lists with individual tasks that can be assigned to a user would flex the majority of the requirements of this assessment. You would be able to create a list of tasks, add tasks to that list, and assign those tasks to a user.
-
-lists
-users
-tasks
-  user_id
-  list_id
-  status
-  due_date
-tags
-task_tags
-tag_id task_id
+- A Group Task Manager - An application that allowed the creation of task lists with individual tasks that can be assigned to a user would flex the majority of the requirements of this assessment. You would be able to create a list of tasks, add tasks to that list, assign those tasks to a user, and allow users to change the statuses of their tasks.
 
 ### Restricted Domains
 
@@ -50,35 +82,25 @@ tag_id task_id
 - An Amusement Park - This is the domain design for one of the final Rails projects. Try to find inspiration from this project and build something unique and different.
 
 
-## Instructions
+## <a id="instructions">Instructions</a>
 
 1. Create a new repository on GitHub for your Rails application.
-2. When you create the Rails app for your assessment, add the spec.md file from this repo to the root directory of the project, commit it to Git and push it up to GitHub.
+2. When you create the Rails app for your assessment, add the spec.md file from this repo to the root directory of the project, commit it to Git and push it up to GitHub. You will use this file as a personal checklist of requirements as you complete the project.
 3. Build your application. Make sure to commit early and commit often. Commit messages should be meaningful (clearly describe what you're doing in the commit) and accurate (there should be nothing in the commit that doesn't match the description in the commit message). Good rule of thumb is to commit every 3-7 mins of actual coding time. Most of your commits should have under 15 lines of code and a 2 line commit is perfectly acceptable. **This is important and you'll be graded on this**.
 4. Record at least a 30 min coding session. During the session, either think out loud or not. It's up to you. You don't need to submit it, but we may ask for it at a later time.
 5. Make sure to check each box in your spec.md (replace the space between the square braces with an x) and explain next to each one how you've met the requirement *before* you submit your project.
 6. Write a README.md.
-7. [Fill out this checklist.](https://docs.google.com/forms/d/1QlU2-UQNSjlv2Tf2yP8oDsduMobK_1w0ZFXaTpywMCk/)
 7. Submit a video of how a user would interact with your working web application.
 8. Write a blog post about the project and process.
 9. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
 
-## If you're a Learn-Verified Premium student:
+## <a id="support">Project Support</a> 
 
-Unlike the rest of the curriculum, if you have any questions about your assessment or need help with it, please don’t use the Ask New Question feature. Rather than working with Learn Experts, please reach out to your Learn Instructor responsible for this section instead.
+* For project support, you can reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads) responsible for this section and/or schedule up to four 30-minute [Project Support sessions](https://theflatironschool.typeform.com/to/B9BrgH).
+* After project submission, watch for an email from Learn with instructions to schedule an assessment. If you don't receive the email within a day or so, reach out to [your Section Lead](http://help.learn.co/instructional-support/receiving-course-support/who-are-the-section-leads).
 
-We should reach out to you soon to schedule a review. If you don't hear from us in 48 hours after submission, reach out to us on Slack!
 
-### Be Prepared to:
-
-1. Explain your code from execution point to exit point. We're making sure you wrote it and understand how it works, nothing else. 5-10 minutes
-2. Refactor code. 20-30 minutes
-3. Extend the application with a new feature, more data, a different domain etc. 20-30 minutes
-4. Submit an improved version.
-
-### What to expect from the instructor review
-
-Project reviews are focused on preparing you for technical interviews. Treat project reviews as if they were technical interviews, in both attitude and technical presentation. Starting with this project, your instructor will deliberately give you a more challenging project review, to give you a better sense of the kind of experience and pressure that you experience during a real technical interview. Believe it or not, almost all technical interviewers really do want you to succeed, and we'll work with you as many times as necessary to get you through the review if you don't nail it the first time (which is quite common and completely OK). However, we will potentially give you a hard time, cut you off, push you on your use of vocabulary and/or your coding choices. We want to try to give you a sense of what a coding interview might be like, so you build the confidence to describe your app and to write code even in a higher pressure, slightly more adversarial environment.
+## <a id="success">Practicing for Success on Learn</a>
 
 #### Be scrappy.
 - If you make a mistake, correct yourself. 
@@ -102,6 +124,12 @@ Project reviews are focused on preparing you for technical interviews. Treat pro
 - Explain the details - this is your application, you should have a very thorough understanding of how each piece works.
 - Curiosity and willingness to learn are hugely valued in our industry. If there are things you don’t understand, then ask questions at the end of the review for more information. Your instructor will be able to point you to the appropriate section lead or technical coach for more information.
 - Pretend you’re interviewing for a job as a Rails developer. We’re looking for competent, passionate people who are excited to learn, build, and grow. You won’t be expected to be an expert, but people who will be good to work with.
+
+## <a id="resources">Resources</a>
+- [Rails Routing From the Outside In](https://guides.rubyonrails.org/routing.html)
+- [ActiveRecord Associations](https://guides.rubyonrails.org/association_basics.html)
+- [ActiveRecord Validations](https://guides.rubyonrails.org/active_record_validations.html)
+- [ActiveRecord Query Interface](https://guides.rubyonrails.org/active_record_querying.html)
 
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/rails-assessment'>Rails Portfolio Project</a> on Learn.co and start learning to code for free.</p>
