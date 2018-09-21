@@ -85,7 +85,7 @@ What won't happen:
 ## <a id="instructions">Instructions</a>
 
 1. Create a new repository on GitHub for your Rails application.
-2. When you create the Rails app for your assessment, add the spec.md file from this repo to the root directory of the project, commit it to Git and push it up to GitHub.
+2. When you create the Rails app for your assessment, add the spec.md file from this repo to the root directory of the project, commit it to Git and push it up to GitHub. You will use this file as a personal checklist of requirements as you complete the project.
 3. Build your application. Make sure to commit early and commit often. Commit messages should be meaningful (clearly describe what you're doing in the commit) and accurate (there should be nothing in the commit that doesn't match the description in the commit message). Good rule of thumb is to commit every 3-7 mins of actual coding time. Most of your commits should have under 15 lines of code and a 2 line commit is perfectly acceptable. **This is important and you'll be graded on this**.
 4. Record at least a 30 min coding session. During the session, either think out loud or not. It's up to you. You don't need to submit it, but we may ask for it at a later time.
 5. Make sure to check each box in your spec.md (replace the space between the square braces with an x) and explain next to each one how you've met the requirement *before* you submit your project.
@@ -124,6 +124,12 @@ What won't happen:
 - Explain the details - this is your application, you should have a very thorough understanding of how each piece works.
 - Curiosity and willingness to learn are hugely valued in our industry. If there are things you don’t understand, then ask questions at the end of the review for more information. Your instructor will be able to point you to the appropriate section lead or technical coach for more information.
 - Pretend you’re interviewing for a job as a Rails developer. We’re looking for competent, passionate people who are excited to learn, build, and grow. You won’t be expected to be an expert, but people who will be good to work with.
+
+## <a id="resources">Resources</a>
+- [Rails Routing From the Outside In](https://guides.rubyonrails.org/routing.html)
+- [ActiveRecord Associations](https://guides.rubyonrails.org/association_basics.html)
+- [ActiveRecord Validations](https://guides.rubyonrails.org/active_record_validations.html)
+- [ActiveRecord Query Interface](https://guides.rubyonrails.org/active_record_querying.html)
 
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/rails-assessment'>Rails Portfolio Project</a> on Learn.co and start learning to code for free.</p>
