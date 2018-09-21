@@ -37,8 +37,8 @@ What won't happen:
 1. Use the Ruby on Rails framework.
 
 2. Your models must:  
-  - Include at least one `has_many`, at least one `belongs_to`, and at least one `has_many :through` relationship  
-  - Include a many-to-many relationship with a model acting as a join table. That join table must include a user-submittable attribute — that is to say, some attribute other than its foreign keys that can be submitted by the app's user
+  • Include at least one `has_many`, at least one `belongs_to`, and at least one `has_many :through` relationship  
+  • Include a many-to-many relationship with a model acting as a join table. That join table must include a user-submittable attribute — that is to say, some attribute other than its foreign keys that can be submitted by the app's user
 
 3. Your models must include reasonable validations for the simple attributes. You don't need to add every possible validation or duplicates, such as presence and a minimum length, but the models should defend against invalid data.
 
