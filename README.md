@@ -62,7 +62,8 @@ What won't happen:
 9. Your application must be, within reason, a DRY (Do-Not-Repeat-Yourself) rails app. 
   > • Logic present in your controllers should be encapsulated as methods in your models.  
   >  
-  > • Your views should use helper methods and partials when appropriate. >    
+  > • Your views should use helper methods and partials when appropriate. 
+  >    
   > • Follow patterns in the [Rails Style Guide](https://github.com/bbatsov/rails-style-guide) and the [Ruby Style Guide](https://github.com/bbatsov/ruby-style-guide).
 
 10. **Do not** use scaffolding to build your project. Your goal here is to learn. Scaffold is a way to get up and running quickly, but learning a lot is not one of the benefits of scaffolding.
