@@ -1,0 +1,38 @@
+<%if @user_time_slot.persisted?%>
+  <%= form_for @user_time_slot do |f|%>
+    <tr>
+      <td><%= f.label readable_date(@time_slot) %></td>
+      <td><%= f.label readable_start_time(@time_slot) %></td>
+      <td><%= f.label readable_end_time(@time_slot) %></td>
+      <td><%= f.check_box :time_slot_id, {}, @time_slot.id, "" %></td>
+      <td><%= f.text_field "comments"%></td>
+      <td><%= f.submit%></td>
+    </tr>
+  <%end%>
+<%else%>
+    <table border="1">
+      <tr>
+        <th>Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Select</th>
+        <th>Your Comments</th>
+      </tr>
+    <%= form_for @user_time_slot do |f|%>
+      <%counter = 1%>
+      <%ordered_time_slots(@available_time_slots).each do |time_slot|%>
+        <%= f.fields_for counter.to_s do |sign_up_form| %>
+          <tr>
+            <td><%= sign_up_form.label readable_date(time_slot) %></td>
+            <td><%= sign_up_form.label readable_start_time(time_slot) %></td>
+            <td><%= sign_up_form.label readable_end_time(time_slot) %></td>
+            <td><%= sign_up_form.check_box :time_slot_id, {}, time_slot.id, "" %></td>
+            <td><%= sign_up_form.text_field "comments"%></td>
+            <%counter += 1%>
+          </tr>
+          <%end%>
+        <%end%>
+        </table>
+      <%=submit_tag("sign up")%>
+    <%end%>
+  <%end%>

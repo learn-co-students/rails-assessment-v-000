@@ -102,15 +102,15 @@ What won't happen:
 ## <a id="success">Practicing for Success on Learn</a>
 
 #### Be scrappy.
-- If you make a mistake, correct yourself. 
+- If you make a mistake, correct yourself.
 - Think on your feet. We will expect you to be able to explain development concepts to us, as well as expanding on concepts that you have already implemented, but you’ll also have the opportunity to look things up while you're live coding.
 
 #### Make no little plans.
 - Approach live coding with a constructive attitude. You might feel nervous or uncertain, but as long as you are familiar with the section material you should be able to reason your way to a solution.
-- Be proud of your project and your code, and show confidence in it. 
+- Be proud of your project and your code, and show confidence in it.
 
 #### Radiate positivity.
-- Present yourself and your project in the best way possible. 
+- Present yourself and your project in the best way possible.
 - Be open to feedback, both positive and constructive. We give feedback to help each other get better.
 - If the instructor asks you to complete additional features, or you missed a project requirement, treat this as a learning experience. Becoming a developer is complex and challenging, and it’s our job to find the holes in your knowledge and help you fill them. This is to help you become a better developer, not to delay your progress in the program.
 

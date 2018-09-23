@@ -1,0 +1,6 @@
+<h1><%= @user.name %></h1>
+<h2>Email: <%= @user.email %></h2>
+<img src="<%= @user.image %>">
+<br>
+<br>
+<%=link_to "Edit Profile", edit_user_path(@user)%>

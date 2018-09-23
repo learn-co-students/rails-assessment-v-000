@@ -1,0 +1,13 @@
+<% if flash[:message] %>
+  <%= flash[:message] %>
+<% end %>
+<%= form_for @user, url: login_path, method: :post do |f|%>
+  <%=f.label :email%>
+  <%=f.text_field :email%>
+
+  <%=f.label :password%>
+  <%=f.text_field :password%>
+
+  <%=f.submit 'Log in'%>
+   Or <%= link_to(controller: 'users', action: 'new') { 'sign up' } %>
+<%end%>

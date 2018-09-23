@@ -1,0 +1,33 @@
+
+  <%if @admin%>
+  <div>
+    <%= link_to "Home", user_path(@admin)%>
+    <%= link_to "Sign up", "/users/#{@admin.id}/time_slots/new"%>
+    <%=link_to "My Time Slots", "/users/#{@admin.id}/time_slots"%>
+    <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+      <input type=submit value='logout'>
+    <%end%>
+    <br>
+    Admin:
+    <%=link_to "Add Time Slots", new_time_slot_path%>
+    <%=link_to "All Users", users_path%>
+    <br><br>
+  </div>
+  <%else%>
+  <div>
+    <%= link_to "Home", user_path(@user)%>
+    <%= link_to "Sign up", "/users/#{@user.id}/time_slots/new"%>
+    <%=link_to "My Time Slots", "/users/#{@user.id}/time_slots"%>
+    <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+      <input type=submit value='logout'>
+    <%end%>
+    <%if @user.admin%>
+      <br>
+      Admin:
+      <%=link_to "Add Time Slots", new_time_slot_path%>
+      <%=link_to "All Users", users_path%>
+    <%end%>
+    <br><br>
+  <%end%>
+</div>
+<%= yield %>
