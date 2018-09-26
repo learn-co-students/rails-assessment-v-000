@@ -1,4 +1,10 @@
-<%= form_tag ({controller: 'sessions', action: 'create', method: 'post'}) do %>
-  <input name=name>
+<h1>Login!</h1>
+
+<%= form_tag (sessions_path) do %>
+
+  Name: <%= text_field_tag :name %><br>
+
+  Password: <%= text_field_tag :password %><br>
+
   <input type=submit value='login'>
 <% end %>
