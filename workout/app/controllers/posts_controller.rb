@@ -2,7 +2,11 @@ class PostsController < ApplicationController
   before_action :authenticate_required
 
   def index
-    @posts = Post.all
+    if params[:user_id]
+      @posts = User.find(params[:user_id]).posts
+    else
+      @posts = Post.all
+    end
   end
 
   def new
