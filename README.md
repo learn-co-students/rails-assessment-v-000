@@ -1,3 +1,9 @@
+
+Work on user_post_path in posts views index
+
+
+
+
 # Build a Rails App
 
 ## Overview
