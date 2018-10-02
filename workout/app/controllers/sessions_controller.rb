@@ -1,17 +1,16 @@
 class SessionsController < ApplicationController
 
   def new
-    @user = User.new
-    @users = User.all
   end
 
   def create
-    @user = User.find_by(name: params[:name])
-    if @user && @user.authenticate(params[:password])
-      session[:user_id] = @user.id
-      redirect_to user_path(@user), notice: "Welcome back to Workout!"
+    user = User.find_by(name: params[:session][:name].downcase)
+    if user && user.authenticate(params[:session][:password])
+      log_in user
+      redirect_to user, notice: "Welcome back to Workout!"
     else
-      redirect_to root_path
+      flash.now[:danger] = 'Invalid name/password combination'
+      render 'new'
     end
   end
 

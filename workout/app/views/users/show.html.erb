@@ -2,10 +2,14 @@
 
 <p>What would you like to do?</p>
 
+<% @user.posts.each do |post| %>
+  <%= link_to post.title, post_path(post) %>
+<% end %>
+
 <%= link_to "Add Workout", new_post_path(@post) %>
 
-
+<br><br>
 
 <%= link_to "View All Workouts", posts_path(@posts) %>
 
-<p><%= link_to "Logout", logout_path/p>
+<p><%= link_to "Logout", logout_path %></p>

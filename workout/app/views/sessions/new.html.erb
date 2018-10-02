@@ -1,10 +1,17 @@
-<h1>Login!</h1>
+<h1>Log In!</h1>
 
-<%= form_tag (sessions_path) do %>
+<%= form_for(:session, url: login_path) do |f| %>
 
-  Name: <%= text_field_tag :name %><br>
+  
+    <%= f.label :name %>
+    <%= f.text_field :name %>
 
-  Password: <%= text_field_tag :password %><br>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
 
-  <input type=submit value='login'>
+    <%= f.submit "Log in"%>
+  
 <% end %>
+
+
+<p>New user? <%= link_to "Sign up now!", signup_path %></p>

@@ -1,4 +1,4 @@
 class Post < ApplicationRecord
-  has_many :goals
-  has_many :users, through: :goals
+  has_many :users_posts
+  has_many :users, through: :users_posts
 end
