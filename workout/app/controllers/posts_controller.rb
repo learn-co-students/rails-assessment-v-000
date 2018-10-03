@@ -2,15 +2,13 @@ class PostsController < ApplicationController
   before_action :authenticate_required
 
   def index
-    if params[:user_id]
-      @posts = User.find(params[:user_id]).posts
-    else
+      @post = Post.new
       @posts = Post.all
-    end
+      
   end
 
   def new
-    @post = Post.new
+     @post = Post.new
   end
 
   def create
@@ -19,6 +17,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_path(@post)
     else
+     # @posts = Post.all
       render :new
     end
   end
@@ -43,6 +42,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:name, :reps, :time)
+    params.require(:post).permit(:name, :reps, :time, :user_id)
   end
 end
