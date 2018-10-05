@@ -1,7 +1,8 @@
 <h1>Select a workout!</h1><br>
 
 <% @posts.each do |post| %>
-  <li><%= link_to post.name, user_post_path(post) %></li><br>
+  <li><%= link_to post.user.name, user_path(post.user) %></li><br>
 <% end %>
 
-<%= link_to "Log Out", root_path(@user) %></li>
+
+<%= link_to "Log Out", root_path(@user) %>
