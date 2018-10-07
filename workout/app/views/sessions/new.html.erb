@@ -1,0 +1,23 @@
+<h1>Log In!</h1>
+
+<%= form_for(:session, url: login_path) do |f| %>
+
+  
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit "Log in"%>
+  
+<% end %>
+
+<br>
+<h4>Or</h4>
+<%= button_to "Sign in with Google", "/auth/google", method: "get" %>
+
+<br>
+
+
+<p>New user? <%= link_to "Sign up now!", signup_path %></p>

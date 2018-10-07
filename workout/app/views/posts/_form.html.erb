@@ -1,0 +1,16 @@
+<h1>Add New Workout!</h1>
+
+<%= form_for ([@user.post, @user]) do |f| %>
+
+<%= f.label :name, "Workout Name?"%>
+<%= f.text_field :name %><br>
+<br>
+<%= f.label :reps, "How many reps?" %>
+<%= f.text_field :reps %><br>
+<br>
+<%= f.label :time, "Time it took to complete?" %>
+<%= f.text_field :time %><br>
+<br>
+<%= f.submit "Post Workout"%>
+
+<% end %>

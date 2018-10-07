@@ -1,0 +1,11 @@
+<h1>Welcome back <%= @user.name %>! </h1>
+
+<p>What would you like to do?</p>
+
+<%= link_to "Add Workout", new_user_post_path(@user) %>
+
+<br><br>
+
+<%= link_to "View All Workouts", user_posts_path(@user, @post) %>
+
+<p><%= link_to "Logout", logout_path %></p>
