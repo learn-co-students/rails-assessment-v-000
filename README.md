@@ -132,3 +132,4 @@ What won't happen:
 
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/rails-assessment'>Rails Portfolio Project</a> on Learn.co and start learning to code for free.</p>
+
