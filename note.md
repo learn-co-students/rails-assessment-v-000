@@ -3,7 +3,6 @@
   -check dryness
   -update seeds
   -what happens if already have an account and try to log in with fb?
-  -breaks if tries to sign up with non unique email, need to kick it back with errors
   -nested routes not secure!
 
 #UX needs
