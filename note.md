@@ -1,9 +1,9 @@
 #Need to add:
-  -field with errors
+  -You must include at least one class level ActiveRecord scope method. ???
   -check dryness
-  -update seeds
   -what happens if already have an account and try to log in with fb?
   -nested routes not secure!
+  -add validations to time_slots/user_time_slots
 
 #UX needs
   -add note if no new slots available
