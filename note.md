@@ -1,9 +1,10 @@
 #Need to add:
   -You must include at least one class level ActiveRecord scope method. ???
   -check dryness
-  -what happens if already have an account and try to log in with fb?
   -nested routes not secure!
   -add validations to time_slots/user_time_slots
+  -check edit validations
+  -not sure about code in sessions controller- maybe belongs elsewhere
 
 #UX needs
   -add note if no new slots available

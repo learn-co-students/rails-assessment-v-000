@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if auth
+    if auth && !User.find_by(email: auth['info']['email'])
       @user = User.find_or_create_by(uid: auth['uid']) do |u|
         u.name = auth['info']['name']
         u.email = auth['info']['email']
@@ -15,6 +15,9 @@ class SessionsController < ApplicationController
       end
       session[:user_id] = @user.id
       redirect_to user_path(@user)
+    elsif auth && User.find_by(email: auth['info']['email'])
+      flash[:message] = "You already created an account associated with that email address. Please log in using your password."
+      redirect_to '/login'
     elsif User.find_by(email: session_params[:email]) && User.find_by(email: session_params[:email]).authenticate(session_params[:password])
       @user = User.find_by(email: params[:user][:email])
       session[:user_id] = @user.id
