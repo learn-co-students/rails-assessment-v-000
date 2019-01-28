@@ -11,7 +11,7 @@
   -big when submit new time_slot
   -time_slot show add who signed up for admin view
   -add message to time slot page if haven't signed up for any
-  -past time slots vs upcoming time slots
+  -past time slots vs upcoming time slots- could this be scope method?
 
 #Maybe add
   -log in with google

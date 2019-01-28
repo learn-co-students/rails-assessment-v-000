@@ -1,3 +1,17 @@
+<% if @time_slot.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@time_slot.errors.count, "error") %>
+      prohibited this time slot from being saved:
+    </h2>
+
+    <ul>
+    <% @time_slot.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 <%= form_for @time_slot do |f|%>
   <%=f.label :start_time%>
   <%=f.datetime_select :start_time, ampm: true%>

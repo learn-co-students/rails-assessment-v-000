@@ -9,7 +9,7 @@ class TimeSlotsController < ApplicationController
       @user = User.find(params[:user_id])
       @time_slots = @user.time_slots
    else
-     @time_slots = TimeSlot.all
+     @time_slots = TimeSlot.future
    end
   end
 
@@ -29,8 +29,14 @@ class TimeSlotsController < ApplicationController
   end
 
   def create
-    @time_slot = TimeSlot.create(time_slot_params)
-    redirect_to time_slots_path
+    @time_slot = TimeSlot.new(time_slot_params)
+    if @time_slot.valid?
+      @time_slot.save
+      redirect_to time_slots_path
+    else
+      set_user
+      render :new
+    end
   end
 
   def edit
