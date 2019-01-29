@@ -6,8 +6,11 @@
     <th>View</th>
     <%if params[:user_id]%>
       <th>Your Comments</th>
-      <th>Delete Sign Up</th>
       <th>Edit Sign Up</th>
+      <th>Delete Sign Up</th>
+    <%elsif @user.admin%>
+      <th>Edit</th>
+      <th>Delete</th>
     <%end%>
   </tr>
   <%ordered_time_slots(@time_slots).each do |time_slot|%>
@@ -23,8 +26,11 @@
       <%if params[:user_id]%>
         <%user_time_slot = UserTimeSlot.find_by(user_id: @user.id, time_slot_id: time_slot.id)%>
         <td><%=user_time_slot.comments%></td>
-        <td><%= button_to "Delete", user_time_slot, :method => :delete%></td>
         <td><%=button_to "Edit", edit_user_time_slot_path(user_time_slot), :method => :get%></td>
+        <td><%= button_to "Delete", user_time_slot, :method => :delete%></td>
+      <%elsif @user.admin%>
+        <td><%=button_to "Edit", edit_time_slot_path(time_slot), :method => :get%></td>
+        <td><%= button_to "Delete", time_slot, :method => :delete%></td>
       <%end%>
     </tr>
   <%end%>

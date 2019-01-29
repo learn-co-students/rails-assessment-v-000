@@ -1,10 +1,10 @@
 #Need to add:
   -check dryness (dry up logging in layout)
   -nested routes not secure!
-  -check edit validations
   -not sure about code in sessions controller- maybe belongs elsewhere
   -add edit option for times slots and admin view all timeslots
   -protect time slots for admin only
+  -log in/ admin check method inconsistent
 
 #UX needs
   -add note if no new slots available

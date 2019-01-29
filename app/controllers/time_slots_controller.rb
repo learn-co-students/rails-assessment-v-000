@@ -50,6 +50,16 @@ class TimeSlotsController < ApplicationController
     redirect_to time_slots_path
   end
 
+  def destroy
+    if permission_check
+      TimeSlot.find(params[:id]).destroy
+      set_user
+      redirect_to "/time_slots"
+    else
+      redirect_to '/'
+    end
+  end
+
   private
 
   def time_slot_params
