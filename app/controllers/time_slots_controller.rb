@@ -41,12 +41,7 @@ class TimeSlotsController < ApplicationController
 
   def edit
     set_user
-    if params[:user_id]
-      @user_time_slot = UserTimeSlot.find_by(user_id: params[:user_id], time_slot_id: params[:id])
-      @time_slot = TimeSlot.find(params[:id])
-    else
-      @time_slot = TimeSlot.find(params[:id])
-    end
+    @time_slot = TimeSlot.find(params[:id])
   end
 
   def update
