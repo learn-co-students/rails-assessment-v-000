@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
     if @user.admin
       true
     elsif params[:user_id]
-      if params[:user_id] == @user.id
+      if params[:user_id]
         true
       else
         false

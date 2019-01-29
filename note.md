@@ -1,10 +1,10 @@
 #Need to add:
-  -You must include at least one class level ActiveRecord scope method. ???
-  -check dryness
+  -check dryness (dry up logging in layout)
   -nested routes not secure!
-  -add validations to time_slots/user_time_slots
   -check edit validations
   -not sure about code in sessions controller- maybe belongs elsewhere
+  -add edit option for times slots and admin view all timeslots
+  -protect time slots for admin only
 
 #UX needs
   -add note if no new slots available
