@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
   private
   def require_login
-    return head(:forbidden) unless session.include? :user_id
+    return head(:forbidden) unless session.include?(:user_id)
   end
 
   def require_admin
@@ -20,22 +20,5 @@ class ApplicationController < ActionController::Base
 
   def set_user
     @user = User.find(session[:user_id])
-  end
-
-  def permission_check
-    set_user
-    if @user.admin
-      true
-    elsif params[:user_id]
-      if params[:user_id]
-        true
-      else
-        false
-      end
-    elsif params[:id] == @user.id
-      true
-    else
-      false
-    end
   end
 end

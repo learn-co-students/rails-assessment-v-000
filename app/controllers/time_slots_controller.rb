@@ -1,6 +1,6 @@
 class TimeSlotsController < ApplicationController
   before_action :require_admin
-  skip_before_action :require_admin, only: [:index]
+  skip_before_action :require_admin, only: [:index, :show]
   layout "logged_in"
 
   def index
@@ -50,13 +50,9 @@ class TimeSlotsController < ApplicationController
   end
 
   def destroy
-    if permission_check
-      TimeSlot.find(params[:id]).destroy
-      set_user
-      redirect_to "/time_slots"
-    else
-      redirect_to '/'
-    end
+    set_user
+    TimeSlot.find(params[:id]).destroy
+    redirect_to "/time_slots"
   end
 
   private

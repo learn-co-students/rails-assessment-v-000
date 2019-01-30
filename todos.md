@@ -2,7 +2,6 @@
   -check dryness (dry up logging in layout)
   -log in/ admin check method inconsistent
   -add details
-  -readables should maybe be model instance methods, ordered should maybe be class method
 
 #UX needs
   -add note if no new slots available

@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    if auth && !User.find_by(email: auth['info']['email'])
+    if auth && !User.find_by(email: auth['info']['email'])#should this be in user controller?
       @user = User.find_or_create_by(uid: auth['uid']) do |u|
         u.name = auth['info']['name']
         u.email = auth['info']['email']

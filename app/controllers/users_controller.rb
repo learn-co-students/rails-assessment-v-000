@@ -21,16 +21,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    if session[:user_id] == params[:id].to_i
-      set_user
-    elsif User.find(session[:user_id]).admin
+    set_user
+    if @user.admin
+      @admin = @user
       @user = User.find(params[:id])
-      @admin = User.find(session[:user_id])
-    elsif session[:user_id] && session[:user_id] != params[:id].to_i
-      set_user
+    elsif @user.id != params[:id].to_i
       redirect_to user_path(@user)
-    else
-      redirect_to '/'
     end
   end
 
@@ -40,13 +36,11 @@ class UsersController < ApplicationController
   end
 
   def edit
-    if session[:user_id] == params[:id].to_i #can this be dried up?
-      set_user
-    elsif User.find(session[:user_id]).admin
+    set_user
+    if @user.admin
+      @admin = @user
       @user = User.find(params[:id])
-      @admin = User.find(session[:user_id])
-    elsif session[:user_id] && session[:user_id] != params[:id].to_i
-      set_user
+    elsif @user.id != params[:id].to_i
       redirect_to edit_user_path(@user)
     end
   end
