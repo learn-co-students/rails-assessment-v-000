@@ -1,7 +1,7 @@
 #Need to add:
   -check dryness (dry up logging in layout)
-  -log in/ admin check method inconsistent
   -add details
+  -remove edit/delete buttons for past sign ups for users
 
 #UX needs
   -add note if no new slots available
