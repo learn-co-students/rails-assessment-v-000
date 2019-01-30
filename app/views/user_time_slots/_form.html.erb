@@ -33,6 +33,7 @@
           <%end%>
         <%end%>
         </table>
-      <%=submit_tag("sign up")%>
+      <%=f.hidden_field :user_id, :value => @user.id%>
+      <%=f.submit "sign up"%>
     <%end%>
   <%end%>

@@ -8,13 +8,15 @@ class UserTimeSlotsController < ApplicationController
   end
 
   def create
-    if permission_check
-      set_user
+    set_user
+    id_to_use = params[:user_time_slot][:user_id].to_i
+    if @user.admin || @user.id == id_to_use
       params[:user_time_slot].each do |time_slot|
-        UserTimeSlot.find_or_create_by(user_id: @user.id, time_slot_id: time_slot.last[:time_slot_id].to_i, comments: time_slot.last[:comments])
+        if time_slot.first != "user_id"
+          UserTimeSlot.find_or_create_by(user_id: id_to_use, time_slot_id: time_slot.last[:time_slot_id].to_i, comments: time_slot.last[:comments])
+        end
       end
-
-      redirect_to "/users/#{@user.id}/time_slots"
+      redirect_to "/users/#{id_to_use}/time_slots"
     else
       redirect_to '/'
     end
@@ -27,11 +29,11 @@ class UserTimeSlotsController < ApplicationController
   end
 
   def update
-    if permission_check
-      @user_time_slot = UserTimeSlot.find(params[:id])
+    set_user
+    @user_time_slot = UserTimeSlot.find(params[:id])
+    if @user.admin || @user.id == @user_time_slot.user_id
       @user_time_slot.comments = params[:user_time_slot][:comments]
       @user_time_slot.save
-      set_user
       redirect_to "/users/#{@user.id}/time_slots"
     else
       redirect_to '/'
@@ -50,7 +52,7 @@ class UserTimeSlotsController < ApplicationController
 
   private
   def user_time_slot_params
-    params.require(:user_time_slot).permit(:time_slot_id)
+    params.require(:user_time_slot).permit(:time_slot_id, :user_id)
   end
 
 end

@@ -1,10 +1,9 @@
 #Need to add:
   -check dryness (dry up logging in layout)
   -nested routes not secure!
-  -not sure about code in sessions controller- maybe belongs elsewhere
-  -add edit option for times slots and admin view all timeslots
   -protect time slots for admin only
   -log in/ admin check method inconsistent
+  -add details
 
 #UX needs
   -add note if no new slots available
@@ -36,3 +35,6 @@
   -option to send availability and admin to confirm actual slots
   -admin gets notification if volunteer deletes a time slot
   -time slots coordinated by specific Admin
+
+#Blog post
+  -helper route names don't work check time slot index path for example

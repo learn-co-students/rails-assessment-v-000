@@ -5,12 +5,13 @@ class TimeSlotsController < ApplicationController
 
   def index
     set_user
-    if params[:user_id]
-      @user = User.find(params[:user_id])
+    if params[:user_id] && (params[:user_id].to_i == session[:user_id] || @user.admin)
       @time_slots = @user.time_slots
-   else
+    elsif params[:user_id]
+      redirect_to "/users/#{@user.id}/time_slots"
+    else
      @time_slots = TimeSlot.future
-   end
+    end
   end
 
   def show
@@ -20,12 +21,7 @@ class TimeSlotsController < ApplicationController
 
   def new
     set_user
-    if params[:user_id]
-      @user_time_slot = UserTimeSlot.new
-      @available_time_slots = TimeSlot.all_available
-    else
-      @time_slot = TimeSlot.new
-    end
+    @time_slot = TimeSlot.new
   end
 
   def create
