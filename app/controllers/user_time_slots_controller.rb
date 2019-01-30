@@ -25,7 +25,11 @@ class UserTimeSlotsController < ApplicationController
   def edit
     set_user
     @user_time_slot = UserTimeSlot.find_by_id(params[:id])
-    @time_slot = TimeSlot.find(params[:id])
+    if @user.admin || @user.id == @user_time_slot.user_id
+      @time_slot = TimeSlot.find(params[:id])
+    else
+      redirect_to "/users/#{@user.id}/time_slots"
+    end
   end
 
   def update
