@@ -41,9 +41,10 @@ class UserTimeSlotsController < ApplicationController
   end
 
   def destroy
-    if permission_check
-      UserTimeSlot.find(params[:id]).destroy
-      set_user
+    set_user
+    @user_time_slot = UserTimeSlot.find(params[:id])
+    if @user.admin || @user.id == @user_time_slot.user_id
+      @user_time_slot.destroy
       redirect_to "/users/#{@user.id}/time_slots"
     else
       redirect_to '/'
