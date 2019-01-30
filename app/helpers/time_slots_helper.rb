@@ -7,10 +7,6 @@ module TimeSlotsHelper
     time_slot.start_time.strftime("%I:%M %p")
   end
 
-  def duration_in_hours(time_slot)
-    time_slot.duration/60
-  end
-
   def end_time(time_slot)
     time_slot.start_time + (time_slot.duration * 60)
   end

@@ -36,4 +36,15 @@ class TimeSlot < ApplicationRecord
     joins(:user_time_slots).where('user_time_slots.user_id' => user_id)
   end
 
+  def self.available_to_user(user)
+    options = []
+    self.future.each do |time_slot|
+      if time_slot.available && time_slot.users.exclude?(user)
+        options << time_slot
+      end
+    end
+    options
+  end
+
+
 end

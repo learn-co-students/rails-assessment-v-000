@@ -6,8 +6,8 @@ class TimeSlotsController < ApplicationController
   def index
     set_user
     if params[:user_id] && (params[:user_id].to_i == session[:user_id] || @user.admin)
-      @future_time_slots = TimeSlot.by_user(@user).future
-      @past_time_slots = TimeSlot.by_user(@user).past
+      @future_time_slots = TimeSlot.by_user(@user.id).future
+      @past_time_slots = TimeSlot.by_user(@user.id).past
     elsif params[:user_id]
       redirect_to "/users/#{@user.id}/time_slots"
     else

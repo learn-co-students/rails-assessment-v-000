@@ -4,7 +4,7 @@ class UserTimeSlotsController < ApplicationController
   def new
     set_user
     @user_time_slot = UserTimeSlot.new
-    @available_time_slots = TimeSlot.all_available
+    @available_time_slots = TimeSlot.available_to_user(@user)
   end
 
   def create
