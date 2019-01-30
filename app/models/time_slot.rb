@@ -32,4 +32,8 @@ class TimeSlot < ApplicationRecord
     where("start_time >= ?", Date.today)
   end
 
+  def self.by_user(user_id)
+    joins(:user_time_slots).where('user_time_slots.user_id' => user_id)
+  end
+
 end

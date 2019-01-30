@@ -1,6 +1,5 @@
 #Need to add:
   -check dryness (dry up logging in layout)
-  -nested routes not secure!
   -protect time slots for admin only
   -log in/ admin check method inconsistent
   -add details
