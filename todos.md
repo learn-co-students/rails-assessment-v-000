@@ -1,7 +1,10 @@
+#Questions:
+  -How to reuse table code for time_slots index
+
 #Need to add:
-  -check dryness (dry up logging in layout)
   -add details
   -remove edit/delete buttons for past sign ups for users
+  -make it so users can't edit/delete past sign ups
 
 #UX needs
   -add note if no new slots available
