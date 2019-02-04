@@ -1,15 +1,11 @@
-#Need to add:
-  -check dryness (dry up logging in layout)
-  -add details
-  -remove edit/delete buttons for past sign ups for users
 
 #UX needs
   -add note if no new slots available
-  -big when submit new time_slot
   -time_slot show add who signed up for admin view
   -add message to time slot page if haven't signed up for any
 
-#Maybe add
+#Features to add
+  -add details
   -log in with google
   -confirmation pending/confirmed! to user time slots
   -admin approve a user
@@ -18,7 +14,7 @@
   -ugh should really be first name and last name
   -non fb users add a profile pic
   -if logged in via fb, shouldn't be able to change password
-  -if previously logged in w/fb and made profile changes currently that will be overwritten upon relogin
+  -if previously logged in w/fb and made profile changes currently that will be overwritten upon reloggin
 
 #Future
   -notification if admin edits a time slot a user is signed up for
