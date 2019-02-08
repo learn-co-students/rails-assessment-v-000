@@ -7,9 +7,12 @@ Rails.application.routes.draw do
   post '/logout' => 'sessions#destroy'
 
   resources :users
-  resources :user_time_slots
+  resources :user_time_slots, only: [:new, :create, :edit, :update, :destroy]
   resources :users, only: [:show] do
-    resources :time_slots, only: [:show, :index, :new, :edit]
+    resources :time_slots, only: [:show, :index]
+  end
+  resources :users, only: [:show] do
+    resources :user_time_slots, only: [:new]
   end
 
   resources :time_slots

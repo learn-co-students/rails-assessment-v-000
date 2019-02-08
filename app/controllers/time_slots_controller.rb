@@ -1,13 +1,15 @@
 class TimeSlotsController < ApplicationController
   before_action :require_admin
+  #set user before action
   skip_before_action :require_admin, only: [:index, :show]
   layout "logged_in"
 
   def index
     set_user
     if params[:user_id] && (params[:user_id].to_i == session[:user_id] || @user.admin)
-      @future_time_slots = TimeSlot.by_user(@user.id).future
-      @past_time_slots = TimeSlot.by_user(@user.id).past
+      @user = User.find(params[:user_id])
+      @future_time_slots = @user.time_slots.future
+      @past_time_slots = @user.time_slots.past
     elsif params[:user_id]
       redirect_to "/users/#{@user.id}/time_slots"
     else
@@ -29,8 +31,7 @@ class TimeSlotsController < ApplicationController
 
   def create
     @time_slot = TimeSlot.new(time_slot_params)
-    if @time_slot.valid?
-      @time_slot.save
+    if @time_slot.save
       redirect_to time_slots_path
     else
       set_user

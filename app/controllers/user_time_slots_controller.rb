@@ -3,8 +3,16 @@ class UserTimeSlotsController < ApplicationController
 
   def new
     set_user
-    @user_time_slot = UserTimeSlot.new
-    @available_time_slots = TimeSlot.available_to_user(@user)
+    if params[:user_id] && (@user.id == params[:user_id] || @user.admin)
+      if @user.admin && params[:user_id] != @user.id
+        @admin = @user
+        @user = User.find(params[:user_id])
+      end
+    elsif params[:user_id] && @user.id != params[:user_id]
+      redirect_to new_user_time_slot_path(@user)
+    end
+      @user_time_slot = UserTimeSlot.new
+      @available_time_slots = TimeSlot.available_to_user(@user)
   end
 
   def create

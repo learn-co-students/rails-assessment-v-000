@@ -1,3 +1,6 @@
+<% if @admin%>
+  <h2>You are signing up <%=@user.name%></h2>
+<%end%>
 <%if @user_time_slot.persisted?%>
   <%= form_for @user_time_slot do |f|%>
     <tr>

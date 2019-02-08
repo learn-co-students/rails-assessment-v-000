@@ -28,6 +28,8 @@
   -option to send availability and admin to confirm actual slots
   -admin gets notification if volunteer deletes a time slot
   -time slots coordinated by specific Admin
+  -update sign up sheet to be email and password field instead of test field
+  -add nested users/user_id/user_time_slots/id when admin trying to sign up another user
 
 #Blog post
   -helper route names don't work check time slot index path for example
