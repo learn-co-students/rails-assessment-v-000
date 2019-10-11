@@ -56,8 +56,9 @@ What won't happen:
   > • You must include a nested `index` or `show` route
 
 8. Your forms should correctly display validation errors.
-  a. Your fields should be enclosed within a fields_with_errors class
-  b. Error messages describing the validation failures must be present within the view.
+  > a. Your fields should be enclosed within a fields_with_errors class
+  >
+  > b. Error messages describing the validation failures must be present within the view.
 
 9. Your application must be, within reason, a DRY (Do-Not-Repeat-Yourself) rails app. 
   > • Logic present in your controllers should be encapsulated as methods in your models.  
@@ -116,7 +117,7 @@ What won't happen:
 - Use the best technical vocabulary you can. You will be expected to present yourself as a competent Rails developer.
 - Explain the details - this is your application, you should have a very thorough understanding of how each piece works.
 - Curiosity and willingness to learn are hugely valued in our industry. If there are things you don’t understand, then ask questions at the end of the review for more information. Your instructor will be able to point you to the appropriate section lead or technical coach for more information.
-- Pretend you’re interviewing for a job as a Rails developer. We’re looking for competent, passionate people who are excited to learn, build, and grow. You won’t be expected to be an expert, but people who will be good to work with.
+- Pretend you’re interviewing for a job as a Rails developer. We’re looking for competent, passionate people who are excited to learn, build, and grow. You won’t be expected to be an expert, but we're seeking people who will be good to work with.
 
 ## <a id="resources">Resources</a>
 - [Rails Routing From the Outside In](https://guides.rubyonrails.org/routing.html)
