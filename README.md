@@ -77,7 +77,7 @@ What won't happen:
 
 ### Restricted Domains
 
-- A Blog App - We used a Blog domain design for a lot of the rails lessons and code-alongs.
+- A Basic Blog App - We've used a Blog domain design for a lot of the rails lessons and code-alongs. The blog must have unique features/approaches and solve problems in different ways.
 
 - An Amusement Park - This is the domain design for one of the final Rails projects. Try to find inspiration from this project and build something unique and different.
 
