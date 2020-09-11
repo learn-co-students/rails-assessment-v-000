@@ -6,7 +6,7 @@
 - [Project Requirements](#requirements)
 - [Instructions](#instructions)
 - [Support](#support)
-- [Practicing for Success on Learn](#success)
+- [Practicing for Success](#success)
 - [Resources](#resources)
 
 In this lesson you're going to build a complete Ruby on Rails application that manages related data through complex forms and RESTful routes. The goal of the application is to build a Content Management System, whether the content being managed is Blog Posts, Recipes, a Library of Resources, or any domain model that lends itself to these requirements (the majority of ideas you could come up with would probably meet the requirements).
@@ -94,7 +94,7 @@ What won't happen:
 8. Write a blog post about the project and process.
 9. When done, submit your GitHub repo's url, a link to your video demo, and a link to your blog post in the corresponding text boxes in the right rail. Hit "I'm done" to wrap it up.
 
-## <a id="success">Practicing for Success on Learn</a>
+## <a id="success">Practicing for Success</a>
 
 #### Be scrappy.
 - If you make a mistake, correct yourself. 
